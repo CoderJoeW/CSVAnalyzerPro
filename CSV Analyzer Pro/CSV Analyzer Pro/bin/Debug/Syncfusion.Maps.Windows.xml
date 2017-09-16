@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.Maps.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileDbfData">
+            <summary>
+            Represents the ShapeFileDbfData class in the map.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileDbfData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbfReader.ShapeFileDbfData">ShapeFileDbfData</see> class. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfData.DbfHeader">
+            <summary>
+            Gets  the dbf data file header. .
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfData.DbfFields">
+            <summary>
+            Gets or sets values of DbfFields.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileDbfField">
+            <summary>
+            Defines class ShapeFileDbfField
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileDbfField.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbfReader.ShapeFileDbfField">ShapeFileDbfField</see> class. 
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader">
+            <summary>
+            Defines class for ShapeFileDbfHeader
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbfReader.ShapeFileDbfHeader">ShapeFileDbfHeader</see> class. 
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Length">
+            <summary>
+            Gets or sets Length of the Header.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.FileType">
+            <summary>
+            Gets or sets the Dbf file type.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.RecordLength">
+            <summary>
+            Gets or sets the Record length of the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.NumberOfRecords">
+            <summary>
+            Gets or sets number of Reacords in the fle.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.ShapeFileDbfFields">
+            <summary>
+            Gets or sets the ShapeFileDbfFields.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Day">
+            <summary>
+            Gets or sets Day of the Dbf file last update.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Month">
+            <summary>
+            Gets or sets Month of the Dbf file last updated.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Year">
+            <summary>
+            Gets or sets Year of the Dbf file last updated.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.EncryptionFlag">
+            <summary>
+            Gets or sets Cuncription flag of the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.FreeRecordThread">
+            <summary>
+            Gets the FreeRecordThread of the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.IncompleteTransaction">
+            <summary>
+            Gets the IncompleteTransaction of the Dbf File.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.LanguageDriver">
+            <summary>
+            Gets the Language Driver of the Dbf File.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.MdxFlag">
+            <summary>
+            Gets the MDX Flag of the Dbf File.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Reserve1">
+            <summary>
+            Gets the First Reserved byte in the Dbf File.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Reserve2">
+            <summary>
+            Gets the Second Reserved byte in the Dbf File.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Reserve3">
+            <summary>
+            Gets the Third Reserved byte in the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Reserve4">
+            <summary>
+            Gets the fourth Reserved byte in the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileDbfHeader.Terminator">
+            <summary>
+            Gets the Terminator flag of the Dbf file.
+            </summary>
+            <value></value>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileDbfReader">
+            <summary>
+            Defines class ShapeFileDbfReader
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileDbfReader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbfReader.ShapeFileDbfReader">ShapeFileDbfReader</see> class. 
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileDbfReader.ReadDbfData(System.String)">
+            <summary>
+            Method that Reads the Dbf Data.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileHeader">
+            <summary>
+            ShapeFileHeader
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.#ctor">
+            <summary>
+            Constructor ShapeFileHeader
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.ToString">
+            <summary>
+            Converts values to ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.Length">
+            <summary>
+            Indicate the fixed-length of this header in bytes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.FileCode">
+            <summary>
+            Specifies the file code for an ESRI shapefile, which
+            should be the value, 9994.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.FileLength">
+            <summary>
+            Specifies the length of the shapefile, expressed
+            as the number of 16-bit words in the file.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.BoundingBox">
+            <summary>
+             Gets or Sets BoundingBox value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.Version">
+            <summary>
+            Specifies the shapefile version number.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileHeader.ShapeType">
+            <summary>
+            Specifies the shape type for the file. A shapefile
+            contains only one type of shape.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileReader">
+            <summary>
+            Class ShapeFileReader
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileReader.#ctor">
+            <summary>
+            Constrctor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileReader.#ctor(System.String)">
+            <summary>
+            ShapeFileReader 
+            </summary>
+            <param name="shapefilename"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileReader.ReadShapeFile">
+            <summary>
+             Reads the data from ReadShapeFile
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileReader.ReadFromStream(System.IO.Stream)">
+            <summary>
+             Reads data from stream
+            </summary>
+            <param name="fs"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileReader.ReadHeader(System.IO.Stream)">
+            <summary>
+            Reads and parses the header of the .shp index file
+            </summary>
+            <remarks>        
+            
+            Byte
+            Position    Field           Value       Type    Order
+            -----------------------------------------------------
+            Byte 0      File Code       9994        Integer Big
+            Byte 4      Unused          0           Integer Big
+            Byte 8      Unused          0           Integer Big
+            Byte 12     Unused          0           Integer Big
+            Byte 16     Unused          0           Integer Big
+            Byte 20     Unused          0           Integer Big
+            Byte 24     File Length     File Length Integer Big
+            Byte 28     Version         1000        Integer Little
+            Byte 32     Shape Type      Shape Type  Integer Little
+            Byte 36     Bounding Box    Xmin        Double  Little
+            Byte 44     Bounding Box    Ymin        Double  Little
+            Byte 52     Bounding Box    Xmax        Double  Little
+            Byte 60     Bounding Box    Ymax        Double  Little
+            Byte 68*    Bounding Box    Zmin        Double  Little
+            Byte 76*    Bounding Box    Zmax        Double  Little
+            Byte 84*    Bounding Box    Mmin        Double  Little
+            Byte 92*    Bounding Box    Mmax        Double  Little
+            
+            * Unused, with value 0.0, if not Measured or Z type
+            
+            The "Integer" type corresponds to the CLS Int32 type, and "Double" to CLS Double (IEEE 754).
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileReader.Records">
+            <summary>
+            Records stores the list of shapefile values
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileReader.Header">
+            <summary>
+             Header property determines the header value 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.BoundingBox">
+            <summary>
+            BoundingBox
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.BoundingBox.MinX">
+            <summary>
+            Indicates the minimum x-position of the bounding
+            box for the shape (expressed in degrees longitude).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.BoundingBox.MinY">
+            <summary>
+            Indicates the minimum y-position of the bounding
+            box for the shape (expressed in degrees latitude).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.BoundingBox.MaxX">
+            <summary>
+            Indicates the maximum x-position of the bounding
+            box for the shape (expressed in degrees longitude).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.BoundingBox.MaxY">
+            <summary>
+            Indicates the maximum y-position of the bounding
+            box for the shape (expressed in degrees latitude).
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.Helpers.Split``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Get the array slice between the two indexes.
+            ... Inclusive for start index, exclusive for end index.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Maps.ShapeFileRecord">
+            <summary>
+            The ShapeFileRecord class represents the contents of
+            a shape record, which is of variable length.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.#ctor">
+            <summary>
+            Constructor for the ShapeFileRecord class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.GetPartsCount">
+            <summary>
+            Indicates the number of parts for this shape.
+            A part is a connected set of points, analogous to
+            a PathFigure in WPF.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.GetPointsCount">
+            <summary>
+            Specifies the total number of points defining
+            this shape record.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.ToString">
+            <summary>
+            Output some of the fields of the shapefile record.
+            </summary>
+            <returns>A string representation of the record.</returns>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.MidPoint">
+            <summary>
+            specifies the Mid point between two variables
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.RecordIndex">
+            <summary>
+            Indicates the record number (or index) which starts at 1.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.ContentLength">
+            <summary>
+            Specifies the length of this shape record in 16-bit words.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.ShapeType">
+            <summary>
+            Specifies the shape type for this record.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.BoundingBox">
+            <summary>
+            Gets or Sets BoundingBox value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.Parts">
+            <summary>      
+            A collection of indices for the points array.
+            Each index identifies the starting point of the
+            corresponding part (or PathFigure using WPF
+            terminology).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.Points">
+            <summary>
+            A collection of all of the points defining the
+            shape record.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFileRecord.Attributes">
+            <summary>
+            Access the (dBASE) attribute values associated
+            with this shape record.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.Maps.MapItemShapes">
+            <summary>
+            To specify the zooming factor
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.MapItemShapes.Ellipse">
+            <summary>
+            To specify the map item shape as Ellipse
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.MapItemShapes.Rectangle">
+            <summary>
+            To specify the map item shape as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.MapItemShapes.None">
+            <summary>
+            To specify the map item shape as None
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.SelectionModes.Default">
+            <summary>
+            To specify the map shape selection mode as default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.SelectionModes.Multiple">
+            <summary>
+            To specify the map shape selection mode as multiple
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.AnnotationShapes.None">
+            <summary>
+            To specify the annotation shape  as none
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.AnnotationShapes.Rectangle">
+            <summary>
+            To specify the annotation shape  as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.AnnotationShapes.Image">
+            <summary>
+            To specify the annotation shape  as Image
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeType.NullShape">
+            <summary>
+            Nullshape / placeholder record.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeType.Point">
+            <summary>
+            Point record, for defining point locations such as a city.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeType.PolyLine">
+            <summary>
+            One or more sets of connected points. Used to represent roads,
+            hydrography, etc.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeType.Polygon">
+            <summary>
+            One or more sets of closed figures. Used to represent political
+            boundaries for countries, lakes, etc.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeType.Multipoint">
+            <summary>
+            A cluster of points represented by a single shape record.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ValueType.Double">
+            <summary>
+            To specify the value type as Double
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ValueType.Range">
+            <summary>
+            To specify the value type as Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.SymbolTypes.Ellipse">
+            <summary>
+            To specify the symbol type as Ellipse
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.SymbolTypes.Rectangle">
+            <summary>
+            To specify the symbol type as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.SymbolTypes.Custom">
+            <summary>
+            To specify the symbol type as Custom
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.VisibleChild.Symbols">
+            <summary>
+            To specify the Visible child as symbols
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.VisibleChild.Labels">
+            <summary>
+            To specify the Visible child as Labels
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendMode.Default">
+            <summary>
+            To specify the Legend mode as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendMode.Interactive">
+            <summary>
+            To specify the Legend mode as Interactive 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeColorMode.Default">
+            <summary>
+            To specify the shape color mode as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeColorMode.ColorPalette">
+            <summary>
+            To specify the shape color mode as Colorpallette
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ShapeColorMode.HeatMap">
+            <summary>
+            To specify the shape color mode as Heatmap
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ColorPalettes.Metro">
+            <summary>
+            To specify the colorpalettes as metro
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ColorPalettes.CoolBlue">
+            <summary>
+            To specify the colorpalettes as CoolBlue
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.ColorPalettes.CustomPalette">
+            <summary>
+            To specify the colorpalettes as CustomPalette
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.PanMode.Right">
+            <summary>
+            To specify the Panmode as Right
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.PanMode.Left">
+            <summary>
+            To specify the Panmode as Left
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.PanMode.Top">
+            <summary>
+            To specify the Panmode as Top
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.PanMode.Bottom">
+            <summary>
+            To specify the Panmode as Bottom
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendIcons.Rectangle">
+            <summary>
+            To specify the Legend Icon as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendIcons.Ellipse">
+            <summary>
+            To specify the Legend Icon as Ellipse
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendType.Bubbles">
+            <summary>
+            To specify the Legend Type as Bubbles
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendType.Layers">
+            <summary>
+            To specify the Legend Type as Layers
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.Default">
+            <summary>
+            To specify the Legend Position as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.TopLeft">
+            <summary>
+            To specify the Legend Position as TopLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.TopCenter">
+            <summary>
+            To specify the Legend Position as TopCenter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.TopRight">
+            <summary>
+            To specify the Legend Position as TopRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.MidLeft">
+            <summary>
+            To specify the Legend Position as MidLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.Center">
+            <summary>
+            To specify the Legend Position as Center
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.MidRight">
+            <summary>
+            To specify the Legend Position as MidRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.BottomLeft">
+            <summary>
+            To specify the Legend Position as BottomLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.BottomCenter">
+            <summary>
+            To specify the Legend Position as BottomCenter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendPosition.BottomRight">
+            <summary>
+            To specify the Legend Position as BottomRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendDockPosition.Left">
+            <summary>
+            To specify the Legend Dock Position as Left
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendDockPosition.Top">
+            <summary>
+            To specify the Legend Dock Position as Top
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendDockPosition.Right">
+            <summary>
+            To specify the Legend Dock Position as Right
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.LegendDockPosition.Bottom">
+            <summary>
+            To specify the Legend Dock Position as Bottom
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Circle">
+            <summary>
+            To specify the shape of the bubble as circle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Rectangle">
+            <summary>
+            To specify the shape of the bubble as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Diamond">
+            <summary>
+            To specify the shape of the bubble as Diamond
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Triangle">
+            <summary>
+            To specify the shape of the bubble as Triangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Trapezoid">
+            <summary>
+            To specify the shape of the bubble as Trapezoid
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Star">
+            <summary>
+            To specify the shape of the bubble as Star
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Pentagon">
+            <summary>
+            To specify the shape of the bubble as Pentagon
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Pushpin">
+            <summary>
+            To specify the shape of the bubble as Pushpin
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.BubbleType.Custom">
+            <summary>
+            To specify the shape of the bubble as Custom
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Maps.ShapeFillSetting.AutoFillColors">
+            <summary>
+            To specify the AutoFillcolors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.Uri">
+            <summary>
+            To specify the uri of map shapes
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ShapeSetting">
+            <summary>
+            To specify the shape setting
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.BubbleSetting">
+            <summary>
+            To specify the bubble setting
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.LegendSetting">
+            <summary>
+            To specify the LegendSetting
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ItemSource">
+            <summary>
+            To specify the item source
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ShapeIDPath">
+            <summary>
+            To specify the shapeidpath
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ShowMapItem">
+            <summary>
+            To specify the show map item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.EnableSelection">
+            <summary>
+            To specify the enable selection
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.SelectionMode">
+            <summary>
+            To specify the selection mode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ShowToolTip">
+            <summary>
+            To specify the tooltip property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.ShapeIDTableField">
+            <summary>
+            To specify the shapeidtablefield
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.ShapeFileLayer.BoundingBox">
+            <summary>
+            To specify the BoundingBox
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.Maps.CreateAccessibilityInstance">
+            <summary>
+            To specify wheather to enable zoom on selection or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.Maps.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.Maps.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.Maps.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.ZoomLevel">
+            <summary>
+            To specify the Zoomlevel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.MaxZoomLevel">
+            <summary>
+            To specify the maximum Zoominglevel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.ZoomFactor">
+            <summary>
+            To specify the zooming factor
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.BaseMapIndex">
+            <summary>
+            To specify the BaseMapIndex
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.MapItemsShape">
+            <summary>
+            To specify shape of the map item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.MapItemFont">
+            <summary>
+            To specify font of the map item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.Maps.MapItemStroke">
+            <summary>
+            To specify stroke of the map item
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.Maps.MapsDesigner">
+            <summary>
+            Class for SmartTag
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.Maps.MapsDesigner.actionLists">
+            <summary>
+            Designer ActionList collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the MapsDesigner class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Overridden Initialize method.
+            </summary>
+            <param name="component">Component object</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.Maps.MapsActionList">
+            <summary>
+            MapsActionList
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsActionList.#ctor(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes a new instance of the MapsActionList class.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsActionList.InitializeActionList">
+            <summary>
+            Overrridden InitializeActionList.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsActionList.Name">
+            <summary>
+            Gets or sets Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsActionList.ZoomLevel">
+            <summary>
+            Gets or Sets ZoomLevel 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsActionList.EnableZoomOnSelection">
+            <summary>
+            Gets or Sets ShapesCount
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsActionList.ZoomFactor">
+            <summary>
+            Gets or Sets ZoomFactor
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsActionList.MaxZoomLevel">
+            <summary>
+            Gets or Sets MaxZoomLevel
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.Maps.MapsAccessibility">
+            <summary>
+            Accessibility class to provide Coded UI support.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsAccessibility.#ctor(Syncfusion.Windows.Forms.Maps.Maps)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="maps">Maps</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.Maps.MapsAccessibility.HitTest(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the child object at the specified screen coordinates.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Bounds">
+            <summary>
+            Bounds of the Control
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Role">
+            <summary>
+            Gets the role for the Maps. This is used by accessibility programs.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Name">
+            <summary>
+            Gets or sets the accessible object name
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Description">
+            <summary>
+            Gets the description of the Control.ControlAccessibleObject
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.State">
+            <summary>
+            Gets the state of this accessible object.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Help">
+            <summary>
+            Gets the description of what the object does or how the object is used.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.Maps.MapsAccessibility.Parent">
+            <summary>
+            Gets the parent of an accessible object.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MapsWindowsAssembly">
+            <exclude/>
+            <summary>
+            This class holds the name of the Syncfusion.Maps.Windows assembly and provides a helper
+            routine that helps with resolving types when loading a serialization stream and when
+            the framework probes for assemblies by reflection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MapsWindowsAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.Maps.Windows"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MapsWindowsAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the Maps assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MapsWindowsAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MapsWindowsAssembly.#cctor">
+            <summary>
+            Initializes the <see cref="T:Syncfusion.MapsWindowsAssembly"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MapsWindowsAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This delegate helps with resolving types and can be used as an eventhandler
+            for a <see cref="E:System.AppDomain.AssemblyResolve"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data with information about the type.</param>
+            <returns>A reference to the assembly where the type is located.</returns>      
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.Maps.AssemblyInfo">
+            <summary>
+            AssemblyInformation for internal use.
+            </summary>
+        </member>
+    </members>
+</doc>

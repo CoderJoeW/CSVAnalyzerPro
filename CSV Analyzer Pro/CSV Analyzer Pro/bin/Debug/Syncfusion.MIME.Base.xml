@@ -1,0 +1,4238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.MIME.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection">
+            <summary>
+            collection to store attributes. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEAttributesCollection">
+            <summary>
+            collection to store attributes
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMESerialization">
+            <summary>
+            Base interface for all MIME objects which must support .
+            serialization
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMESerialization.Save(System.IO.Stream)">
+            <summary>
+            Save MIME document to stream.
+            </summary>
+            <param name="stream">stream for serialization</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEAttributesCollection.Add(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            adding part to collection.
+            </summary>
+            <param name="value">attribute to add.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEAttributesCollection.Remove(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            remove specified attribute.
+            </summary>
+            <param name="value">attribute to remove.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEAttributesCollection.Contains(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            to check if collection contains specified attribute.
+            </summary>
+            <returns>contains collection item or not.</returns>
+            <param name="value">attribute to check</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEAttributesCollection.Clear">
+            <summary>
+            removes all attributes
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEAttributesCollection.Item(System.Int32)">
+            <summary>
+            Indexator wich allow access to attribute by index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEAttributesCollection.Item(System.String)">
+            <summary>
+            Indexator, wich allow access to attribute by name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEAttributesCollection.IsExtended">
+            <summary>
+            tag to define if current
+            attribute is user-defined.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.m_bIsExtended">
+            <summary>
+            Property to check if this collection 
+            is collection of extended attributes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.m_hashNames">
+            <summary>
+            table to store names and indexes of attributes
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.CheckExtend(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            check if specified extended attribute
+             is in proper format.
+            </summary>
+            <param name="value">attribute to check.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Contains(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            Determines if Attribute is present.
+            </summary>
+            <param name="value">value to check.</param>
+            <returns>
+            true if present
+            false if not.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Add(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            Adding part to collection.
+            </summary>
+            <param name="value"> attribute to add.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Remove(Syncfusion.MIME.IMIMEHeaderAttribute)">
+            <summary>
+            Removing specified part from collection.
+            </summary>
+            <param name="value"> attribute to remove. </param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Save(System.IO.Stream)">
+            <summary>
+            Save MIME document to stream.
+            </summary>
+            <param name="stream">Stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.OnInsertComplete(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.OnClearComplete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.IsExtended">
+            <summary>
+            Property to check if this collection 
+            is collection of extended attributes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Item(System.Int32)">
+            <summary>
+            Getting attribute by index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Collections.MIMEAttributesCollection.Item(System.String)">
+            <summary>
+            Calling attribute by name.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection">
+            <summary>
+            Parts collection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartsCollection">
+            <summary>
+            Collection to store parts.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEPartsCollection.Add(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            adding part to collection.
+            </summary>
+            <param name="value">part to add.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEPartsCollection.Remove(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            removes part from collection.
+            </summary>
+            <param name="value">part to add.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEPartsCollection.Contains(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            method to check if part is present in collection.
+            </summary>
+            <returns>True - if part if present, otherwise False</returns>
+            <param name="value">part to check</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEPartsCollection.Clear">
+            <summary>
+            Clear collection
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartsCollection.Item(System.Int32)">
+            <summary>
+            indexator wich allow access to part by.
+            index
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartsCollection.Item(System.String)">
+            <summary>
+            indexator, wich allow access to part by boundary.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.m_boundTable">
+            <summary>
+            hash store boundary unique name-to-part reference
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Add(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            Adding part to collection.
+            </summary>
+            <param name="value">part to add.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Remove(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            Removing specified part from collection.
+            </summary>
+            <param name="value">attribute to remove.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.ClearAll">
+            <summary>
+            Clearing parts collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Insert(System.Int32,Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            Method to insert object to collection.
+            </summary>
+            <param name="index">at wnat index to insert.</param>
+            <param name="value"> object to insert. </param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Contains(Syncfusion.MIME.IMIMEPart)">
+            <summary>
+            Method to check if part is present in collection.
+            </summary>
+            <param name="part">part to check.</param>
+            <returns>True if present, False if not.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Save(System.IO.Stream)">
+            <summary>
+            Save MIME document to stream.
+            </summary>
+            <param name="stream">Stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.OnInsertComplete(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.OnClearComplete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Item(System.Int32)">
+            <summary>
+            Calling part by index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Collections.MIMEPartsCollection.Item(System.String)">
+            <summary>
+            Getting part by boundary.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException">
+            <summary>
+            MimeHeadPartMissException fired when document body is missing.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.DEF_MESSAGE">
+            <summary>
+            Message to show when exception fired.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.#ctor(System.Exception)">
+             <summary>
+            constructor.
+             </summary>
+             <param name="innerExc">inner exeption.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.#ctor(System.String)">
+             <summary>
+            constructor.
+             </summary>
+             <param name="message">message to show.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.#ctor(System.String,System.Exception)">
+             <summary>
+            constructor.
+             </summary>
+             <param name="message">message to show.</param>
+             <param name="innerExc">inner exception.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Exceptions.MimeHeadPartMissException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+             <summary>
+            constructor.
+             </summary>
+             <param name="info">info.</param>
+             <param name="context">context.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.MIMEDocumentHeader">
+            <summary>
+            class to store collection of document attributes. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader">
+            <summary>
+            Base header class. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEHeader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeader.Item(System.String)">
+            <summary>
+            Get value of header attribute
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeader.Item(System.String,System.String)">
+            <summary>
+            Get value of header attribute
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeader.Collection">
+            <summary>
+            get collection of attributes
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.m_hash">
+            <summary>
+            hash table to store attributes values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.m_subtypes">
+            <summary>
+            hash table to store attributes subtypes values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.m_collection">
+            <summary>
+            Collection to store atteributes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.Save(System.IO.Stream)">
+            <summary>
+            Save MIME document to stream.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.Item(System.String)">
+            <summary>
+            Get value of header attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.Item(System.String,System.String)">
+            <summary>
+            Get value of header attribute subtype.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEHeader.Collection">
+            <summary>
+            get attributes collection.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEDocumentHeader">
+            <summary>
+            MIME document header.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocumentHeader.MIMEVersion">
+            <summary>
+            gets version of MIME implementation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocumentHeader.ContentType">
+            <summary>
+            Allow to specify which data stored in MIME part.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocumentHeader.XAttributes">
+            <summary>
+            user custom attributes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.MIMEDocumentHeader.m_sBoundary">
+            <summary>
+            used to store first part boundary.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.MIMEDocumentHeader.m_xAttrib">
+            <summary>
+            collection of extender attrtibutes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.MIMEDocumentHeader.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.MIMEDocumentHeader.Save(System.IO.Stream)">
+            <summary>
+            method to save current header.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.MIMEDocumentHeader.CreateHeader">
+            <summary>
+            Creates default MIME document header.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.MIMEDocumentHeader.CreateMailHeader">
+            <summary>
+            Adding information to header used in mail messages.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.From">
+            <summary>
+            gets/sets mail header attributes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.To">
+            <summary>
+            gets/sets mail header attributes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.Subject">
+            <summary>
+            gets/sets mail header attributes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.Date">
+            <summary>
+            gets/sets mail header attributes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.MIMEVersion">
+            <summary>
+            returns MIME standart version.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.Boundary">
+            <summary>
+            propertu to get\set first part header value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.ContentType">
+            <summary>
+            property to get contentType attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.MIMEDocumentHeader.XAttributes">
+            <summary>
+            property to get extender attributes.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader">
+            <summary>
+            current header contains standard attributes for
+            attachemrnt part. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader">
+            <summary>
+             base header class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartHeader">
+            <summary>
+            MIME Part header
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartHeader.ContentType">
+            <summary>
+            Allow to specify which data stored in MIME part
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartHeader.TransferEncoding">
+            <summary>
+            Which encoding used for MIME part data transafering
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.m_attribContType">
+            <summary>
+            attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.m_attribTransEnc">
+            <summary>
+            attribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.#ctor">
+            <summary>
+            Method to create ordinary part header.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.Save(System.IO.Stream)">
+            <summary>
+            Save MIME part header to stream.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.ContentType">
+            <summary>
+            Allow to specify which data stored in MIME part.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader.TransferEncoding">
+            <summary>
+            Which encoding used for MIME part data transafering.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartAttachmentHeader">
+            <summary>
+            Extended version of Mime part header, mostly used for attachments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartAttachmentHeader.Disposition">
+            <summary>
+            additional attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartAttachmentHeader.FileName">
+            <summary>
+            fileName.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader.m_attribContDisposition">
+            <summary>
+            new attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader.m_sFileName">
+            <summary>
+            to store file name.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader.#ctor">
+            <summary>
+            (Default constructor) Setting attribute values .
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader.Disposition">
+            <summary>
+            retunrs Content disposition attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartAttachHeader.FileName">
+            <summary>
+            property to specif.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartDigestHeader">
+            <summary>
+            current header contains standard attributes for digest part.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartDigestHeader.#ctor">
+            <summary>
+            constructor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartDigestHeader.CreateHeader">
+            <summary>
+            Create header.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader">
+            <summary>
+             current header contains 
+            standart attributes for
+            embeded part.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartEmbedHeader">
+            <summary>
+            Header for embedded objects.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartEmbedHeader.ContentId">
+            <summary>
+            additional attribute for enbedded part.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.DEF_LOCAL">
+            <summary>
+            part of cid code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.m_attribContentId">
+            <summary>
+            attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.m_fileName">
+            <summary>
+            to store name of file.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.CreateCid">
+            <summary>
+            method to create cid code.
+            </summary>
+            <returns>cid code.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.ContentId">
+            <summary>
+            returns contentLocation attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartEmbedHeader.FileName">
+            <summary>
+            returns file name.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartRedirectHeader">
+            <summary>
+            Current header contains standard attributes for redirect part.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartRedirectHeader">
+            <summary>
+            MIME part header for rich text content.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartRedirectHeader.Boundary">
+            <summary>.
+            boundary to redirect to .
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartRedirectHeader.m_sBoundary">
+            <summary>
+            to store redirect boundary value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartRedirectHeader.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="boundary"></param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartRedirectHeader.#ctor">
+            <summary>
+            Default parameter.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartRedirectHeader.Boundary">
+            <summary>
+            property to redirect boundary
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartTextHeader">
+            <summary>
+            Current header contains standard attributes for text part.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Headers.MIMEPartTextHeader.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute">
+            <summary>
+            base MIME header attribute class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEHeaderAttribute">
+            <summary>
+            Header attribute 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderAttribute.Name">
+            <summary>
+            Name of attribute
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderAttribute.Value">
+            <summary>
+            Get or Set value of header attribute
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderAttribute.Charset">
+            <summary>
+            encoding value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderAttribute.Encoding">
+            <summary>
+            encoding to use
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.m_sName">
+            <summary>
+            name of attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.m_charset">
+            <summary>
+            Encoding of attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.m_header">
+            <summary>
+            header which contains current attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.m_encoding">
+            <summary>
+            encoding used in writing value of attribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="header">parental header.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.#ctor(Syncfusion.MIME.IMIMEHeader,System.String)">
+            <summary>
+            Constructor specify parent header and attrbiute name
+            </summary>
+            <param name="header">parent reference</param>
+            <param name="name">attribute name</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.WriteValue">
+            <summary>
+            method to write attribute value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.EncodeValue">
+            <summary>
+            method to encode value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.ReformatValue(System.Text.StringBuilder,System.String)">
+            <summary>
+            method to split value if needed.
+            </summary>
+            <param name="builder"> builder to write to.</param>
+            <param name="sValue"> value to write.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.IsASCII(System.String)">
+            <summary>
+            method to check if current character
+            is ascii character.
+            </summary>
+            <returns>if is...</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.CheckCorrect(System.Text.StringBuilder)">
+            <summary>
+            Check if there is separator between
+            name of attribute and its value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Save(System.IO.Stream)">
+            <summary>
+            Save MIME attribute to stream.
+            </summary>
+            <param name="stream">stream to write to</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Name">
+            <summary>
+            Name of attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Value">
+            <summary>
+            Get or Set value of header attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Charset">
+            <summary>
+            gets/sets charset of attribute.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Encoding">
+            <summary>
+            get/set value encoding.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderAttribute.Header">
+            <summary>
+            property to get header.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentDispositionAttribute">
+            <summary>
+            MIMEHeaderContentDisposition attribute 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute">
+            <summary>
+            Header attrbiute class which allow to specify subtypes 
+            supported by attribute.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEHeaderSubTypesAttribute">
+            <summary>
+            Header attribute which supports additional sub-types values
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderSubTypesAttribute.SupportedSubTypes">
+            <summary>
+            Get list of supported sub-typed
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEHeaderSubTypesAttribute.Item(System.String)">
+            <summary>
+            Indexator which allow to read value of specified sub-types
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.m_supportedSubTypes">
+            <summary>
+            list of supported subtypes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="mimeHeader">parental header.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.#ctor(Syncfusion.MIME.IMIMEHeader,System.String)">
+            <summary>
+            Constructor allow to specify parent header and attribute name 
+            in one call
+            </summary>
+            <param name="header">reference on parent object</param>
+            <param name="name">attribute name</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.SetSupportedSubTypes">
+            <summary>
+            Setting list of subtypes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.SupportedSubTypes">
+            <summary>
+            Get list of supported sub-types.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderSubTypesAttribute.Item(System.String)">
+            <summary>
+            Indexator which allow to read value of specified sub-types.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentDispositionAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            constructor.
+            </summary>
+            <param name="mimeHeader">parental header.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentDispositionAttribute.SetSupportedSubTypes">
+            <summary>
+            method to set supported subtypes of current attribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentDispositionAttribute.Save(System.IO.Stream)">
+            <summary>
+            overriden Save method.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentIdAttribute">
+            <summary>
+            MIMEHeaderContentIdAttribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentIdAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            constructor.
+            </summary>
+            <param name="mimeHeader">parental header.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentIdAttribute.Save(System.IO.Stream)">
+            <summary>
+            Specific save method for current attribute.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentTypeAttribute">
+            <summary>
+            MIMEHeaderContentType attribute class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentTypeAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            Default constructor which set attribute name to MIMEConsts.ContentType.
+            </summary>
+            <param name="header">parental header.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentTypeAttribute.#ctor(Syncfusion.MIME.IMIMEHeader,System.String)">
+            <summary>
+            Constructo allow to specify parent header object and attribute name
+            </summary>
+            <param name="header">reference on parent object</param>
+            <param name="name">attribute name</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentTypeAttribute.SetSupportedSubTypes">
+            <summary>
+            setting supported sub attributes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderContentTypeAttribute.Save(System.IO.Stream)">
+            <summary>
+            Specific save method for current attribute.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute">
+            <summary>
+            MIMEHeaderMailAttribute used fom complex attributes with mail addresses.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute.DEF_REGEX_MAIL">
+            <summary>
+            regex to find e-mail adress.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute._regMail">
+            <summary>
+            regex used to find e-mail address.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute.#ctor(Syncfusion.MIME.IMIMEHeader)">
+            <summary>
+            Main Constructor.
+            </summary>
+            <param name="header">header to get hash table.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute.#ctor(Syncfusion.MIME.IMIMEHeader,System.String)">
+            <summary>
+            Constructor allow to specify parent header and attribute name 
+            in one call.
+            </summary>
+            <param name="header">Parent header.</param>
+            <param name="name">attribute name.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute.FindAddress">
+            <summary>
+            extract e-mail address from text.
+            </summary>
+            <returns>e-mail address.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Attributes.MIMEHeaderMailAttribute.Save(System.IO.Stream)">
+            <summary>
+            Save MIME attribute to stream.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.MIMEDocument">
+            <summary>
+            Represents MIME documents.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEDocument">
+            <summary>
+            MIME document interface.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.EmbedData(System.String)">
+            <summary>
+            Add embeded data to document
+            from file.
+            </summary>
+            <param name="filePath">file path</param>
+            <returns>reference on created mime part object</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.EmbedData(System.IO.Stream)">
+            <summary>
+            Add embeded data to document
+            from stream.
+            </summary>
+            <param name="stream">stream to read data from.</param>
+            <returns>generated part.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.GetDigest">
+            <summary>
+            Creates digest document.
+            </summary>
+            <returns>boundary part.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AppendString(System.String)">
+            <summary>
+            appends specified string .
+            </summary>
+            <param name="text">text to append</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AppendText(System.String)">
+            <summary>
+            Appends text from file to MIME document.
+            </summary>
+            <param name="filePath">Path to file.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AppendText(System.String,System.Text.Encoding)">
+            <summary>
+            Appending text to message.
+            </summary>
+            <param name="filePath">Path to file</param>
+            <param name="encoding">Text file encoding.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AppendText(System.IO.Stream)">
+            <summary>
+            Append text to MessagePart in MIME document.
+            </summary>
+            <param name="stream">stream to append.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AttachBinary(System.String)">
+            <summary>
+            Create attachment in MIME document.
+            </summary>
+            <param name="filePath">file to add.</param>
+            <returns>generated part.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.AttachBinary(System.IO.Stream)">
+            <summary>
+            Create attachment in MIME document.
+            </summary>
+            <param name="stream">stream to read from.</param>
+            <returns>generated part</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.ConvertHTML(System.String)">
+            <summary>
+            converting html document 
+            to MIME document.
+            </summary>
+            <param name="fileToLoad">path to HTML file</param>
+            <returns>converted document.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.Reset">
+            <summary>
+            Method to reset current document 
+            to null.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.Save(System.String)">
+            <summary>
+            Save MIME document to file.
+            </summary>
+            <param name="filePath">file path</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.Load(System.String)">
+            <summary>
+            Load MIME document from file.
+            </summary>
+            <param name="filePath">file path</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEDocument.Load(System.IO.Stream)">
+            <summary>
+            Load MIME document from stream.
+            </summary>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocument.Header">
+            <summary>
+            Get reference on header of MIME document.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocument.Parts">
+            <summary>
+            Get collection of MIME document parts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocument.MessagePart">
+            <summary>
+            Get main document's part.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocument.MessageParts">
+            <summary>
+            gets main message parts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEDocument.MixedParts">
+            <summary>
+            Get collection of MIME document parts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_messagePart">
+            <summary>
+            message part of message
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_documentHeader">
+            <summary>
+            header of document
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_partsCollection">
+            <summary>
+            Collection ot store document parts
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_mainCollection">
+            <summary>
+            To store main message in different formats
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_redirectCollection">
+            <summary>
+            Collection to store redirect parts
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_digestPart">
+            <summary>
+            Collection to store digest parts
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_sBoundary">
+            <summary>
+            currently used boundary 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_docEncoding">
+            <summary>
+            Defines document encoding
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEDocument.m_bIsEmbeded">
+            <summary>
+            variable to remrmber if there is
+            embeded file.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.GetAllParts">
+            <summary>
+            method to get all parts of document.
+            </summary>
+            <returns>parts collection.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AddDataToMessage(System.IO.Stream)">
+            <summary>
+            Method used to add data to message part
+            </summary>
+            <param name="stream">stream to read from</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AddDataToMessage(System.Byte[])">
+            <summary>
+            Method used to add data to message part
+            </summary>
+            <param name="inBytes">bytes to write to message data </param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.CheckPartsOrder">
+            <summary>
+            Method to create redirect parts for
+            combined messages
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.SetHeader">
+            <summary>
+            method to set header
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.SaveMessage(System.IO.Stream)">
+            <summary>
+            proper body part saving
+            ( chech if need to save digest )
+            </summary>
+            <param name="stream">stream to write to</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.#ctor">
+            <summary>
+            document constructor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Parse(System.String)">
+            <summary>
+            static method to load document
+            </summary>
+            <param name="fileName">path to file</param>
+            <returns>MIMEDocument</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.ConvertHTML(System.String)">
+            <summary>
+            method to convert html to
+            MIME.
+            </summary>
+            <param name="fileToRead">path to file to convert.</param>
+            <returns>MIME document.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.EmbedData(System.String)">
+            <summary>
+            Method to add embeded data to document
+            from file.
+            </summary>
+            <param name="filePath">path to file.</param>
+            <returns>embedded part interface.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.EmbedData(System.IO.Stream)">
+            <summary>
+            Method to add embeded data to document.
+            from stream
+            </summary>
+            <param name="stream">stream to read from.</param>
+            <returns>embedded part interface.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.GetDigest">
+            <summary>
+            Method to create digest part.
+            </summary>
+            <returns>digest part interface.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AppendText(System.String)">
+            <summary>
+            Method used to appent text to message part from file.
+            </summary>
+            <param name="filePath">path to the file.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AppendText(System.String,System.Text.Encoding)">
+            <summary>
+            Method used to appent text to message part
+             from file with specified encoding.
+            </summary>
+            <param name="filePath">path to file.</param>
+            <param name="encoding">encoding to use in file reading.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AppendText(System.IO.Stream)">
+            <summary>
+            Method used to appent text to message part
+            from stream.
+            </summary>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AppendString(System.String)">
+            <summary>
+            Method used to appent text to message part
+            with string.
+            </summary>
+            <param name="text"> text to append .</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AttachBinary(System.String)">
+            <summary>
+            Method used to attach binary data to document
+            from file
+            </summary>
+            <param name="filePath">path to file</param>
+            <returns>interface of attached part</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.AttachBinary(System.IO.Stream)">
+            <summary>
+            Method used to attach binary data to document
+            from stream.
+            </summary>
+            <param name="stream">stream to read from.</param>
+            <returns>interface of attached part. </returns>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Load(System.String)">
+            <summary>
+            Loads MIME document from file.
+            </summary>
+            <param name="filePath">path to file.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Save(System.String)">
+            <summary>
+            Method to save current document to file.
+            </summary>
+            <param name="filePath">path to file to write.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Load(System.IO.Stream)">
+            <summary>
+            mathod to load document.
+            </summary>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Save(System.IO.StreamWriter)">
+            <summary>
+            Save MIME document to stream.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Save(System.IO.Stream)">
+            <summary>
+            Method to save current document to stream.
+            </summary>
+            <param name="stream">stream to save to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.MIMEDocument.Reset">
+            <summary>
+            Reset document.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.DocumentEncoding">
+            <summary>
+            get/set document encoding
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.MessagePart">
+            <summary>
+            property to get message part
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.MessageParts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.Header">
+            <summary>
+            property to get document header
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.Parts">
+            <summary>
+            property to get parts collection
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.MIMEDocument.MixedParts">
+            <summary>
+            property to get parts collection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding">
+            <summary>
+            enumerator to define data encoding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding.base64">
+            <summary>
+            base 64 encoding required.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding.quotedprintable">
+            <summary>
+            quoted-printable encoding expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding.uuencoding">
+            <summary>
+            unix-unix encoding expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding.binhex">
+            <summary>
+            binhex encoding expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.PartDataEncoding.equivalent">
+            <summary>
+            no encoding.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream">
+            <summary>
+            MIMEStreamClass used to store start and end 
+            position of some data in stream and decode
+            it, when needed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.m_start">
+            <summary>
+            Start porition in stream.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.m_end">
+            <summary>
+            end position in steream.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.m_encoding">
+            <summary>
+            encoding used while reading stream.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.m_stream">
+            <summary>
+            readed stream.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.m_charset">
+            <summary>
+            charset used in QP decoding.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.#ctor(System.IO.Stream)">
+            <summary>
+            constructor.
+            </summary>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Flush">
+            <summary>
+            Cleares all buffers, streams...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            method to perform seek operation.
+            </summary>
+            <param name="offset">offset.</param>
+            <param name="origin">origin</param>
+            <returns>seeked position</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.SetLength(System.Int64)">
+            <summary>
+            sets length of controlled sub stream .
+            </summary>
+            <param name="value">setting length of stream.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            reads controlled sub string.
+            </summary>
+            <param name="buffer">buffre to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            method to write data to the stream.
+            </summary>
+            <param name="buffer">buffre to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.ReadStreamWithEncoding(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            reading data from current stream to byte buffer
+            using specified encoding.
+            </summary>
+            <param name="buffer">buffre to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.DecodeB64(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            method to get decoded bytes.
+            </summary>
+            <param name="buffer">buffer to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.DecodeQP(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+             method to get decoded bytes.
+            </summary>
+            <param name="buffer">buffer to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.DecodeBinHex(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            method to get decoded bytes from
+            binhex ecoded data.
+            </summary>
+            <param name="buffer">buffer to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.DecodeUU(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            method to get decoded bytes
+            from uu encoded data.
+            </summary>
+            <param name="buffer">buffer to write.</param>
+            <param name="offset">offset in buffer to start with.</param>
+            <param name="count">number of bytes to fill.</param>
+            <returns>number of filled bytes.</returns>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.StartPosition">
+            <summary>
+            Start porition in stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.EndPosition">
+            <summary>
+            end position in steream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.DataEncoding">
+            <summary>
+            encoding used while reading stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Charset">
+            <summary>
+            get/set charset of encoded text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.CanRead">
+            <summary>
+            property to check if can read current stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.CanSeek">
+            <summary>
+            property to check if can seek in current stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.CanWrite">
+            <summary>
+            property to check if can write to current stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Length">
+            <summary>
+            property to get length of current stream.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Streams.MIMEDataStream.Position">
+            <summary>
+            gets/sets position of current stream.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser">
+            <summary>
+            MIMEParser class is used to
+            load MIME document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_REGEX_OPTIONS">
+            <summary>
+            Default RegEx checks object's options.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_ATTRIBNAME_REGEX">
+            <summary>
+            regex to determine attribute name
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_REGEX_MAIL">
+            <summary>
+            regex to find e-mail adress.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_TOKENS">
+            <summary>
+            Tokens which consist of a few symbols but have some meaning.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_ATTRIBUTES">
+            <summary>
+            Attribute tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_CONT_TYPE_VAL">
+            <summary>
+            Content type value tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_CONT_TYPE_SUB">
+            <summary>
+            content type sub attributes tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_TRANS_ENC_VAL">
+            <summary>
+            transfer encoding attribute values 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.DEF_RFC_ATTRIB">
+            <summary>
+            attributes to define RFC part
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser._tokensHash">
+            <summary>
+            Special hash which allow quickly to find by token name 
+            corresponding enum value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_valueCharset">
+            <summary>
+            charset of reded value of attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_bSkipBadAttrib">
+            <summary>
+            bool variable to choose to skip 
+            bad params or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_reader">
+            <summary>
+            token stream
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_document">
+            <summary>
+            document to load
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_bIsDigest">
+            <summary>
+            variable to specify parts collection
+            in reading
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_sValue">
+            <summary>
+            variable to store string values
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_stream">
+            <summary>
+            defines stream to work with
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_part">
+            <summary>
+            part to store readed tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_header">
+            <summary>
+            current header to store attributes
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_attribute">
+            <summary>
+            Current attribute
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_parentAttrib">
+            <summary>
+            variable to store parental attribute
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_bIsUserAttrib">
+            <summary>
+            to specify if current part is redirect part
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_attribName">
+            <summary>
+            member to specify sub attribute Name
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_sBoundary">
+            <summary>
+            field to store opening boundary
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_boundary">
+            <summary>
+            part to store digest
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_sOneChartokens">
+            <summary>
+            tspecials for MIME document
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_actions">
+            <summary>
+            array of parser actions.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_mimeStack">
+            <summary>
+            stack to store delegates;
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.m_bSingleDoc">
+            <summary>
+            variblse to remember if current document is single-part document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser._regName">
+            <summary>
+            object used by IsName method.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser._regMail">
+            <summary>
+            regex used to find e-mail address.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.#cctor">
+            <summary>
+            setting values to MIME tags.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ConvertToHash(System.Collections.Hashtable,System.Array,Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags)">
+            <summary>
+            converting MIME tokens to hash table, setting its values.
+            </summary>
+            <param name="hash">hashtable to fill</param>
+            <param name="array">array of parameters to hash</param>
+            <param name="tag">value of parameters</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.#ctor(Syncfusion.MIME.IMIMEDocument,System.String)">
+            <summary>
+            Initializes new object with defined reader and file to read.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.#ctor(Syncfusion.MIME.IMIMEDocument,System.IO.Stream)">
+            <summary>
+            overloaded constructor.
+            </summary>
+            <param name="document">document to write to.</param>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ConfigureParser(Syncfusion.MIME.IMIMEDocument,System.IO.Stream)">
+            <summary>
+            Prepares our parser for work.
+            </summary>
+            <param name="stream">MIME document stream</param>
+            <param name="document">Destination object.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.Load">
+            <summary>
+            Method to start reading document.
+            </summary>
+            <returns>Loaded document</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ProcessReading">
+            <summary>
+            recursive method to parce document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ReadBoundary">
+            <summary>
+            method to read boundary and set new part.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ReadAttribName">
+            <summary>
+            method to read and resolve attribute name.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ReadAttribValue">
+            <summary>
+            Method to read and set attribute value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ReadSubAttribName">
+            <summary>
+            setting and preparing 
+            for reading sub attribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.ReadData">
+            <summary>
+            Reads binary data.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetData">
+            <summary>
+            creating stream for new part, 
+            setting its parameters.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.CheckEncoding">
+            <summary>
+            method to set correct encoding to stream.
+            </summary>
+            <returns>Typed encoding.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetName">
+            <summary>
+            getting string value of name of 
+            attribute.
+            </summary>
+            <returns>name of attribute.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetAttribValue">
+            <summary>
+            method to get value of just read attribute.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetString(System.String)">
+            <summary>
+            reading stream to specified delimiter.
+            </summary>
+            <param name="delimiter">delimiter of string.</param>
+            <returns>value string.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetBoundary">
+            <summary>
+            method to get boundary.
+            </summary>
+            <returns>boundary value.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.FillDelegateArray">
+            <summary>
+            method to fill 
+            delegate array.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.GetComplexAttributeValue">
+            <summary>
+            method to get complex attribute value.
+            </summary>
+            <returns>attribute value</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.Eof">
+            <summary>
+            Checks if we reached end of file.
+            </summary>
+            <returns>if end of file is reached</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.SkipSpaces">
+            <summary>
+             Skips all next WhiteSpaces.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.SkipLines">
+            <summary>
+            method to skip unusefull empty lines
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.SetNewPart(System.String)">
+            <summary>
+            Getting ready to 
+            read neext part.
+            </summary>
+            <param name="boundary">unique boundary</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.SavePart(System.Boolean)">
+            <summary>
+            method to save part.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.IsName(System.String)">
+            <summary>
+            method to check if current string 
+            can be name of attribute.
+            </summary>
+            <param name="name">string to check</param>
+            <returns>if string can be name</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.CheckAttribute(System.String)">
+            <summary>
+            method to check if specified attribute name
+            is known or user defined attribute.
+            </summary>
+            <param name="current">name to check</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.CheckForAddress(System.String)">
+            <summary>
+            method to find e-mail address in attribute field.
+            </summary>
+            <param name="str"> field to check.</param>
+            <returns>finded addresses.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.MIMEParser.SpecifyAttribute">
+            <summary>
+            mathod to create readed attribute.
+            </summary>
+            <returns>created attribute</returns>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.MIMEParser.SkipBadStyles">
+            <summary>
+            Indicates skip bad styles or throw exceptions (skip if True; make exception if False.)
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken">
+            <summary>
+            Enum for noting expected token.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.Bounary">
+            <summary>
+            Parts separator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.AttributeName">
+            <summary>
+            Name of the attribute expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.AttrValue">
+            <summary>
+            Value of the attribute is expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.AttrDelimiter">
+            <summary>
+            Delimiter between attributes is expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.SubAttribute">
+            <summary>
+            SubType attribute expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.Data">
+            <summary>
+            Data part of message expected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEToken.CloseBoundary">
+            <summary>
+            Close part tag expected.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction">
+            <summary>
+            Action expected
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction.Attach">
+            <summary>
+            Attachment part was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction.Embed">
+            <summary>
+            embedded part was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction.Text">
+            <summary>
+            Message part was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction.Digest">
+            <summary>
+            Digest part was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEAction.Redirect">
+            <summary>
+            skip to next boundary.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags">
+            <summary>
+            MIME tags
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags.AttributeName">
+            <summary>
+            attribute name was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags.ContentTypeValues">
+            <summary>
+            Content type attribute value was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags.ContentTypeSubType">
+            <summary>
+            Content type sub attribute was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags.ContentTransferEncodingValues">
+            <summary>
+            content transfer encoding value was read.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMETags.RFCAttributes">
+            <summary>
+            RFCAttribute was read.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEEncoding">
+            <summary>
+            encoding to use
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEEncoding.Base64">
+            <summary>
+            use base64 encoding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.MIMEParser.MIMEEncoding.QuotedPrintable">
+            <summary>
+            use quoted-printable encoding.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.MIMEParser.NextAction">
+            <summary>
+            delegate for next action.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart">
+            <summary>
+            Description for DigestPart - multipart class to store/manage 
+            parts in rfc882 format.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart">
+            <summary>
+            base MIME part class
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPart">
+            <summary>
+            interface description to MIMEpart class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEPart.GetData">
+            <summary>
+            gets parts data.
+            </summary>
+            <returns>data.</returns>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPart.UniqueBoundary">
+            <summary>
+            Unique indetifier used by MIME document parser for part finding.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPart.Header">
+            <summary>
+            Part header which contains additional information about part data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPart.Data">
+            <summary>
+            Get or Set Mime part data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPart.Close">
+            <summary>
+            get/set if current part must close itself.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.BUFFER_ENLARGE">
+            <summary>
+            Give coeficient of convert buffer enlargment.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.BinHexMessage">
+            <summary>
+            message of header of BinHex40 encoded
+            file.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.m_Boundary">
+            <summary>
+            unique part boundary.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.m_header">
+            <summary>
+            part header.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.m_body">
+            <summary>
+            data to transfer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.m_bClose">
+            <summary>
+            if current part must close itself.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.#ctor(Syncfusion.MIME.IMIMEPartHeader,System.String)">
+            <summary>
+            Constructor wich creates part with attach header.
+            </summary>
+            <param name="header">parental header.</param>
+            <param name="boundary">boundary.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.CheckDataType(System.IO.Stream)">
+            <summary>
+            Writing part Data in specified encoding.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.CopyData(System.IO.Stream)">
+            <summary>
+            Copy data.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.ToQuotedPrintable(System.IO.Stream)">
+            <summary>
+            save data in quoted-printable encoding.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.ToUUEncoded(System.IO.Stream)">
+            <summary>
+            save data in uu encoding.
+            </summary>
+            <param name="stream">stream to encode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.ToBinHexEncoding(System.IO.Stream)">
+            <summary>
+            save data in BinHex encoding.
+            </summary>
+            <param name="stream">stream to write to</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.GetData">
+            <summary>
+            method to get part data.
+            </summary>
+            <returns>part data</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.Save(System.IO.Stream)">
+            <summary>
+            Method to save part.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.UniqueBoundary">
+            <summary>
+            gets/sets value of unique part boundary
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.Header">
+            <summary>
+            returns part header
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.Data">
+            <summary>
+            gets/sets part data
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEPart.Close">
+            <summary>
+            get\set if part must close itself
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEBoundaryPart">
+            <summary>
+            collection contains opened parts.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEBoundaryPart.AddDigestPart(System.IO.Stream)">
+            <summary>
+            adding digest part from stream.
+            </summary>
+            <param name="stream">stream to read from.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.IMIMEBoundaryPart.AddDigestPart(System.String)">
+            <summary>
+            addinf digest part from file .
+            </summary>
+            <param name="filePath">file to add.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEBoundaryPart.Parts">
+            <summary>
+            gets collection of digest parts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEBoundaryPart.UniqueBoundary">
+            <summary>
+            get/set global boundary
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.m_partsCollection">
+            <summary>
+            Collection to store parts.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.#ctor(System.String)">
+            <summary>
+            Main Constructor which allow to specify unique boundary.
+            </summary>
+            <param name="boundary">unique boundary.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.AddDigestPart(System.IO.Stream)">
+            <summary>
+            adding digest part from stream.
+            </summary>
+            <param name="stream">stream with digest part.</param>
+            <returns>reference on added part.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.AddDigestPart(System.String)">
+            <summary>
+            add digest part from file into boundary part.
+            </summary>
+            <param name="filePath">path to the file with part.</param>
+            <returns>reference on added part.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.Save(System.IO.Stream)">
+            <summary>
+            saving digest part to stream.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.Parts">
+            <summary>
+            returns collection of the parts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.Header">
+            <summary>
+            returns header of digest part - null.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEBoundaryPart.Data">
+            <summary>
+            returns data of current part - null.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart">
+            <summary>
+            MIMEDigestPart class is used to build digest collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.m_bIsDigest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.#ctor(Syncfusion.MIME.Base.Implementation.Headers.MIMEPartHeader,System.String)">
+            <summary>
+            Constructor which allow to specify header class for part. 
+            </summary>
+            <param name="header">parental header.</param>
+            <param name="boundary">unique boundary.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.#ctor(System.String)">
+            <summary>
+            Main constructor for Digest part.
+            </summary>
+            <param name="boundary">part unique boundary index</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.#ctor(System.String,System.IO.Stream)">
+            <summary>
+            Constructor which allow to create part and set Data stream for it
+            </summary>
+            <param name="boundary">unique boundary part</param>
+            <param name="data">data stream for part</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.Save(System.IO.Stream)">
+            <summary>
+            Specific Save method for current part.
+            </summary>
+            <param name="stream">Stream to write to.</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Implementation.Parts.MIMEDigestPart.IsDigest">
+            <summary>
+            get\set part is digest
+            or used for enother purpose
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Implementation.Parts.MIMERedirectPart">
+            <summary>
+            MIMERedirectPart class used to build redirect system in document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMERedirectPart.#ctor(Syncfusion.MIME.IMIMEPartRedirectHeader,System.String)">
+            <summary>
+            constructor.
+            </summary>
+            <param name="header">parental header.</param>
+            <param name="boundary">boundary.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Implementation.Parts.MIMERedirectPart.Save(System.IO.Stream)">
+            <summary>
+            Specific Save method for current 
+            part.
+            </summary>
+            <param name="stream">stream to write to.</param>
+        </member>
+        <member name="T:Syncfusion.MIME.IMIMEPartTextHeader">
+            <summary>
+            MIME part header for plain text content.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.IMIMEPartTextHeader.CharSet">
+            <summary>
+            charset of value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.IO.BufferedStreamEx">
+            <summary>
+            Special wrapper which allow us to control access to stream
+            and cache data. Our implementation fix bug of NET BufferedStream
+            class: on Position property set class reset internal cache.
+            Our class detect situations when reset of cache not needed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._DefaultBufferSize">
+            <summary>
+            Default buffer allocation size
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._s">
+            <summary>
+            Underlying stream.  Close sets _s to null.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._buffer">
+            <summary>
+            Shared read/write buffer.  Alloc on first use.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._readPos">
+            <summary>
+            Read pointer within shared buffer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._readLen">
+            <summary>
+            Number of bytes read in buffer from _s.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._writePos">
+            <summary>
+            Write pointer within shared buffer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._bufferSize">
+            <summary>
+            Length of internal buffer, if it's allocated.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._streamPos">
+            <summary>
+            Stream position on moment of buffer read
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.BufferedStreamEx._sLength">
+            <summary>
+            cached inner stream length
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.#ctor">
+            <summary>
+            Default constructor. hidden to class users.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.#ctor(System.IO.Stream)">
+            <summary>
+            Initialize class by stream and DefaultBufferSize == 4096.
+            </summary>
+            <param name="stream">Stream which our class must wrap</param>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.#ctor(System.IO.Stream,System.Int32)">
+            <summary>
+            Initialize class by instance of stream and user defined cache size
+            </summary>
+            <param name="stream">Stream which our class must wrap</param>
+            <param name="bufferSize">User defined cache size</param>
+            <exception cref="T:System.ArgumentException">stream does not support Read and Write operations</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">bufferSize is equel or less of zero</exception>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read data from stream. If data is cached then class will not call wrapped
+            stream and simple returned copy of cached data.
+            </summary>
+            <param name="array">Output buffer</param>
+            <param name="offset">offset in output buffer where data from stream must be placed</param>
+            <param name="count">count of bytes which class must return</param>
+            <returns>quantity of read bytes</returns>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.ReadByte">
+            <summary>
+            Reads a byte from the underlying stream.  Returns the byte cast to an int
+            or -1 if reading from the end of the stream.
+            </summary>
+            <returns>read byte</returns>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Write portion of data into wrapped stream. If data can be placed into
+            cache then it will be there and only on Flush operation data will be
+            saved to wrapped stream.
+            </summary>
+            <param name="array">array containing data </param>
+            <param name="offset">offset to the beginning of the portion of data</param>
+            <param name="count">number of bytes in the portion of data</param>
+            <exception cref="T:System.ArgumentNullException">
+            If array or stream is null
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            If offset or count is less than zero
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If array does not contain required elements count
+            </exception>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.WriteByte(System.Byte)">
+            <summary>
+            Write on byte of information into stream.
+            </summary>
+            <param name="value">Value which must be written</param>
+            <exception cref="T:System.ArgumentNullException">
+            If stream is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If can't write into stream
+            </exception>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Seek operation. On any seek operation not written data from cache will be
+            flushed to wrapped stream. Better use Position property it optimized for
+            cache use.
+            </summary>
+            <param name="offset">New offset of stream</param>
+            <param name="origin">Start point of seek operation</param>
+            <returns>Current position</returns>
+            <exception cref="T:System.ArgumentNullException">
+            If stream is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If can't seek in the stream
+            </exception>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.Close">
+            <summary>
+            Save all data from cache and Close stream.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.FlushRead">
+            <summary>
+            Reading is done by blocks from the file, but someone could read
+            1 byte from the buffer then write.  At that point, the OS's file
+            pointer is out of sync with the stream's position.  All write
+            functions should call this function to preserve the position in the file.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.Flush">
+            <summary>
+            Flush data. reset cache.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            When stream is null
+            </exception>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.FlushWrite">
+            <summary>
+            Writes are buffered.  Anytime the buffer fills up
+            (_writePos + delta > _bufferSize) or the buffer switches to reading
+            and there is dirty data (_writePos > 0), this function must be called.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.BufferedStreamEx.SetLength(System.Int64)">
+            <summary>
+            Set length of wrapped stream
+            </summary>
+            <param name="value">new Length of stream</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            When value is less than zero
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            When stream is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If can't seek or can't write into stream
+            </exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.CanRead">
+            <summary>
+            Indicate can be data readed from wrapped stream.
+            TRUE - data can be readed.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">class instance was disposed</exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.CanWrite">
+            <summary>
+            Indicate can data be written to wrapped stream.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">class instance was disposed</exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.CanSeek">
+            <summary>
+            Indicate does wrapped stream support Seek operations or not
+            </summary>
+            <exception cref="T:System.ArgumentNullException">class instance was disposed</exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.Length">
+            <summary>
+            Get Length of wrapped stream. On property value get class Flush not
+            written to stream data.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">class instance was disposed</exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.Position">
+            <summary>
+            Get current position of stream. Position can be differ then wrapped
+            stream has, because wrapped stream will point on last byte of our
+            cached data. On property set not written data flushed to stream.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">class instance was disposed</exception>
+            <exception cref="T:System.ArgumentException">wrapped stream does not support seek operation</exception>
+        </member>
+        <member name="P:Syncfusion.IO.BufferedStreamEx.BaseStream">
+            <summary>
+            Get reference on stream wrapped by BufferStreamEx
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.Converter">
+            <summary>
+            Class used for converting html files to MIME document
+            with embeded resourses.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.SPACE">
+            <summary>
+            space symbol code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.QUOTATION_MARK">
+            <summary>
+            quotation symbol code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.LESS_THAN_SIGN">
+            <summary>
+            less &lt; symbol code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.EQUALS_SIGN">
+            <summary>
+            equal [=] symbol code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.GREATER_THAN_SIGN">
+            <summary>
+            greater [>] symbol code.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.m_sDirectory">
+            <summary>
+            variable to store working 
+            directory.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Converter.document">
+            <summary>
+            MIME document to fill.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.#ctor(Syncfusion.MIME.IMIMEDocument,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="doc">document to fill</param>
+            <param name="fileToRead">path to HTML file to modify</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.htmlToMhtml(System.IO.Stream)">
+            <summary>
+            Converts the HTML text into MHTML.  Reads image files an puts them
+            into body parts in the MHTML document.
+            </summary>
+            <param name="htmlText">html file</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.GetImageUrls(System.IO.Stream)">
+            <summary>
+            Returns a list of all the image URLs in the HTML text.
+            </summary>
+            <param name="htmlText">html file</param>
+            <returns>list of url's</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.FindImgTag(System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            Returns the position of the start of the string "&lt; img ".  If the
+            search fails, the function returns endPos.
+            </summary>
+            <param name="pos">position in html stream.</param>
+            <param name="endPos">end of stream.</param>
+            <param name="text">html text</param>
+            <returns>position</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.FindTagEnd(System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            Returns the position of the character just past the end of a
+            tag.  If the end of the tag is not found, the function returns
+            endPos.
+            </summary>
+            <param name="pos">position in the stream.</param>
+            <param name="endPos">endposition.</param>
+            <param name="text">HTML data.</param>
+            <returns>position of the character.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.GetImgUrlBegin(System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            Searches within an IMG tag for the URL.  If the method finds the
+            URL, it returns the position of the beginning of the URL.  If
+            the method does not find the URL, it returns endPos.
+            </summary>
+            <param name="pos">position in stream.</param>
+            <param name="endPos">end stream position.</param>
+            <param name="text">html data</param>
+            <returns>position of the beginning of the URL.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.ReplaceImageUrls(System.IO.Stream,System.Collections.Hashtable)">
+            <summary>
+            Replaces all the image URLs in the HTML text with the corresponding
+            "cid:" URL.  Returns the new HTML text.
+            </summary>
+            <param name="text">html data.</param>
+            <param name="cids">table of cid codes.</param>
+            <returns>modified HTML.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.SetWorkingDirectory(System.String)">
+            <summary>
+            changes working directory for 
+            proper resourses loading.
+            </summary>
+            <param name="fileName">file path to get directory</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Converter.RestoreWorkingDirectory">
+            <summary>
+            restore working directory.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.EncodeConsts">
+            <summary>
+            Constants for Encoder class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.DefaultCharset">
+            <summary>
+            defines utf charset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.QPTab">
+            <summary>
+            quoted printable tab sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.QPSpace">
+            <summary>
+            quoted printable space sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.EndLine">
+            <summary>
+            end line sign
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.MaxLineLength">
+            <summary>
+            max string line length.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.DefaultFileName">
+            <summary>
+            default file name, used
+            when user file name is not set.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.AdditionalQPCharacters">
+            <summary>
+            additional qouted printable characters.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.UUEnd">
+            <summary>
+            sign of end of UU encoded part in bytes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeConsts.UUBegin">
+            <summary>
+            sign of start of UU encoded part.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.Encoder">
+            <summary>
+            Class to encode/decode messages in qouted printable and base64 formats.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Encoder.DEF_DECODE">
+            <summary>
+            regex pattern for Hex values detection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Encoder._decodeQp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Encoder._charset">
+            <summary>
+            charset for quote printable encoding
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.Encoder.HexUpperChars">
+            <summary>
+            char array to store hexal digits
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeQP(System.String,System.String)">
+            <summary>
+            encodes message in defined
+            charset to quoted printable format
+            </summary>
+            <returns>
+            quoted printable string
+            </returns>
+            <param name="message"> massage to encode </param>
+            <param name="charset">charset of message</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeQP(System.String)">
+            <summary>
+            encodes message to quoted printable format
+            </summary>
+            <returns>
+            quoted printable string
+            </returns>
+            <param name="message">message to encode </param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.DecodeQP(System.String,System.String)">
+            <summary>
+            decodes message in quoted printable format
+            with define dcharset
+            </summary>
+            <returns>
+            decoded string
+            </returns>
+            <param name="message"> message to dencode </param>
+            <param name="charset">charset to use in decoding</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.DecodeQP(System.String)">
+            <summary>
+            Decodes message from quoted printable
+            format.
+            </summary>
+            <returns>
+            decoded string
+            </returns>
+            <param name="message">message to decode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeBase64(System.IO.Stream)">
+            <summary>
+            encodes stream to base64 string
+            </summary>
+            <returns>
+            encoded stream
+            </returns>
+            <param name="stream">stream to encode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeBase64(System.String)">
+            <summary>
+            encodes string to base64 strin
+            </summary>
+            <returns>
+            encoded string
+            </returns>
+            <param name="message">message to encode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.ToBase64(System.IO.Stream,System.Int32,System.IO.Stream)">
+            <summary>
+            Save data in b64 encoding.
+            </summary>
+            <param name="stream">stream to write to</param>
+            <param name="bufferEnlarge">number to enlarge reading buffer to.</param>
+            <param name="data">data to save.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.DecodeBase64(System.String)">
+            <summary>
+            decodes incomming string from base64 format.
+            </summary>
+            <returns>
+            decoded string
+            </returns>
+            <param name="message">message to decode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.UUEncode(System.String,System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to encode data to UU encoding and write it to stream.
+            </summary>
+            <param name="fileName">name of file to encode.</param>
+            <param name="stream">file</param>
+            <param name="streamToWrite">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.UUDecode(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to decode UU encodd file.
+            </summary>
+            <param name="reader">stream to decode data from.</param>
+            <param name="writer">stream to write.</param>
+            <returns>name of decoded file</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeBinHex(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to encode data to BinHex format
+            and write it to stream.
+            </summary>
+            <param name="stream">stream contains data data to encode.</param>
+            <param name="toWrite">stream to write to.</param>
+            <returns>number of written bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.DecodeBinHex(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to decode BinHex data.
+            </summary>
+            <param name="reader">data to decode.</param>
+            <param name="writer">stream to write decoded data.</param>
+            <returns>number of decoded bytes.</returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.InternalDecodeQP(System.String,System.Text.Encoding)">
+            <summary>
+            internal decode method.
+            </summary>
+            <returns>decoded string.</returns>
+            <param name="message"> message to decode .</param>
+            <param name="encoding">encoding of string to use.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.InternalEncodeQP(System.String,System.Text.Encoding)">
+            <summary>
+            internal qp encoder.
+            </summary>
+            <returns>
+            encoded stream.
+            </returns>
+            <param name="message">message to encode.</param>
+            <param name="encoding">encoding to use.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.EncodeQPSymbol(System.Char)">
+            <summary>
+            method to encode puoted printable symbol.
+            </summary>
+            <returns>
+            encoded symbol.
+            </returns>
+            <param name="symbol">symbol to encode.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.Encoder.IsQuotedPrintable(System.Char)">
+            <summary>
+            Checks whether symbol must be encoded.
+            </summary>
+            <returns>
+            true if char is in quoted printable format
+            false if char is not in quoted printable format.
+            </returns>
+            <param name="symbol">symbol to check</param>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Utilities.Encoder.Charset">
+            <summary>
+            Name of Charset for quoted printable encoding.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.EncodeQPHelper">
+            <summary>
+            Helper class for quoted printable encoding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.bodyBuilder">
+            <summary>
+            string builder to store buffered strings.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.lineBuilder">
+            <summary>
+            string builder to store buffered string lines.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.newLine">
+            <summary>
+            bool new line.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.ToString">
+            <summary>
+            converts builder to string.
+            </summary>
+            <returns>
+            string.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.Append(System.String)">
+            <summary>
+            method to appent string.
+            </summary>
+            <param name="str">string to append.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.AppendNewLine">
+            <summary>
+            method to append new line.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.Remove(System.Int32,System.Int32)">
+            <summary>
+            method to remove substring.
+            </summary>
+            <param name="startIndex">start of substring.</param>
+            <param name="length">length of substring.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.FlushLine">
+            <summary>
+            cleares line.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.LineLength">
+            <summary>
+            gets line length.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Utilities.EncodeQPHelper.StartNewLine">
+            <summary>
+            defines if to start new line.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.UUEncoder">
+            <summary>
+            Class with helper methods for
+            uu encoding/decoding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.byteMask">
+            <summary>
+            mesk for bitwize operations
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.uustring">
+            <summary>
+            string to store UU characters.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.uuTable">
+            <summary>
+            table to store uu characters values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.uuDecodeTable">
+            <summary>
+            table to store uu value characters.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.m_stream">
+            <summary>
+            stream to write encoded data
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.m_sFileName">
+            <summary>
+            store file name to encode
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UUEncoder.m_fileMode">
+            <summary>
+            code of file mode
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.#cctor">
+            <summary>
+            constructor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.EncodeUU(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to initialeze encoding
+            </summary>
+            <param name="stream">stream to read data from.</param>
+            <param name="toWrite">stream to write to.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.DecodeUU(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to initialize decoding.
+            </summary>
+            <param name="stream">stream to read from.</param>
+            <param name="toWrite">stream to write.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.ReadHeader(System.IO.Stream)">
+            <summary>
+            method to read header
+            </summary>
+            <param name="stream">stream to read from</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.ReadEnd(System.IO.Stream)">
+            <summary>
+            method to read end tag
+            </summary>
+            <param name="stream">stream to read from</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.Transfer(System.IO.Stream)">
+            <summary>
+            method to encode stream
+            </summary>
+            <param name="stream">stream to encode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.DeTransfer(System.IO.Stream)">
+            <summary>
+            method to decode pure data.
+            </summary>
+            <param name="stream">stream wich buffer to encode</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.TranslateBuffer(System.Byte[])">
+            <summary>
+            method to tramslate
+            encoded bytes
+            </summary>
+            <param name="buffer">byte array to translate</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.SkipLines(System.IO.Stream)">
+            <summary>
+            methor to skip CLR's signs
+            </summary>
+            <param name="stream">stream to read</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UUEncoder.FillHash">
+            <summary>
+            method to fill hash table
+            with char values
+            </summary>
+        </member>
+        <member name="P:Syncfusion.MIME.Base.Utilities.UUEncoder.FileName">
+            <summary>
+            gets/sets name of file to encode
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.BinHexEncoder">
+            <summary>
+            Class with helper methods for
+            BinHex encoding/decoding.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.BinHexEncoder.byteMask">
+            <summary>
+            mesk for bitwize operations
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.BinHexEncoder.m_hexChars">
+            <summary>
+            chars of BinHex alphabet.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.BinHexEncoder.m_hexHash">
+            <summary>
+            hash table to store codes of hex characters.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.BinHexEncoder.m_valHash">
+            <summary>
+            hash table to store hex characters
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.BinHexEncoder.m_stream">
+            <summary>
+            stream to write encoded data
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.#cctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.Encode(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to convert income bytes
+            to BinHex bytes.
+            </summary>
+            <param name="stream">bytes to encode.</param>
+            <param name="toWrite">stream to write encoded data.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.Decode(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            method to decode
+            income bytes from binhex
+            format.
+            </summary>
+            <param name="stream">bytes to decodde.</param>
+            <param name="toWrite">stream to write decoded data.</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.FillHash">
+            <summary>
+            method to fill hashtable vith values of hex characters.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.TranslateBuffer(System.Byte[])">
+            <summary>
+            method to tramslate
+            encoded bytes
+            </summary>
+            <param name="buffer">byte array to translate</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.SkipLines(System.IO.Stream)">
+            <summary>
+            methor to skip CLR's signs
+            </summary>
+            <param name="stream">stream to read</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.ReadHeader(System.IO.Stream)">
+            <summary>
+            method to read header
+            </summary>
+            <param name="stream">stream to read from</param>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.BinHexEncoder.ClearStream(System.IO.Stream)">
+            <summary>
+            method to remove all CRL symbol occurences.
+            </summary>
+            <param name="stream">stream to edit.</param>
+        </member>
+        <member name="T:Syncfusion.IO.NewLineStyle">
+            <summary>
+            Represents new line in different OS
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.NewLineStyle.Windows">
+            <summary>
+            \r\n.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.NewLineStyle.Mac">
+            <summary>
+            \r.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.NewLineStyle.Unix">
+            <summary>
+            \n\r
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.NewLineStyle.Control">
+            <summary>
+            \n
+            </summary>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream">
+            <summary>
+            Stream which return and write data as string tokens into/from file.
+            Stream support encoding and data buffering.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.DEF_BUFFER_SIZE">
+            <summary>
+            Stream buffer used for optimizing speed of read/write operations
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.DEF_FAST_SEARCH">
+            <summary>
+            Buffer size used for line counting and searching
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.DEF_READ_CHAR_BUFFER_SIZE">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.DEF_TOKEN_SPLITS">
+            <summary>
+            characters which delimit tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.DEF_MULTI_TOKEN_SPLIT">
+            <summary>
+            Array of atomic tokens which can takes more then one symbol
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream._preambles">
+            <summary>
+            Known to us preambles of encodings
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream._encodings">
+            <summary>
+            Known to us encodings
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_iSkippedBytes">
+            <summary>
+            Count of bytes in the beginning of the stream, that must be skipped. (Preambula)
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_OneSorted">
+            <summary>
+            Array of sorted split chars - used by BinarySearch method
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_TokenBuffer">
+            <summary>
+            Temporary storage for token extracting. Used beacus it does not
+            reallocated on each string set...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_MultiSorted">
+            <summary>
+            array of multi-symbols tokens
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_encoding">
+            <summary>
+            Encoding used for read and write operations
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_multiFirst">
+            <summary>
+            Hash which helps detect multi-symbols tokens spliters
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_buffer">
+            <summary>
+            Buffer stream... can be simply replaced by this reference
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_strEndOfLine">
+            <summary>
+            New line splitter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_style">
+            <summary>
+            Storage of EndLineStyle property
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_maxMultiLen">
+            <summary>
+            Storage of MaxMultiTokenLength property
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_minMultiLen">
+            <summary>
+            Storage of MinMultiTokenLength property
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_bCaseSensitive">
+            <summary>
+            Indicate is stream extract multichar token in case sensitive
+            or insensitive mode
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_bControlStream">
+            <summary>
+            If value set to true value then class has rights to dispose m_buffer
+            variable, otherwise Internal stream does not belong to class and must
+            be free by user
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_stack">
+            <summary>
+            Stack used for multichar token extract operations
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_readCharBuffer">
+            <summary>
+            This buffer used as temporary for extracting chars from source stream
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_bPeekLine">
+            <summary>
+            bool defines if line is in cache
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_strPeekLine">
+            <summary>
+            variable store token extracted from stream by peekline operation
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_chPeekChar">
+            <summary>
+            variable store extracted from stream char on peek operation
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_bPeekChar">
+            <summary>
+            True - cache contains some data, otherwise false
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_strPeekToken">
+            <summary>
+            varaiable store token extracted from stream by Peek operation
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.m_bPeekToken">
+            <summary>
+            True - cache contains some data, otherwise false
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.GetEnumerator">
+            <summary>
+            Method return enumerator which give us stream data by tokens
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#cctor">
+            <summary>
+            Sort encoding and preable only once.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.String)">
+            <summary>
+            Constructor must received a file name and try to open it
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.String,System.IO.FileMode)">
+            <summary>
+            constructor allow to control mode of file open operation
+            </summary>
+            <param name="fileName"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess)">
+            <summary>
+            Constructor allow to control File open mode and access flags
+            </summary>
+            <param name="fileName">File name</param>
+            <param name="mode">A FileMode constant that determines how to open or create the file. </param>
+            <param name="access">A FileAccess constant that determines how the file can be
+            accessed by the TokenStream object. This gets the CanRead and CanWrite properties
+            of the FileStream object. CanSeek is true if path specifies a disk file</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>
+            construct allow to override file mode, access and share flags
+            </summary>
+            <param name="fileName">File name</param>
+            <param name="mode">A FileMode constant that determines how to open or create the file. </param>
+            <param name="access">A FileAccess constant that determines how the file can be
+            accessed by the TokenStream object. This gets the CanRead and CanWrite properties
+            of the FileStream object. CanSeek is true if path specifies a disk file</param>
+            <param name="share">A FileShare constant that determines how the file will be shared
+            by processes</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)">
+            <summary>
+            Open stream. Constructor allow to specify parameter of stream open
+            </summary>
+            <param name="fileName">File name</param>
+            <param name="mode">A FileMode constant that determines how to open or create the file. </param>
+            <param name="access">A FileAccess constant that determines how the file can be
+            accessed by the TokenStream object. This gets the CanRead and CanWrite properties
+            of the FileStream object. CanSeek is true if path specifies a disk file</param>
+            <param name="share">A FileShare constant that determines how the file will be shared
+            by processes</param>
+            <param name="bufferSize">size of internal buffer used for read/write operations
+            optimizations</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream)">
+            <summary>
+            Constructor, initializes new object
+            </summary>
+            <param name="input">Input data Stream</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+            Create Token stream from other stream.
+            encoding of input stream class try to detected automaticaly.
+            </summary>
+            <param name="input">source stream</param>
+            <param name="controlStream">True - if TokenStream instance must close input stream on
+            own Close, otherwise false</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Create Token stream from other stream with specified by user encoding
+            </summary>
+            <param name="input">input stream</param>
+            <param name="encoding">If encoding of input stream known then you can
+            specify it, otherwise send null value for auto-detection</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)">
+            <summary>
+            Create Token stream from other stream with specified by user encoding.
+            Constructor help to specify must class control input stream or not
+            </summary>
+            <param name="input">input strea</param>
+            <param name="encoding">If encoding of input stream known then you can
+            specify it, otherwise send null value for auto-detection</param>
+            <param name="controlStream">True - if TokenStream instance must close input stream on
+            own Close, otherwise false</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream,System.Boolean,System.Int32)">
+            <summary>
+            Constructor, initializes new object
+            encoding of input stream class try to detected automaticaly.
+            </summary>
+            <param name="input">Input data Stream</param>
+            <param name="controlStream">True - if TokenStream instance must close input stream on
+            own Close, otherwise false</param>
+            <param name="bufferSize">Size of the Stream</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32)">
+            <summary>
+            Constructor, initializes new object
+            </summary>
+            <param name="input">Input data Stream</param>
+            <param name="encoding">If encoding of input stream known then you can
+            specify it, otherwise send null value for auto-detection</param>
+            <param name="controlStream">True - if TokenStream instance must close input stream on
+            own Close, otherwise false</param>
+            <param name="bufferSize">Size of the Stream</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.FromString(System.String)">
+            <summary>
+            Initializes TokenStream from string input
+            </summary>
+            <param name="buffer">String with input data</param>
+            <returns>TokenStream Object</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Dispose">
+            <summary>
+            Free resources of Token stream class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes data into Stream
+            </summary>
+            <param name="buffer">Data which will be writing</param>
+            <param name="offset">Start Position</param>
+            <param name="count">Number of Symbols</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Peek">
+            <summary>
+            Peek one byte from stream
+            </summary>
+            <returns>-1 if end of stream reached, otherwise one byte from stream</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.PeekChar">
+            <summary>
+            Method extract one char from stream
+            </summary>
+            <returns>-1 if end of stream, otherwise integer value of char</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.PeekToken">
+            <summary>
+            Peek Token from the Stream
+            </summary>
+            <returns>string.Empty or null if end of stream, otherwise extracted token</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.PeekLine">
+            <summary>
+            peek line from the stream
+            </summary>
+            <returns>Exracted token</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ReadLine">
+            <summary>
+            read single line
+            </summary>
+            <returns>String.Empty if end of stream reached, otherwise line from file</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Read">
+            <summary>
+            Reads one byte from stream
+            </summary>
+            <returns>-1 if end of stream reached, otherwise one byte from stream</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ReadChar">
+            <summary>
+            Read one char from stream and shift position of stream to next char
+            </summary>
+            <returns>-1 if end of stream, otherwise integer value of char</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.SkipLine">
+            <summary>
+            Moves current position in the stream to the next line
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ReadToken">
+            <summary>
+            Read one token from stream
+            </summary>
+            <returns>null if end of stream reached, otherwise token string</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ReadTokens(System.String[],System.Int32,System.Int32)">
+            <summary>
+            Read mutliple tokens from stream into array
+            </summary>
+            <param name="buffer">array where extracted tokens must be placed</param>
+            <param name="position">start position in array</param>
+            <param name="length">quantity of tokens to extract</param>
+            <returns>quantity of extracted tokens</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Read(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Reads data from the Stream
+            </summary>
+            <param name="buffer">Source Stream</param>
+            <param name="offset">Start position</param>
+            <param name="count">Number of symbols</param>
+            <returns>number of extracted charecters</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads data from the Stream
+            </summary>
+            <param name="buffer">Input Stream</param>
+            <param name="offset">Start Position</param>
+            <param name="count">Number of Symbols</param>
+            <returns>number of extracted bytes</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.IsSplitTokenChar(System.Char)">
+            <summary>
+            Check does char belong to one symbols tokens separators or not
+            </summary>
+            <param name="ch">char to test</param>
+            <returns>true - if char belong to split chars, otherwise false</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.GetMultiToken(System.Char[],System.String@)">
+            <summary>
+            Method check charecter from array for multi-symbols tokens and return
+            quantity of used cherecters from array for token, also it return token.
+            In case when nothing found return -1. Method try to find longest token
+            from list.
+            </summary>
+            <param name="ch">chars to check</param>
+            <param name="token">found token</param>
+            <returns>Used chars from input array, otherwise -1</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ConvertToLinePosition(System.Int64,System.Int32@,System.Int32@)">
+            <summary>
+            Method convert offset to Line number and position in line
+            </summary>
+            <param name="offset">Offset which must be converted to line and position values</param>
+            <param name="line">line part of offset</param>
+            <param name="position">position part of offset</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.GetNewLineString(Syncfusion.IO.NewLineStyle)">
+            <summary>
+            Method convert enumeration to it string representation
+            </summary>
+            <param name="value">value to convert</param>
+            <returns>end line string</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.DetectFileNewLineStyle">
+            <summary>
+            Method check file and try to detect which line end code is used in file
+            </summary>
+            <returns>in case of error NewLineStyle.Windows style returned</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.DetectFileEncoding">
+            <summary>
+            Method try to detect file encoding
+            </summary>
+            <returns>Detect file encoding by preambles</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.CompareArrays(System.Byte[],System.Byte[])">
+            <summary>
+            Method compare two arrays and return result of comapring
+            </summary>
+            <param name="source">source array</param>
+            <param name="preamble">array with preambles symbols</param>
+            <returns>0 - they are identical, -1 - source array less then
+            preamble array</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Close">
+            <summary>
+            Close current file
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Flush">
+            <summary>
+            Flush changes from internal buffers to source streams
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Sets position withing the stream
+            </summary>
+            <param name="offset">Start position</param>
+            <param name="origin">indicating the reference point used to obtain the new position</param>
+            <returns>new positions in stream</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.SeekOnTokenLength(System.String,System.Boolean,System.IO.SeekOrigin)">
+            <summary>
+            Sets the position withing the Stream
+            </summary>
+            <param name="token">Token</param>
+            <param name="origin">indicating the reference point used to obtain the new position</param>
+            <param name="bBack">bool bBack</param>
+            <returns>new position in stream</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.SetLength(System.Int64)">
+            <summary>
+            Sets Length in the Stream
+            </summary>
+            <param name="value">Length of the Stream</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.GetLinesCount(System.Int64,System.Int64)">
+            <summary>
+            Calculates count of lines between to positions in the file
+            </summary>
+            <param name="startPos">Start position for calculating</param>
+            <param name="endPos">End position for calculating</param>
+            <returns>Count of lines</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.BuildFastCharTree(System.Collections.Hashtable,System.String[])">
+            <summary>
+            Method create tree ob FastChar objects which allow to search faster
+            any word from stream by chars. '\uffff' - symbol indicate end of string
+            from source array.
+            </summary>
+            <param name="source">hash table which will store FastChar's objects</param>
+            <param name="value">array of strings</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.BuildFastCharTreeEx(System.Collections.Hashtable,System.String[])">
+            <summary>
+            Method create tree ob FastChar objects which allow to search faster
+            any word from stream by chars. '\uffff' - symbol indicate end of string
+            from source array. Alternative method of FastChar tree building.
+            </summary>
+            <param name="source">hahs table which will store FastChar's objects</param>
+            <param name="value">array of strings</param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.GetFastChar(System.Char)">
+            <summary>
+            According to CaseSensitive property value return case sensitive or
+            case insensitive FastChar class instance.
+            </summary>
+            <param name="ch">Init new instance by char</param>
+            <returns>Reference on new instance of FastChar class</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.CalculateLineCount(System.String)">
+            <summary>
+            Calculate lines in stream
+            </summary>
+            <returns>Return total lines count in file</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.CalculateLineCount(System.String,System.Int64,System.Int32@)">
+            <summary>
+            Calculate lines in stream till specified positon
+            </summary>
+            <param name="endOfLine">string which interpreted as end of line</param>
+            <param name="tillOffset">make calculations till specified offset</param>
+            <param name="position">return position part of calculation</param>
+            <returns>lines quantity in area from current Position tillOffset vaue</returns>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ReadLineInternal(System.String,System.Int64,System.Int32@,Syncfusion.IO.TokenStream.ReadTillEndOfLine)">
+            <summary>
+            
+            </summary>
+            <param name="endOfLine">string which interpreted as end of line</param>
+            <param name="tillOffset">make calculations till specified offset</param>
+            <param name="position">return position part of calculation</param>
+            <param name="action"></param>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.MaxMultiTokenLength">
+            <summary>
+            Get maximum size of multi symbols token
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.MinMultiTokenLength">
+            <summary>
+            Get minimum size of multi symbols token
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.OneCharTokens">
+            <summary>
+            Get or set array of charecters which can split tokens in stream.
+            Each symbol from this array will be returned by Stream as token
+            with one char, for more complex constructions must be used
+            MultiCharTokens property values.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.MultiCharTokens">
+            <summary>
+            Get or set multi-symbols atomic tokens. This property can used by
+            top-level abstractions for extracting special lexems, like: ++, --,
+            +=, -=, !=, ==, *= and etc.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.CaseSensitive">
+            <summary>
+            Get or set does MultiCharTokens case sensitive or not.
+            Default is case sensitive - TRUE.
+            This property greatly reduce performance of TokenStream class
+            that is use it only where it realy needed
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.Encoding">
+            <summary>
+            Encoding used for file reading
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.Position">
+            <summary>
+            get or set position in stream
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.CanSeek">
+            <summary>
+            If TokenStream can Seek
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.CanRead">
+            <summary>
+            If TokenStream can Read
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.CanWrite">
+            <summary>
+            If TokenStream can Write
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.Length">
+            <summary>
+            Number of symbols in  our Stream
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.NewLine">
+            <summary>
+            On end of line string update recalculate lines in stream
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.EndLineStyle">
+            <summary>
+            Gets or Sets End line style ( For different OS )
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.SkipBytes">
+            <summary>
+            GET count of skipped bytes at the beginning of the file.
+            Skipped bytes - size of the preambula for encoding.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.StreamTokenEnum">
+            <summary>
+            Class implement enumerator which use own algorithm for extracting
+            data from input stream... Algorithm is a little faster then used in
+            TokenStream class, but it does not support multi-symbols tokens splitter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.StreamTokenEnum.m_parent">
+            <summary>
+            Parent TokenStream
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.StreamTokenEnum.m_lPosition">
+            <summary>
+            Current Position Of Reading
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.#ctor">
+            <summary>
+            Empty Constructor
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.Finalize">
+            <summary>
+            Destructor. Disposes all resources
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.#ctor(Syncfusion.IO.TokenStream)">
+            <summary>
+            Let Him Know About Parent
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.Dispose">
+            <summary>
+            Disposes all resources
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.Reset">
+             <summary>
+            At the Beginning Of Enumeration Clear The Buffer
+             </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.StreamTokenEnum.MoveNext">
+            <summary>
+            NOTE : newline - is one token
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.StreamTokenEnum.Current">
+            <summary>
+            Get current token
+            </summary>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.FastChar">
+            <summary>
+            This class used for multichars tokens search operations. Class hold
+            case sensitive information.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.FastChar.m_ch">
+            <summary>
+            Current char from the Stream
+            </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.FastChar.m_bHasEnd">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Syncfusion.IO.TokenStream.FastChar.m_subchars">
+            <summary>
+            Holds the rest of chars in the word
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.FastChar.#ctor">
+            <summary>
+            Default constructor diasbled for end user
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.FastChar.#ctor(System.Char)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="ch"></param>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.FastChar.#ctor(System.Char,System.Collections.IDictionary)">
+            <summary>
+            Constructor for inheritors
+            </summary>
+            <param name="ch">char</param>
+            <param name="dict">Collection for sub-chars</param>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.FastChar.Char">
+            <summary>
+            Returns one char form the stream
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.FastChar.HasEnd">
+            <summary>
+            True indicate that SubChars collection contains string end symbol '\uffff'
+            </summary>
+        </member>
+        <member name="P:Syncfusion.IO.TokenStream.FastChar.SubChars">
+            <summary>
+            Returns sub-chars ( the rest of chars in the word )
+            </summary>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.FastInsensChar">
+            <summary>
+            This class used for multi-symbols tokens search operation. Class hold
+            case insensitive information.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.FastInsensChar.#ctor(System.Char)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="ch">character.</param>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.CaseInsensCharProvider">
+            <summary>
+            Fix Microsoft bug for Case insensitive types... Microsoft provide only
+            case insensitive hash provider for strings... chars by itself not supported.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.CaseInsensCharProvider.GetHashCode(System.Object)">
+            <summary>
+            Method calculate hash code for char
+            </summary>
+            <param name="obj">Object which hash must be calculated</param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.CaseInsensCharComparer">
+            <summary>
+            Class provide functionality for comparing two chars... Class fix Microsoft
+            bug: case insensitive help provided only for strings...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.CaseInsensCharComparer.Compare(System.Object,System.Object)">
+            <summary>
+            Method compare too chars by it value - case insensitive
+            </summary>
+            <param name="x">first value</param>
+            <param name="y">second value</param>
+            <returns>0 - if equel, -1 if x less y, 1 if x greater y</returns>
+        </member>
+        <member name="T:Syncfusion.IO.TokenStream.ArrayLengthComparer">
+            <summary>
+            Class helps us to sort arrays by Length property value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.IO.TokenStream.ArrayLengthComparer.Compare(System.Object,System.Object)">
+            <summary>
+            Method compare two Array classes by Length property values
+            </summary>
+            <param name="x">first parameter</param>
+            <param name="y">second parameter</param>
+            <returns>0 - if equel, -1 if x less y, 1 if x greater y</returns>
+        </member>
+        <member name="T:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen._uniqueCheck">
+            <summary></summary>
+        </member>
+        <member name="F:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen._rnd">
+            <summary></summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen.CreateBoundary">
+            <summary>
+            Method to generate unique boundary value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.MIME.Base.Utilities.UniqueBoundaryGen.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.KnownCharsets">
+            <summary>
+            Determines charsets used in MIME document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.KnownCharsets.Koi8R">
+            <summary>
+            koi8 r.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.KnownCharsets.Koi8U">
+            <summary>
+            koi8 u.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.KnownCharsets.Latin1">
+            <summary>
+            latin1.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.KnownCharsets.Utf8">
+            <summary>
+            utf-8.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.KnownCharsets.Unicode">
+            <summary>
+            Unicode.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.MIMEConsts">
+            <summary>
+            Text constants used in MIME document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Version">
+            <summary>
+            Determines version of MIME standart.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.VerValue">
+            <summary>
+            tag to define value of MIME implementation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentType">
+            <summary>
+            Name of ContentType attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.MultipartMessage">
+            <summary>
+            Message following MIME header in multi-part document..
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Separator">
+            <summary>
+            Separator used to open and close MIME parts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Extend">
+            <summary>
+            tag wich determines that specified
+            attribute is extended.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.NewLine">
+            <summary>
+            new line sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Space">
+            <summary>
+            Space
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.OpenEncoded">
+            <summary>
+            tag to defing start of encoded
+            attribute value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.CloseEncoded">
+            <summary>
+            tag to define end of encoded
+            attribute value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.B64Sign">
+            <summary>
+            B64.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.IsAs">
+            <summary>
+            ["] sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentTransferEncoding">
+            <summary>
+            Name of Contenttransferencoding attribute
+            used to specify encoding of current data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentLocation">
+            <summary>
+            Name of Content Location attribute
+            used to specify location of current .
+            content
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentId">
+            <summary>
+            tag to identify data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentDisposition">
+            <summary>
+            Name of ContentDisposition attribute
+            used to specify status of current 
+            data in document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ContentDescription">
+            <summary>
+            name of attribute to describe 
+            content of following data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.BufferLength">
+            <summary>
+            Specifies length of buffer used to encode data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Bytes8k">
+            <summary>
+            buffer length.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.Base64StringTrim">
+            <summary>
+            length of base64 string line.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.ValueDelimiter">
+            <summary>
+            tag separates attribute name and it's value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.DataEnlarger">
+            <summary>
+            enlarger for reading b64 string.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.MIMEConsts.NewLineBytes">
+            <summary>
+            Unicode array which represents NewLine symbols.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.ContentTypeValues">
+            <summary>
+            Content type attribute values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MultipartAlternative">
+            <summary>
+            multipart/alternative data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MultipartRelated">
+            <summary>
+            multipart/related data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MultipartMixed">
+            <summary>
+            following document contains independent parts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MultipartDigest">
+            <summary>
+            tag to define digest document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MessageRfc822">
+            <summary>
+            tag to define digest part.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.TextHtml">
+            <summary>
+            following data is text in HTML format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.TextPlain">
+            <summary>
+            following data is simlpe ASCII text without formatting.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.ImageGif">
+            <summary>
+            following data is image in gif format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.ImageJpeg">
+            <summary>
+            following data is image in jpeg format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.Application">
+            <summary>
+            following data is application.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.ApplicationPKCS7Mime">
+            <summary>
+            s-mime type,(signedData, envelopedData
+            degenerate signedData, "certs-only" message).
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.ApplicationPKCS7Signature">
+            <summary>
+            s-mime type, specifies current part as part with digital signature.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.ApplicationPKCS10">
+            <summary>
+            s-mime type, specifies curent data as file in p10 format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.BinHex">
+            <summary>
+            repesents data encoded in binhex format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeValues.MultipartSigned">
+            <summary>
+            s-mime type, means that current part is digitally signed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.ContentTypeSubtype">
+            <summary>
+            Names of Content type attribute subtypes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeSubtype.Type">
+            <summary>
+            type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeSubtype.Buond">
+            <summary>
+            Bound.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeSubtype.Charset">
+            <summary>
+            Charset.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeSubtype.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTypeSubtype.SMime">
+            <summary>
+            smime-type.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.ContentTransferEncodingValues">
+            <summary>
+            Values of ContentTransferEncoding attribute.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTransferEncodingValues.UuEncode">
+            <summary>
+            specifies data encoding as uu encoding
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTransferEncodingValues.QuotedPrintable">
+            <summary>
+            specifies data encoding as quoted printable.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTransferEncodingValues.Base64">
+            <summary>
+            specifies data encoding as base 64.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTransferEncodingValues.Bit7">
+            <summary>
+            specifies data encoding as 7 bit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentTransferEncodingValues.BinHex">
+            <summary>
+            specifies data encoding as BinHex4.0
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.ContentDispositionValue">
+            <summary>
+            ContentDisposition attribute values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentDispositionValue.Attachment">
+            <summary>
+            specifies data as attachment.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.ContentDispositionSubtype">
+            <summary>
+            Names of Content Disposition subtypes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.ContentDispositionSubtype.FileName">
+            <summary>
+            Determines  name/path to file.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.MIME.DocumentAttributes">
+            <summary>
+            Names of mail attributes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.DocumentAttributes.To">
+            <summary>
+            To.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.DocumentAttributes.From">
+            <summary>
+            From.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.DocumentAttributes.Subject">
+            <summary>
+            Subject.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.DocumentAttributes.Date">
+            <summary>
+            Date.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.MIME.DocumentAttributes.Cc">
+            <summary>
+            cc.
+            </summary>
+        </member>
+    </members>
+</doc>
