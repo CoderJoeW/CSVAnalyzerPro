@@ -14,6 +14,7 @@ using System.Threading;
 using System.Reflection;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.GridHelperClasses;
+using CSV_Analyzer_Pro.Core.PluginSystem;
 
 namespace CSV_Analyzer_Pro{
     public partial class Form1 : Form{
@@ -44,6 +45,12 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+            try {
+                PluginLoader loader = new PluginLoader();
+                loader.LoadPlugins();
+            }catch(Exception exc) {
+                Console.WriteLine(string.Format("Plugins couldnt be loaded: {0}", exc.Message));
+            }
             LoadCommands();
         }
 

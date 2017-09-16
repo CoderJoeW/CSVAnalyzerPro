@@ -367,6 +367,10 @@
     <Compile Include="CheckUpdate.Designer.cs">
       <DependentUpon>CheckUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core\PluginSystem\Constants.cs" />
+    <Compile Include="Core\PluginSystem\ExamplePlugin.cs" />
+    <Compile Include="Core\PluginSystem\IPlugin.cs" />
+    <Compile Include="Core\PluginSystem\PluginLoader.cs" />
     <Compile Include="CusDGV.cs">
       <SubType>Component</SubType>
     </Compile>
