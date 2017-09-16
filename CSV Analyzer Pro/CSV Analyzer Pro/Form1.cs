@@ -128,6 +128,7 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void OnColumnHeaderMouseClick(object sender, GridCellClickEventArgs e) {
+            Debug.Write("ColumnHeaderClickEventFired");
             GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
             if (dbg[e.RowIndex, e.ColIndex].CellType == "ColumnHeaderCell") {
                 int index = tabControl1.SelectedIndex;
@@ -150,7 +151,7 @@ namespace CSV_Analyzer_Pro{
 
         private void Model_QueryCellInfo(object sender, Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventArgs e) {
             if (e.Style.CellType != "ColumnHeaderCell" && (e.RowIndex % 2 == 0))
-                e.Style.BackColor = Color.LightPink;
+                e.Style.BackColor = Color.LightCyan;
             else
                 e.Style.BackColor = Color.GhostWhite;
         }
@@ -233,7 +234,7 @@ namespace CSV_Analyzer_Pro{
                 //Get gridview
                 GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
                 //Attach event handler
-                dbg.CellClick += (s, e) => this.OnColumnHeaderMouseClick(s, e);
+                //dbg.CellClick += (s, e) => this.OnColumnHeaderMouseClick(s, e);
                 //Bind data source
                 dbg.DataSource = ds.Tables[index.ToString()];
             }
@@ -255,6 +256,7 @@ namespace CSV_Analyzer_Pro{
             dbg.ExcelLikeCurrentCell = true;
             dbg.Model.Options.SelectionBorderBrush = new SolidBrush(Color.DarkGreen);
             dbg.Model.Options.SelectionBorderThickness = 4;
+            dbg.ListBoxSelectionMode = SelectionMode.None;
             dbg.ShowRowHeaders = false;
             dbg.ThemesEnabled = true;
             dbg.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2007Blue;
@@ -363,9 +365,12 @@ namespace CSV_Analyzer_Pro{
         private void InsertRowNew() {
             int index = tabControl1.SelectedIndex;
 
-            if(index == 0){return;}
+            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+
+            if (index == 0){return;}
 
             ds.Tables[index.ToString()].Rows.Add("");
+            dbg.Refresh();
         }
 
         private void InsertRowAfter() {
@@ -377,8 +382,8 @@ namespace CSV_Analyzer_Pro{
             DataRow dr;
             dr = ds.Tables[tabCIndex.ToString()].NewRow();
             int index = dbg.CurrentCell.RowIndex;
-            Debug.WriteLine("Index: " + index);
             ds.Tables[tabCIndex.ToString()].Rows.InsertAt(dr, index);
+            dbg.Refresh();
         }
 
         private void InsertRowBefore() {
