@@ -2,6 +2,8 @@ Added
 -Multi-Selection
 -Copy and paste multiple rows/columns(starts from selected cell to lower right)
 -Double click column header to sort by column(Asc,Desc)
+-Experimental Plugin code added(Non production ready)
+-Added plugin system
 
 Changed
 -Tables now have a beautifully styled UI
@@ -14,6 +16,8 @@ Fixed
 - Row functions fixed
 
 TODO
+-Create documentation on plugin system
+-Improve plugin system metadata into array structure
 -Rewrite HandleSearch()
 -Fix OnColumnHeaderClick
 -Rewrite sorting code
@@ -25,5 +29,4 @@ TODO
 -Fix thread integration
 -Add edit panel
 -Add context menu on cell right click
--Create plugins system
 -Create plugins store

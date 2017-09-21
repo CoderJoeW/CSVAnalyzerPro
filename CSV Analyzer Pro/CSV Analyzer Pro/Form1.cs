@@ -19,6 +19,8 @@ using CSV_Analyzer_Pro.Core.PluginSystem;
 namespace CSV_Analyzer_Pro{
     public partial class Form1 : Form{
         #region Globals
+        PluginLoader loader = new PluginLoader();
+
         DataSet ds = new DataSet();
 
         BackgroundWorker worker;
@@ -26,6 +28,8 @@ namespace CSV_Analyzer_Pro{
         string path = "";
 
         bool _exiting = false;
+
+        string Filters = "csv files (*.csv)|*.csv";
         #endregion
 
         #region Initializing
@@ -46,7 +50,6 @@ namespace CSV_Analyzer_Pro{
 
         private void Form1_Load(object sender, EventArgs e) {
             try {
-                PluginLoader loader = new PluginLoader();
                 loader.LoadPlugins();
             }catch(Exception exc) {
                 Console.WriteLine(string.Format("Plugins couldnt be loaded: {0}", exc.Message));
@@ -195,7 +198,7 @@ namespace CSV_Analyzer_Pro{
                 NewWindow();
             }
             OpenFileDialog csvSearch = new OpenFileDialog();
-            csvSearch.Filter = "csv files (*.csv)|*.csv";
+            csvSearch.Filter = Filters;
             csvSearch.FilterIndex = 1;
             csvSearch.Multiselect = false;
 
@@ -256,7 +259,8 @@ namespace CSV_Analyzer_Pro{
             pi.SetValue(dbg, setting, null);
         }
 
-        private void InitGrid(GridDataBoundGrid dbg) {
+        public void InitGrid(GridDataBoundGrid dbg) {
+
             #region DataGridView Contructing
             dbg.Dock = DockStyle.Fill;
             dbg.ExcelLikeSelectionFrame = true;
@@ -308,6 +312,7 @@ namespace CSV_Analyzer_Pro{
             TabPage tb = new TabPage();
             GridDataBoundGrid dbg = new GridDataBoundGrid();
             InitGrid(dbg);
+            loader.GetPluginByTargetFramework("GridDataBoundGrid", dbg);
             DataTable dt = new DataTable();
 
             tb.Text = "New..";

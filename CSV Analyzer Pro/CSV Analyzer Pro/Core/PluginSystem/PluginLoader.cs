@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
+using Syncfusion.Windows.Forms.Grid;
 
 namespace CSV_Analyzer_Pro.Core.PluginSystem {
     public class PluginLoader {
@@ -13,7 +14,6 @@ namespace CSV_Analyzer_Pro.Core.PluginSystem {
         public void LoadPlugins() {
             Plugins = new List<IPlugin>();
 
-            //Load from plugins directory
             if (Directory.Exists(Constants.PluginFolder)) {
                 string[] files = Directory.GetFiles(Constants.PluginFolder);
                 foreach(string file in files) {
@@ -30,6 +30,22 @@ namespace CSV_Analyzer_Pro.Core.PluginSystem {
             foreach(Type type in types) {
                 Plugins.Add((IPlugin)Activator.CreateInstance(type));
             }
+        }
+
+        /*public void Init() {
+            if(Plugins != null) {
+                Plugins.ForEach(plugin => plugin.Action());
+            }
+        }*/
+
+        public void GetPluginByTargetFramework(string framework,GridDataBoundGrid dbg) {
+            List<IPlugin> frameworkPlugs = new List<IPlugin>();
+
+            frameworkPlugs = Plugins.Where(p => p.TargetFramework == framework).ToList();
+            frameworkPlugs.ForEach(p => {
+                p.Action(dbg);
+            });
+
         }
     }
 }
