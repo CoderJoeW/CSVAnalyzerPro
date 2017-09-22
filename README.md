@@ -35,7 +35,7 @@ Quick Links
 Table of Contents
 -----------------
 
-[**Quick Installation**](#quick-installation)
+[**Installation**](#installation)
 
 [**Developer**](#developer)
 * [**Plugin Development**](#api)
@@ -48,8 +48,8 @@ Table of Contents
 
 <br />
 
-<a name="quick-installation"></a>
-Quick Installation (TL;DR)
+<a name="installation"></a>
+Installation
 --------------------------
 
 1. [Download the latest release](https://github.com/flaminggenius/CSVAnalyzerPro/releases)
