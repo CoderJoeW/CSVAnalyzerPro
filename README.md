@@ -75,7 +75,7 @@ Just select a version and view ChangeLog.txt
 
 ## License
 
-See [LICENSE](LICENSE)
+See [LICENSE](https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/LICENSE)
 
 [Issues](https://github.com/flaminggenius/CSVAnalyzerPro/issues)
 ---------------------
@@ -109,8 +109,3 @@ Inspiration and special thanks
 ------------------------------
 
 * Every CSV Editor I have ever used :)
-
-License
--------
-
-See [LICENSE](https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/LICENSE)
