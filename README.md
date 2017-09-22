@@ -22,7 +22,7 @@ Features
 
 * Extend the application through our plugin system
 	* ability to override defaults and use your own styles/functionalitys
-	* Make money ithin you plugins in the plugin store or publish them for free
+	* Make money selling your plugins in the plugin store or publish them for free
 * Fast buffering makes sure those large files open without issue
 * Inline editing makes it easier for you to get down to business
 * Multi-window support takes efficiency to the next level
