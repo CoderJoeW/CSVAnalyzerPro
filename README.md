@@ -61,7 +61,7 @@ Quick Installation (TL;DR)
 
 Developer
 ---------
-
+<a name="api"></a>
 ### Plugin Development
 
 ```vim
