@@ -36,28 +36,14 @@ Table of Contents
 
 [**Quick Installation**](#quick-installation)
 
-[**Usage**](#usage)
-* [**Lightline Setup**](#lightline-setup)
-* [**Powerline Setup**](#powerline-setup)
-* [**Extra Configuration**](#extra-configuration)
-* [**Character Mappings**](#character-mappings)
-
-[**Features**](#detailed-features)
-
-[**Screenshots**](#screenshots)
-
-[**Methods**](#public-methods)
-
 [**Developer**](#developer)
-* [**API**](#api)
+* [**Plugin Development**](#api)
 * [**Contributing**](#contributing)
 * [**Inspiration and special thanks**](#inspiration-and-special-thanks)
 * [**Todo**](#todo)
 * [**License**](#license)
 
-[**FAQ / Troubleshooting**](#faq--troubleshooting)
-
-[**Rationale**](#rationale)
+[**Issues**](#faq--troubleshooting)
 
 <br />
 
@@ -76,7 +62,7 @@ Quick Installation (TL;DR)
 Developer
 ---------
 
-### API
+### Plugin Development
 
 ```vim
 " returns the font character that represents the icon
