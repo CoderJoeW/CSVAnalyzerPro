@@ -2,6 +2,6 @@ sudo: required
 language: csharp
 solution: "/CSV Analyzer Pro/CSVAnalyzerPro.sln"
 install:
-  - sudo apt-get install mono-devel mono-gmcs
+  - sudo apt-get install mono-devel
 script:
   - msbuild CI.proj
