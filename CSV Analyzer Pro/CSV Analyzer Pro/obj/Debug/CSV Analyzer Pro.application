@@ -4,17 +4,17 @@
   <description asmv2:publisher="CSV Analyzer Pro" asmv2:product="CSV Analyzer Pro" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CSV Analyzer Pro.exe.manifest" size="58174">
+    <dependentAssembly dependencyType="install" codebase="CSV Analyzer Pro.exe.manifest" size="3982">
       <assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MeGCXB8FPAs0q9aYIoVrAMqWp6hd2ZkoYZ3zsRCsyEA=</dsig:DigestValue>
+        <dsig:DigestValue>CYsEpH6Ri/wovrI5e6/QHFyygk8wR3rxyk3w5RTTIds=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

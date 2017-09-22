@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.0" publicKeyToken="29271066476a2c51" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CSV Analyzer Pro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="CSV Analyzer Pro.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2357768">
+      <assemblyIdentity name="CSV Analyzer Pro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tLCWSo7nFsiBh4F7KRFr1lpD8hM8uDEYk9B21KxYbmk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CSV Analyzer Pro.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icon.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ejv6NIGZO8nB+WY/JXCMkkwBgK0cJaOScRCB+IqidEY=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP-VNMCTIUD\flameforged" issuerKeyHash="8ad94bec57927380fac9aebdeba08ba3e33ef5f7" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>djkaCDqTLao5rnYxUcIv1TB3eR1b/+C0BT0Xv56JizM=</DigestValue></Reference></SignedInfo><SignatureValue>aqSiUNHJJJ0yGHsaDiH2xNuLNbkBN/jRKwiiJfTGGWfzZfkhcGmmZElmX+ov4QL1rA4waOPywmijnueJPIKKEe5QWyHTl42E/Cxpc7vTLhOQ+waCLuNEjyttEO6MNh2qozO1cHK/SHQaEizi6vJWR8H1gITi/O8zD6LkMTmZ4fw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>4qk2bS4nGhawudwZmWParDfFJNfD+axW0XnGBN+RARkkzsXDPsFe/GNLitLosVjX8/1W9Av4+Fye+Y06CztCPHT2UWJS18BuS42m9yj6J5XbKbIb90cFOPUY0bOxVQNjvH7ul2kzDZ9lccw2BSuo8PKQiDYvqaUU7IXIsLcRJCE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="338b899ebf173d05b4e0ff5b1d797730d52fc2513176ae39aa2d933a081a3976" Description="" Url=""><as:assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.0" publicKeyToken="29271066476a2c51" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-VNMCTIUD\flameforged</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ZUJN2OOm2ZLy19TiDsI9O1EEkXwT41h1GTHR4y5Edtk=</DigestValue></Reference></SignedInfo><SignatureValue>0GTDR53dII4G5ppfi1/U0KFut4j7vET3G8xEgFYGIK5wC4O5qwPBNogYTfE1i2skmBdx6QVAmFqGUui0FE3P3hzB/qgrLF27DvGnLEpWKiZCHipDDVW7Qg2TiAq8j47X78TaD50WYokcZAnaZ3wfKZ5F9ub3+ypqGYc1t1Dmc5o=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4qk2bS4nGhawudwZmWParDfFJNfD+axW0XnGBN+RARkkzsXDPsFe/GNLitLosVjX8/1W9Av4+Fye+Y06CztCPHT2UWJS18BuS42m9yj6J5XbKbIb90cFOPUY0bOxVQNjvH7ul2kzDZ9lccw2BSuo8PKQiDYvqaUU7IXIsLcRJCE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICBTCCAW6gAwIBAgIQTBRU3egwfbVDwaMo2WcwITANBgkqhkiG9w0BAQsFADBBMT8wPQYDVQQDHjYATABBAFAAVABPAFAALQBWAE4ATQBDAFQASQBVAEQAXABmAGwAYQBtAGUAZgBvAHIAZwBlAGQwHhcNMTcwOTA0MDQyMDI0WhcNMTgwOTA0MTAyMDI0WjBBMT8wPQYDVQQDHjYATABBAFAAVABPAFAALQBWAE4ATQBDAFQASQBVAEQAXABmAGwAYQBtAGUAZgBvAHIAZwBlAGQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOKpNm0uJxoWsLncGZlj2qw3xSTXw/msVtF5xgTfkQEZJM7Fwz7BXvxjS4rS6LFY1/P9VvQL+PhcnvmNOgs7Qjx09lFiUtfAbkuNpvco+ieV2ymyG/dHBTj1GNGzsVUDY7x+7pdpMw2fZXHMNgUrqPDykIg2L6mlFOyFyLC3ESQhAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAF62p6p3OKct8AvLHlHjQrGqkOqPDtuZk+gWkwfoAFdMQ7VvxQYS5v4PB4CYV7eL5ZViX5wa6eg+71sO0pDAmLGqbluLLt9AImoAuomxDjwahskm6JjkBolFBOGqkX/vGadD43Yuq4yDX817+QEu+v61mhf5m7sUiBay1AdVL4q0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

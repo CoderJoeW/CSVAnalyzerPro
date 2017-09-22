@@ -12,15 +12,10 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic.FileIO;
 using System.Threading;
 using System.Reflection;
-using Syncfusion.Windows.Forms.Grid;
-using Syncfusion.GridHelperClasses;
-using CSV_Analyzer_Pro.Core.PluginSystem;
 
 namespace CSV_Analyzer_Pro{
     public partial class Form1 : Form{
         #region Globals
-        PluginLoader loader = new PluginLoader();
-
         DataSet ds = new DataSet();
 
         BackgroundWorker worker;
@@ -28,8 +23,6 @@ namespace CSV_Analyzer_Pro{
         string path = "";
 
         bool _exiting = false;
-
-        string Filters = "csv files (*.csv)|*.csv";
         #endregion
 
         #region Initializing
@@ -49,16 +42,12 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-            try {
-                loader.LoadPlugins();
-            }catch(Exception exc) {
-                Console.WriteLine(string.Format("Plugins couldnt be loaded: {0}", exc.Message));
-            }
             LoadCommands();
         }
 
         private void LoadCommands() {
-            //Register Commands
+            //Register KeyDown Commands
+            tabControl1.KeyDown += (s, e) => this.OnKeyCommands(s, e);
         }
         #endregion
 
@@ -70,6 +59,9 @@ namespace CSV_Analyzer_Pro{
         private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
             Thread th = new Thread(() => Save(path));
             th.Start();
+
+            //Retired
+            //Save(path);
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -137,16 +129,12 @@ namespace CSV_Analyzer_Pro{
             }
         }
 
-        private void OnColumnHeaderMouseClick(object sender, GridCellClickEventArgs e) {
-            Debug.Write("ColumnHeaderClickEventFired");
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
-            if (dbg[e.RowIndex, e.ColIndex].CellType == "ColumnHeaderCell") {
-                int index = tabControl1.SelectedIndex;
-                EditHeader eh = new EditHeader(this.UpdateHeader);
-                eh.TextBox1.Text = ds.Tables[index.ToString()].Columns[e.ColIndex].ToString();
-                eh.TextBox2.Text = e.ColIndex.ToString();
-                eh.Show();
-            }
+        private void OnColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
+            int index = tabControl1.SelectedIndex;
+            EditHeader eh = new EditHeader(this.UpdateHeader);
+            eh.TextBox1.Text = ds.Tables[index.ToString()].Columns[e.ColumnIndex].ToString();
+            eh.TextBox2.Text = e.ColumnIndex.ToString();
+            eh.Show();
         }
 
         private void OnSearchCalled() {
@@ -158,13 +146,6 @@ namespace CSV_Analyzer_Pro{
         private void OnKeyCommands(object sender,KeyEventArgs e) {
             //Psuedo code
         }
-
-        private void Model_QueryCellInfo(object sender, Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventArgs e) {
-            if (e.Style.CellType != "ColumnHeaderCell" && (e.RowIndex % 2 == 0))
-                e.Style.BackColor = Color.LightCyan;
-            else
-                e.Style.BackColor = Color.GhostWhite;
-        }
         #endregion
 
         #region Main Functions
@@ -174,21 +155,46 @@ namespace CSV_Analyzer_Pro{
             int index = int.Parse(array[0]);
             //Debug.WriteLine("Index: " + index + " String: " + array[1] + " Table Check: " + ds.Tables[index.ToString()].ToString() + " Column Check: " + ds.Tables[index.ToString()].Columns[index].ColumnName.ToString());
             ds.Tables[pageIndex.ToString()].Columns[index].ColumnName = array[1];
+            DisableSortMode(tabControl1.SelectedTab.Controls.OfType<DataGridView>().First());
         }
 
         private void SearchFor(string val) {
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
-            //dbg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataGridView dgv = tabControl1.SelectedTab.Controls.OfType<DataGridView>().First();
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             int pageIndex = tabControl1.SelectedIndex;
             string[] array = val.Split(',');
             string searchValue = array[0];
             int index = int.Parse(array[1]);
 
-            HandleSearch(dbg, searchValue, index);
+            HandleSearch(dgv, searchValue, index);
         }
 
-        private void HandleSearch(GridDataBoundGrid dbg,string searchValue,int index) {
-            //Rewite
+        private void HandleSearch(DataGridView dgv,string searchValue,int index) {
+            //BROKEN CODE
+            try {
+                bool valueRes = true;
+                foreach (DataGridViewRow row in dgv.Rows) {
+                    if (row.Cells[index].Value.ToString().Equals(searchValue)) {
+                        int rowIndex = row.Index;
+                        dgv.Rows[rowIndex].Selected = true;
+                        rowIndex++;
+                        valueRes = false;
+                        dgv.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                    }
+                }
+                if (valueRes != false) {
+                    MessageBox.Show("Record is not avalable for this Name" + searchValue, "Not Found");
+                    return;
+                }
+            } catch (Exception e) {
+                MessageBox.Show("Error: " + e.Message);
+            }
+        }
+
+        private void DisableSortMode(DataGridView dgv) {
+            foreach (DataGridViewColumn column in dgv.Columns) {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
         #endregion
 
@@ -198,7 +204,7 @@ namespace CSV_Analyzer_Pro{
                 NewWindow();
             }
             OpenFileDialog csvSearch = new OpenFileDialog();
-            csvSearch.Filter = Filters;
+            csvSearch.Filter = "csv files (*.csv)|*.csv";
             csvSearch.FilterIndex = 1;
             csvSearch.Multiselect = false;
 
@@ -211,7 +217,15 @@ namespace CSV_Analyzer_Pro{
                 DataTable dt = ds.Tables.Add(index.ToString());
                 path = csvSearch.FileName;
                 tabControl1.SelectedTab.Text = csvSearch.FileName;
-                OpenCSVFile();
+                //Background worker
+                if (!worker.IsBusy) {
+                    worker.RunWorkerAsync();
+                } else {
+                    MessageBox.Show("Worker is busy..Please Wait");
+                }
+
+                //Retired
+                //OpenCSVFile();
             }
         }
 
@@ -242,39 +256,22 @@ namespace CSV_Analyzer_Pro{
                     ds.Tables[index.ToString()].Rows.Add(fields);
                 }
                 //Get gridview
-                GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+                DataGridView dgv = tabControl1.SelectedTab.Controls.OfType<DataGridView>().First();
                 //Attach event handler
-                //dbg.CellClick += (s, e) => this.OnColumnHeaderMouseClick(s, e);
+                dgv.ColumnHeaderMouseClick += (s, e) => this.OnColumnHeaderMouseClick(s, e);
                 //Bind data source
-                dbg.DataSource = ds.Tables[index.ToString()];
+                dgv.DataSource = ds.Tables[index.ToString()];
+                DisableSortMode(dgv);
             }
         }
         #endregion
 
         #region Helpers
-        private void DoubleBuffering(GridDataBoundGrid dbg, bool setting) {
-            Type dbgType = dbg.GetType();
-            PropertyInfo pi = dbgType.GetProperty("DoubleBuffered",
+        private void DoubleBuffering(DataGridView dgv, bool setting) {
+            Type dgvType = dgv.GetType();
+            PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
                   BindingFlags.Instance | BindingFlags.NonPublic);
-            pi.SetValue(dbg, setting, null);
-        }
-
-        public void InitGrid(GridDataBoundGrid dbg) {
-
-            #region DataGridView Contructing
-            dbg.Dock = DockStyle.Fill;
-            dbg.ExcelLikeSelectionFrame = true;
-            dbg.ExcelLikeCurrentCell = true;
-            dbg.Model.Options.SelectionBorderBrush = new SolidBrush(Color.DarkGreen);
-            dbg.Model.Options.SelectionBorderThickness = 4;
-            dbg.ListBoxSelectionMode = SelectionMode.None;
-            dbg.ShowRowHeaders = false;
-            dbg.ThemesEnabled = true;
-            dbg.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2007Blue;
-            DoubleBuffering(dbg, true);
-
-            dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
-            #endregion
+            pi.SetValue(dgv, setting, null);
         }
         #endregion
 
@@ -310,14 +307,36 @@ namespace CSV_Analyzer_Pro{
         #region Commands
         private void NewWindow() {
             TabPage tb = new TabPage();
-            GridDataBoundGrid dbg = new GridDataBoundGrid();
-            InitGrid(dbg);
-            loader.GetPluginByTargetFramework("GridDataBoundGrid", dbg);
+            CustomDgv dgv = new CustomDgv();
             DataTable dt = new DataTable();
 
             tb.Text = "New..";
 
-            tb.Controls.Add(dbg);
+            #region DataGridView Contructing
+            dgv.Dock = DockStyle.Fill;
+            dgv.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.GridColor = Color.LightGray;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.VirtualMode = true;
+
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersHeight = 30;
+            DoubleBuffering(dgv, true);
+            //dgv.GetType.InvokeMember("DoubleBuffered", Reflection.BindingFlags.NonPublic Or _Reflection.BindingFlags.Instance Or System.Reflection.BindingFlags.SetProperty, Nothing, dgv, New Object() { True});
+
+            //dgv.Columns(1).DefaultCellStyle.BackColor = Color.Yellow
+
+            //Retired
+            //dgv.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            //dgv.ScrollBars = ScrollBars.Both;
+            #endregion
+
+            tb.Controls.Add(dgv);
             tabControl1.TabPages.Add(tb);
             tabControl1.SelectedTab = tb;
         }
@@ -377,12 +396,9 @@ namespace CSV_Analyzer_Pro{
         private void InsertRowNew() {
             int index = tabControl1.SelectedIndex;
 
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
-
-            if (index == 0){return;}
+            if(index == 0){return;}
 
             ds.Tables[index.ToString()].Rows.Add("");
-            dbg.Refresh();
         }
 
         private void InsertRowAfter() {
@@ -390,12 +406,12 @@ namespace CSV_Analyzer_Pro{
 
             if(tabCIndex == 0){return;}
 
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+            DataGridView dgv = tabControl1.SelectedTab.Controls.OfType<DataGridView>().First();
             DataRow dr;
             dr = ds.Tables[tabCIndex.ToString()].NewRow();
-            int index = dbg.CurrentCell.RowIndex;
-            ds.Tables[tabCIndex.ToString()].Rows.InsertAt(dr, index);
-            dbg.Refresh();
+            int index = dgv.CurrentCell.RowIndex;
+            Debug.WriteLine("Index: " + index);
+            ds.Tables[tabCIndex.ToString()].Rows.InsertAt(dr, index + 1);
         }
 
         private void InsertRowBefore() {
@@ -403,10 +419,10 @@ namespace CSV_Analyzer_Pro{
 
             if(tabCIndex == 0){return;}
 
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+            DataGridView dgv = tabControl1.SelectedTab.Controls.OfType<DataGridView>().First();
             DataRow dr;
             dr = ds.Tables[tabCIndex.ToString()].NewRow();
-            int index = dbg.CurrentCell.RowIndex - 1;
+            int index = dgv.CurrentCell.RowIndex;
             ds.Tables[tabCIndex.ToString()].Rows.InsertAt(dr, index);
         }
 
@@ -416,6 +432,7 @@ namespace CSV_Analyzer_Pro{
             if(index == 0){return;}
 
             ds.Tables[index.ToString()].Columns.Add("");
+            DisableSortMode(tabControl1.SelectedTab.Controls.OfType<DataGridView>().First());
         }
         #endregion
 

@@ -76,7 +76,7 @@ namespace CSV_Analyzer_Pro
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(841, 23);
+            this.panel3.Size = new System.Drawing.Size(841, 33);
             this.panel3.TabIndex = 0;
             // 
             // menuStrip1
@@ -188,10 +188,10 @@ namespace CSV_Analyzer_Pro
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 23);
+            this.tabControl1.Location = new System.Drawing.Point(0, 33);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(841, 245);
+            this.tabControl1.Size = new System.Drawing.Size(841, 235);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnTabMouseUp);
             // 
@@ -201,7 +201,7 @@ namespace CSV_Analyzer_Pro
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(833, 219);
+            this.tabPage1.Size = new System.Drawing.Size(833, 209);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Welcome";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@ namespace CSV_Analyzer_Pro
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 213);
+            this.panel1.Size = new System.Drawing.Size(827, 203);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -223,7 +223,7 @@ namespace CSV_Analyzer_Pro
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 195);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(827, 18);
+            this.panel2.Size = new System.Drawing.Size(827, 8);
             this.panel2.TabIndex = 1;
             // 
             // webBrowser1
