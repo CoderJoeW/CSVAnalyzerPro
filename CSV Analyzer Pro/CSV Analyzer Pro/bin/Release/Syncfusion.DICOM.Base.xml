@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.DICOM.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.XlsIOBaseAssembly">
+            <exclude/>
+             <summary>
+             This class holds the name of the Syncfusion.XlsIO.Base assembly and provides a helper 
+             routine that helps with resolving types when loading a serialization stream and when 
+             the framework probes for assemblies by reflection. 
+             </summary>
+        </member>
+        <member name="F:Syncfusion.XlsIOBaseAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.XlsIO"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XlsIOBaseAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the XlsIO assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XlsIOBaseAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.DICOM.DICOMImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:DICOMConverter"/> class.
+            </summary>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.#ctor(System.Drawing.Image)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.DICOM.DICOMImage"/> class.
+            </summary>
+            <param name="image">The image.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:DICOMConverter"/> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="!:DICOMConverter"/> class.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.Save(System.IO.Stream)">
+            <summary>
+            Converts the specified save stream.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMImage.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.DICOM.DICOMImage.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="P:Syncfusion.DICOM.DICOMImage.InputStream">
+            <summary>
+            Gets or sets the input stream.
+            </summary>
+            <value>The input stream.</value>
+        </member>
+        <member name="T:Syncfusion.DICOM.DICOMEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.ApplicationEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.AgeString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.AttributeTag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.CodeString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.DecimalString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.Date_Time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.FloatingPointSingle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.FloatingPointDouble">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.IntegerString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.LongString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.LongText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.OtherByteString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.OtherFloatString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.OtherWordString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.PersonName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.ShortString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SignedLong">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SequenceOfItems">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SignedShort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.ShortText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.Time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.UniqueIdentifier">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.UnsignedLong">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.Unknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.UnsignedShort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.UnlimitedText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.MediaStorageSOPClassUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.MediaStorageSOPInstanceUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.TransferSyntaxUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.ImplementationClassUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.StudyInstanceUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SeriesInstanceUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SpecificCharacterSet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.SOPInstanceUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.Modality">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.ConversionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.PhotometricInterpretation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.m_skip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.offset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.m_bitMapImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Syncfusion.DICOM.DICOMEncoder.m_emptyBytes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.Encode(System.IO.Stream,System.Drawing.Image)">
+            <summary>
+            Encodes the specified save stream.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+            <param name="fileName">Name of the file.</param>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteImage(System.IO.Stream)">
+            <summary>
+            Writes the image.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteDataElements(System.IO.Stream)">
+            <summary>
+            Writes the data elements.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteFileMetaElements(System.IO.Stream)">
+            <summary>
+            Writes the file meta elements.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteFileFormat(System.IO.Stream)">
+            <summary>
+            Writes the file format.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteHeaderPart(System.IO.Stream)">
+            <summary>
+            Writes the header part.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteToStream(System.Byte[],System.IO.Stream)">
+            <summary>
+            Writes to stream.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="saveStream">The save stream.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.WriteToStream(System.IO.Stream,System.String,System.String,System.Byte[])">
+            <summary>
+            Writes to stream.
+            </summary>
+            <param name="saveStream">The save stream.</param>
+            <param name="keyword">The keyword.</param>
+            <param name="vr">The vr.</param>
+            <param name="required">The required.</param>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.GetBytes(System.Int32,System.Int32)">
+            <summary>
+            Gets the bytes.
+            </summary>
+            <param name="length">The length.</param>
+            <param name="count">The count.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.GetAppendedBytes(System.Byte[],System.Byte[])">
+            <summary>
+            Gets the appended bytes.
+            </summary>
+            <param name="p">The p.</param>
+            <param name="lenCalc">The len calc.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.GetImageBytes(System.UInt16)">
+            <summary>
+            Gets the image bytes.
+            </summary>
+            <param name="image">The image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.DICOM.DICOMEncoder.GetImageBytes">
+            <summary>
+            Gets the image bytes.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

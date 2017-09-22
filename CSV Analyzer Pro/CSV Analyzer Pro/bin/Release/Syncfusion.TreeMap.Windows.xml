@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.TreeMap.Windows</name>
+    </assembly>
+    <members>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.UniColorMapping.Color">
+            <summary>
+            To specify the color of the mapping
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.DesaturationColorMapping.Color">
+            <summary>
+            To specify the color of the mapping
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.DesaturationColorMapping.From">
+            <summary>
+            To specify the from value  of the colormapping
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.DesaturationColorMapping.To">
+            <summary>
+            To specify the To value  of the colormapping
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.DesaturationColorMapping.RangeMinimum">
+            <summary>
+            To specify the minimum range of mapping value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.DesaturationColorMapping.RangeMaximum">
+            <summary>
+            To specify the maximum range of mapping value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.RangeBrush.Color">
+            <summary>
+            To specify the color of mapping 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.RangeBrush.From">
+            <summary>
+            To specify the From value of mapping 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.RangeBrush.To">
+            <summary>
+            To specify the To value of mapping 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.RangeBrush.LegendLabel">
+            <summary>
+            To specify the label of the legend
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.GroupColorMapping.GroupID">
+            <summary>
+            To specify the id of the group 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.GroupColorMapping.TreeMapColorMapping">
+            <summary>
+            To specify the TreeMap color mapping
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.Legend.LegendWidth">
+            <summary>
+            To specify the width of treemap legends
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.Legend.LegendHeight">
+            <summary>
+            To specify the height of treemap legends
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.Legend.LegendLabel">
+            <summary>
+            To specify the LegendLabel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.Legend.Fill">
+            <summary>
+            To specify the fill color 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.StartLabel">
+            <summary>
+            To specify the start label of legend 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.EndLabel">
+            <summary>
+            To specify the End label of legend 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.LegendMode">
+            <summary>
+            To specify the Legend mode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.LegendPosition">
+            <summary>
+            To specify the Legend position
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.Positions">
+            <summary>
+            To specify the Legend mode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.Title">
+            <summary>
+            To specify the Legend Title
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.ShowLegend">
+            <summary>
+            To specify the legend is enabled or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.PositionX">
+            <summary>
+            To specify the x position for legend
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.PositionY">
+            <summary>
+            To specify the y position for legend
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.LegendGap">
+            <summary>
+            To specify the Gap between legends
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.LegendType">
+            <summary>
+            To specify the type of legends
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LegendSettings.Size">
+            <summary>
+            To specify the size of legends
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.TreeMap.SummaryBase">
+            <summary>
+            This class is an abstract class that defines the necessary functionality to do tablix calculations.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SummaryBase.Combine(System.Object)">
+            <summary>
+            Use this method to combine a value from an object in the Tablix Grid's data source with the accumulation values held in this instance.
+            </summary>
+            <param name="other">The value to be included in the compuation.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SummaryBase.Reset">
+            <summary>
+            Resets all internal values so the calculations begins anew.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SummaryBase.GetResult">
+            <summary>
+            Returns the calculation value.
+            </summary>
+            <returns>The calculation value.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SummaryBase.GetInstance">
+            <summary>
+            Provides a new instance of this SummaryBase object.
+            </summary>
+            <returns>New instance of this SummaryBase.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SummaryBase.CombineSummary(Syncfusion.Windows.Forms.TreeMap.SummaryBase)">
+            <summary>
+            Use this method to combine another SummaryBase object with the accumulation values held in this instance.
+            </summary>
+            <param name="other">The other SummaryBase object.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.Gap">
+            <summary>
+            To specify the LegendLabel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.LabelPosition">
+            <summary>
+            To specify the label position
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.BorderThickness">
+            <summary>
+            To specify the border thickness
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.BorderBrush">
+            <summary>
+            To specify the border color
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.ShowLabels" -->
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.LeafItemSettings.LabelPath">
+            <summary>
+            To specify the label path
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapEngine.ItemProperties">
+            <summary>
+            Gets a PropertyDescriptorCollection describing the type of the underlying data item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapFlatLevel.GroupPath">
+            <summary>
+            To specify the group path
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapFlatLevel.GroupGap">
+            <summary>
+            To specify the Gap between the treemap group items
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapFlatLevel.GroupPadding">
+            <summary>
+            To specify the group padding
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapFlatLevel.GroupBorderThickenss">
+            <summary>
+            To specify the Group border thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.ItemsLayoutModes.Squarified">
+            <summary> 
+            To specify the layout mode as Squarified
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.ItemsLayoutModes.SliceAndDiceAuto">
+            <summary> 
+            To specify the layout mode as SliceAndDiceAuto
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.ItemsLayoutModes.SliceAndDiceHorizontal">
+            <summary> 
+            To specify the layout mode as SliceAndDiceHorizontal
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.ItemsLayoutModes.SliceAndDiceVertical">
+            <summary> 
+            To specify the layout mode as SliceAndDiceVertical
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendTypes.Rectangle">
+            <summary> 
+            To specify the legend type as Rectangle
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendTypes.Ellipse">
+            <summary> 
+            To specify the legend type as Ellipse
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendTypes.None">
+            <summary> 
+            To specify the legend type as None
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendMode.Default">
+            <summary> 
+            To specify the legend mode as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendMode.Interactive">
+            <summary> 
+            To specify the legend mode as Interactive
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendPositions.Left">
+            <summary> 
+            To specify the legend positions  as Left
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendPositions.Top">
+            <summary> 
+            To specify the legend positions  as Top
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendPositions.Right">
+            <summary> 
+            To specify the legend positions  as Right
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LegendPositions.Bottom">
+            <summary> 
+            To specify the legend positions  as Bottom
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.Default">
+            <summary> 
+            To specify the  position  as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.TopLeft">
+            <summary> 
+            To specify the  position  as TopLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.TopCenter">
+            <summary> 
+            To specify the  position  as TopCenter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.TopRight">
+            <summary> 
+            To specify the  position  as TopRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.MidLeft">
+            <summary> 
+            To specify the  position  as MidLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.Center">
+            <summary> 
+            To specify the  position  as Center
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.MidRight">
+            <summary> 
+            To specify the  position  as MidRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.BottomLeft">
+            <summary> 
+            To specify the  position  as BottomLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.BottomCenter">
+            <summary> 
+            To specify the  position  as BottomCenter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.Position.BottomRight">
+            <summary> 
+            To specify the  position  as BottomRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.SelectionModes.Default">
+            <summary> 
+            To specify the  selection mode as Default
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.SelectionModes.Multiple">
+            <summary> 
+            To specify the  selection mode as Multiple
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.TopLeft">
+            <summary> 
+            To specify the  label position as TopLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.TopCenter">
+            <summary> 
+            To specify the  label position as TopLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.TopRight">
+            <summary> 
+            To specify the  label position as TopRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.CenterLeft">
+            <summary> 
+            To specify the  label position as CenterLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.Center">
+            <summary> 
+            To specify the  label position as Center
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.CenterRight">
+            <summary> 
+            To specify the  label position as CenterRight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.BottomLeft">
+            <summary> 
+            To specify the  label position as BottomLeft
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.BottomCenter">
+            <summary> 
+            To specify the  label position as BottomCenter
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.LabelPositions.BottomRight">
+            <summary> 
+            To specify the  label position as BottomRight
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapItem.Data">
+            <summary>
+            To specify the data
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapItem.Label">
+            <summary>
+            To specify the label
+            </summary>
+        </member>
+        <member name="T:Syncfusion.TreeMapWindowsAssembly">
+            <exclude/>
+            <summary>
+            This class holds the name of the Syncfusion.TreeMap.Windows assembly and provides a helper
+            routine that helps with resolving types when loading a serialization stream and when
+            the framework probes for assemblies by reflection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.TreeMapWindowsAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.TreeMap.Windows"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.TreeMapWindowsAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the TreeMap assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.TreeMapWindowsAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.TreeMapWindowsAssembly.#cctor">
+            <summary>
+            Initializes the <see cref="T:Syncfusion.TreeMapWindowsAssembly"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.TreeMapWindowsAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This delegate helps with resolving types and can be used as an eventhandler
+            for a <see cref="E:System.AppDomain.AssemblyResolve"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data with information about the type.</param>
+            <returns>A reference to the assembly where the type is located.</returns>      
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.TreeMap.AssemblyInfo">
+            <summary>
+            AssemblyInformation for internal use.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMap.CreateAccessibilityInstance">
+            <summary>
+            Creates the accessibilty for the control.
+            </summary>
+            <returns>Accessibility</returns>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.TreeMap.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMap.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMap.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.WeightValuePath">
+            <summary>
+            To specify the Weightvalue path
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LabelFont">
+            <summary>
+            To specify the font style of label
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LabelBrush">
+            <summary>
+            To specify the label brush
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LabelBackgroundBrush">
+            <summary>
+            To specify the label background brush
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LabelBorderBrush">
+            <summary>
+            To specify the label border brush
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LabelBorderThickness">
+            <summary>
+            To specify the label border thickness
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderFont">
+            <summary>
+            To specify the font for treemap header
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderBrush">
+            <summary>
+            To specify the color for treemap header
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderBackgroundBrush">
+            <summary>
+            To specify the color for treemap header background
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderBorderBrush">
+            <summary>
+            To specify the color for header border brush
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderBorderThickness">
+            <summary>
+            To specify the  header border thickness
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.ItemsLayoutMode">
+            <summary>
+            To specify the item layout mode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.SelectionMode">
+            <summary>
+            To specify the selection mode
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.LegendSetting">
+            <summary>
+            To specify the legendsettings
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.IsTootTipVisible">
+            <summary>
+            To specify the tooltip is visible or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HeaderToolTipInfo">
+            <summary>
+            To specify the header tooltip info
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.ItemToolTipInfo">
+            <summary>
+            To specify the Item tooltip info
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HighlightOnSelection">
+            <summary>
+            To specify the highlightonselection is true or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HighlightBorderBrush">
+            <summary>
+            To specify the highlightonselection is true or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HighlightBorderThickness">
+            <summary>
+            To specify the highlightborder thickness
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMap.HighlightGroupOnSelection">
+            <summary>
+            To specify highlighting the group of items on selection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.TreeMap.TreeMapDesigner">
+            <summary>
+            Class for SmartTag
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.TreeMap.TreeMapDesigner.actionLists">
+            <summary>
+            Designer ActionList collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the TreeMapDesigner class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Overridden Initialize method.
+            </summary>
+            <param name="component">Component object</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList">
+            <summary>
+            TreeMapActionList class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.#ctor(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes a new instance of the TreeMapActionList class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.InitializeActionList">
+            <summary>
+            Overrridden InitializeActionList.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.Name">
+            <summary>
+            Gets or sets Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.HeaderBorderThickness">
+            <summary>
+            Gets/Sets HeaderBorderThickness value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.HighlightOnSelection">
+            <summary>
+            Gets/Sets HighlightOnSelection value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.HighlightGroupOnSelection">
+            <summary>
+            Gets/Sets HighlightGroupOnSelection value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.IsToolTipVisible">
+            <summary>
+            Gets/Sets IsToolTipVisible value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.ItemsLayoutModes">
+            <summary>
+            Gets/Sets ItemsLayoutModes value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapActionList.SelectionModes">
+            <summary>
+            Gets/Sets SelectionModes value
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.#ctor(Syncfusion.Windows.Forms.TreeMap.TreeMap)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="treemap">TreeMap</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.HitTest(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the child object at the specified screen coordinates.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Bounds">
+            <summary>
+            Bounds of the Control
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Role">
+            <summary>
+            Gets the role for the Treemap. This is used by accessibility programs.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Name">
+            <summary>
+            Gets or sets the accessible object name
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Description">
+            <summary>
+            Gets the description of the Control.ControlAccessibleObject
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.State">
+            <summary>
+            Gets the state of this accessible object.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Help">
+            <summary>
+            Gets the description of what the object does or how the object is used.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.TreeMap.TreeMapAccessibility.Parent">
+            <summary>
+            Gets the parent of an accessible object.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SubstringExtensions.Between(System.String,System.String,System.String)">
+            <summary>
+            Get string value between [first] a and [last] b.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SubstringExtensions.Before(System.String,System.String)">
+            <summary>
+            Get string value after [first] a.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.TreeMap.SubstringExtensions.After(System.String,System.String)">
+            <summary>
+            Get string value after [last] a.
+            </summary>
+        </member>
+    </members>
+</doc>

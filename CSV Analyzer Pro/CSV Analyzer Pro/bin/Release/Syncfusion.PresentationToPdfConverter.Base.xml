@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.PresentationToPdfConverter.Base</name>
+    </assembly>
+    <members>
+        <member name="M:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.Convert(Syncfusion.Presentation.IPresentation)">
+            <summary>
+            Converts the Presentation to PDF document.
+            </summary>
+            <param name="presentation">Represents the presentation instance.</param>
+            <returns>pdfdcoument instance</returns>
+        </member>
+        <member name="M:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.Convert(Syncfusion.Presentation.IPresentation,Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings)">
+            <summary>
+            Converts the Presentation to PDF document.
+            </summary>
+            <param name="presentation">Represents the presentation instance.</param>
+            <param name="settings">Represents the converter settings instance.</param>
+            <returns>pdfdcoument instance</returns>
+        </member>
+        <member name="M:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.Convert(Syncfusion.Presentation.ISlide)">
+            <summary>
+            Converts the Slide to PDF document.
+            </summary>
+            <param name="slide">Represents the slide instance.</param>
+            <returns>pdfdcoument instance</returns>
+        </member>
+        <member name="T:Syncfusion.PresentationToPdfConverter.SlidesPerPage">
+            <summary>
+            Specifies the Slides per page
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.Six">
+            <summary>
+            Specifies the six Slides per page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.One">
+            <summary>
+            Specifies the one Slide per page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.Two">
+            <summary>
+            Specifies the two Slides per page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.Three">
+            <summary>
+            Specifies the three Slides per page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.Four">
+            <summary>
+            Specifies the four Slides per page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.SlidesPerPage.Nine">
+            <summary>
+            Specifies the nine Slides per page.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.PresentationToPdfConverter.PublishOptions">
+            <summary>
+            Specifies the publishing options of the <see cref="T:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter"/> instance.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.PublishOptions.Slides">
+            <summary>
+            Allows converting all the slides in a Presentation to PDF document. This is the default option.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.PublishOptions.Handouts">
+            <summary>
+            Allows the PDF pages in the converted PDF document to hold more than one slides as specified by the <see cref="T:Syncfusion.PresentationToPdfConverter.SlidesPerPage"/> enumerator
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PresentationToPdfConverter.PublishOptions.NotesPages">
+            <summary>
+            Allows to convert the notes in the slides to PDF document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.#ctor">
+            <summary>
+            Intialize the new instance of presentation to pdfConverter settings.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.SlidesPerPage">
+            <summary>
+            Gets or Sets the slides per page
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.ShowHiddenSlides">
+            <summary>
+            Indicates whether to export hidden slides or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.PublishOptions">
+            <summary>
+            Gets or sets the available publishing options to export the Presentation to PDF document.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.ImageQuality">
+            <summary>
+            Gets or sets the quality. The value indicates in percentage, max value represents best quality and min value represents best compression.
+            </summary>
+            <remarks>
+            The value indicates in percentage, max value represents best quality and min value represents best compression
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.ImageResolution">
+            <summary>
+            Sets the image resolution to the image, which are embedded in the PowerPoint presentation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.PdfConformanceLevel">
+            <summary>
+            Gets or sets the PDF document's Conformance-level.
+            </summary>
+            <value>The <see cref="T:Syncfusion.Pdf.PdfConformanceLevel"/> of the PDF document.</value>
+        </member>
+        <member name="P:Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.OptimizeIdenticalImages">
+            <summary>
+            Gets or Sets a value indicating whether to optimize the memory usage for the identical (duplicate) images in PPTX to PDF conversion and converted PDF document.
+            </summary>
+        </member>
+    </members>
+</doc>

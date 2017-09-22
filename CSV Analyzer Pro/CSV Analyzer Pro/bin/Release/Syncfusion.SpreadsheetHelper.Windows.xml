@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SpreadsheetHelper.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer">
+            <summary>
+            Custom GraphicCellRenderer for <see cref="T:System.Windows.Forms.PictureBox"/> celltype.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer.ChartConverter">
+            <summary>
+            Converter used to convert the XlsIO chart into the SfChart or Image.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer.OnCreateElement(Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject)">
+            <summary>
+            Creates a new <see cref="T:System.Windows.Forms.PictureBox"/>.
+            </summary>
+            <param name="graphicObject"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject"/></param>
+            <returns><see cref="T:System.Windows.Forms.PictureBox"/></returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.Graphic3DChartCellRenderer.OnInitializeElement(Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl,System.Windows.Forms.PictureBox,Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject)">
+            <summary>
+            Initialize or update the properties of <see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl"/> and its content.
+            </summary>
+            <param name="container"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl"/></param>
+            <param name="element"><see cref="T:System.Windows.Forms.PictureBox"/></param>
+            <param name="graphicObject"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject"/></param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.SpreadsheetHelper.NamespaceDoc">
+            <summary>
+            Contains classes which are required to load the Charts and Sparklines into the Spreadsheet. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer">
+            <summary>
+            Custom GraphicCellRenderer for <see cref="T:System.Windows.Forms.PictureBox"/> celltype.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer.ChartConverter">
+            <summary>
+            Converter used to convert the XlsIO chart into the SfChart or Image.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer.OnCreateElement(Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject)">
+            <summary>
+            Creates a new <see cref="T:System.Windows.Forms.PictureBox"/>.
+            </summary>
+            <param name="graphicObject"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject"/></param>
+            <returns><see cref="T:System.Windows.Forms.PictureBox"/></returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer.OnInitializeElement(Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl,System.Windows.Forms.PictureBox,Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject)">
+            <summary>
+            Initialize or update the properties of <see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl"/> and its content.
+            </summary>
+            <param name="container"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellControl"/></param>
+            <param name="element"><see cref="T:System.Windows.Forms.PictureBox"/></param>
+            <param name="graphicObject"><see cref="T:Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicObject"/></param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.SpreadsheetHelper.SparklineCellRenderer">
+            <summary>
+            CellRenderer which is used to render the Sparkline into the Cell.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.SparklineCellRenderer.OnRender(Syncfusion.Windows.Forms.Spreadsheet.Helpers.SpreadsheetPaint,System.Drawing.Rectangle,System.Drawing.Rectangle,Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetColumn)">
+            <summary>
+            CellRenderer which is used to render the Sparkline into the Cell.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.SpreadsheetHelper.SparklineCellRenderer.GetItemsSource(Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetColumn)">
+            <summary>
+            Used to get the itemsSource of Sparkline.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

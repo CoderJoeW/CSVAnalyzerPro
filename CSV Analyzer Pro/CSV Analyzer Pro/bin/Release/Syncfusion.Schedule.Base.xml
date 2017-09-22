@@ -1,0 +1,2863 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.Schedule.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.NamespaceDoc">
+            <summary>
+            The Syncfusion namespace contains classes that defines the value and reference data types, events and event handlers, interfaces, attributes and processing the exceptions.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.ScheduleBaseAssembly">
+            <summary>
+            This class holds the name of the Syncfusion.Grid.Windows assembly and provides a helper 
+            routine that helps with resolving types when loading a serialization stream and when 
+            the framework probes for assemblies by reflection. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.ScheduleBaseAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.Schedule.Base"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.ScheduleBaseAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the Schedule assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.ScheduleBaseAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.ScheduleBaseAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This delegate helps with resolving types and can be used as a eventhandler
+            for a <see cref="E:System.AppDomain.AssemblyResolve"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data with information about the type.</param>
+            <returns>A reference to the assembly where the type is located.</returns>
+            <remarks>
+            Use this handler when reading back types from a serialization stread
+            saved with an earlier version of this assembly.
+            </remarks>
+            <example>
+            <code lang="C#">
+                  public static GridModel LoadSoap(Stream s)
+                  {
+                      try
+                      {
+                          AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(GridBaseAssembly.AssemblyResolver);
+                          SoapFormatter b = new SoapFormatter();
+                          b.AssemblyFormat = FormatterAssemblyStyle.Simple;
+                          GridModel t = b.Deserialize(s) as GridModel;
+                          t.Modified = false;
+                          return t;
+                      }
+                      finally
+                      {
+                          AppDomain.CurrentDomain.AssemblyResolve -= new ResolveEventHandler(GridBaseAssembly.AssemblyResolver);
+                      }
+                  }
+            </code>
+            </example>
+        </member>
+        <member name="T:Syncfusion.Schedule.ILookUpObject">
+            <summary>
+            Defines items that can be included in a <see cref="T:Syncfusion.Schedule.ILookUpObjectList"/>.
+            </summary>
+            <remarks>
+            Choice lists within the ScheduleControl are used to provide possible
+            schedule item information like location or a reminder. ILookUpObject
+            allows such list items to have a ValueMember/DisplayMember associated with
+            the choices as well as a color that will be used in dropdowns showing these
+            lists. Value members are normally the values serialized to data stores.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.ILookUpObject.ColorMember">
+            <summary>
+            Gets or sets a color associated with this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ILookUpObject.DisplayMember">
+             <summary>
+            Gets or sets the display member associated with this item.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ILookUpObject.ValueMember">
+             <summary>
+            Gets or sets a value member associated with this item.
+             </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ILookUpObjectList">
+            <summary>
+            An Interface that defines Collection of <see cref="T:Syncfusion.Schedule.ILookUpObject"/> items.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ILookUpObjectList.Item(System.Int32)">
+            <summary>
+            Indexer that returns a <see cref="T:Syncfusion.Schedule.ILookUpObject"/>.
+            </summary>
+            <param name="i">Gets i-th Object</param>        
+        </member>
+        <member name="T:Syncfusion.Schedule.IRecurringScheduleAppointment">
+            <summary>
+            Provides the functionality for individual schedule items.
+            </summary>
+            <remarks>
+            IScheduleAppointments must implement IComparable and ICloneable. IComparable is used to order
+            the incidents in sorts so the items can be properly arranged in the schedule. ICloneable is
+            also required to handle support for drag and drop in the ScheduleControl.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Schedule.IScheduleAppointment">
+            <summary>
+            Provides the functionality for individual schedule items.
+            </summary>
+            <remarks>
+            IScheduleAppointments must implement IComparable and ICloneable. IComparable is used to order
+            the incidents in sorts so the items can be properly arranged in the schedule. ICloneable is
+            also required to handle support for drag and drop in the ScheduleControl.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointment.IsConflict(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Determine whether item has conflict with other item.
+            </summary>
+            <param name="item">A IScheduleAppointment</param>
+            <returns>True if the item is in conflict.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointment.IsConflict(System.DateTime,System.DateTime)">
+            <summary>
+            Determine whether item has conflict with other item.
+            </summary>        
+            <param name="dtStart">start time</param>
+            <param name="dtEnd">end time</param>
+            <returns>True if the item is in conflict.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.AllDay">
+             <summary>
+            Gets or sets a value indicating whether all day appointment or not.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.AllowClickable">
+            <summary>
+            Gets or sets a value indicating whether or not blocked appointment is allowed to click.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.AllowDrag">
+            <summary>
+            Gets or sets a value indicating whether or not an appointment is allowed to drag.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.AllowResize">
+            <summary>
+            Gets or sets a value indicating whether or not an appointment is allowed to resize and modify its duration.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.BackColor">
+             <summary>
+            Gets or sets the appointment html element background color.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Content">
+             <summary>
+            Gets or sets a text displayed as the main content of this schedule item.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.CustomToolTip">
+            <summary>
+            Gets or sets associates ToolTip text with the appointment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Dirty">
+             <summary>
+            Gets or sets a value indicating whether or not this items has been modified.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.EndTime">
+             <summary>
+            Gets or sets end time for this item.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.IgnoreChanges">
+            <summary>
+            Gets or sets a value indicating whether or not changes to this item should be ignored.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.LabelValue">
+            <summary>
+            Gets or sets a categorizer value for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.LocationValue">
+            <summary>
+            Gets or sets some item dependent string-like the location of a meeting.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.RecurringOnOverride">
+            <summary>
+            Gets or sets some item dependent string-like the location of a meeting.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.MarkerValue">
+            <summary>
+            Gets or sets categorizer value for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Owner">
+            <summary>
+            Gets or sets owner of this schedule item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Reminder">
+            <summary>
+            Gets or sets a value indicating whether or not some reminder action should be taken as this item becomes current.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.ReminderValue">
+            <summary>
+            Gets or sets a remind value of this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.ReminderText">
+            <summary>
+            Gets or sets a remind text of this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.StartTime">
+            <summary>
+            Gets or sets a start time of this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Subject">
+            <summary>
+            Gets or sets the subject or topic title for this schedule item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Tag">
+            <summary>
+            Gets or sets an arbitrary object associated with this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.TimeSpanColor">
+            <summary>
+            Gets or sets a color of appointment time span element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.ToolTip">
+            <summary>
+            Gets or sets ToolTip text with the appointment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.UniqueID">
+            <summary>
+            Gets or sets a unique identifier for this schedule item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointment.Version">
+            <summary>
+            A read-only property that gets a version associated with the data schema for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IRecurringScheduleAppointment.DateList">
+            <summary>
+            Gets or sets the recurrenceList holding the dates associated with this recurring appointment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IRecurringScheduleAppointment.RecurrenceRule">
+            <summary>
+            Gets or sets the RecurrenceRule including both start and end dates.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IRecurringScheduleAppointment.RecurrenceRuleID">
+            <summary>
+            Gets or sets the unique identifier assigned to this recurrence appointment.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.IRecurringScheduleDataProvider">
+            <summary>
+            Implement this interface to support recurring appointment in your IScheduleDataProvider.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IRecurringScheduleDataProvider.AddNewRecurringAppointments(Syncfusion.Schedule.IRecurringScheduleAppointment,System.DateTime)">
+            <summary>
+            Initially adds recurring appointments to the data provider.
+            </summary>
+            <param name="item">The recurring appointment definition.</param>
+            <param name="dateLimit">The minimal date up to which all recurring appointments should be added.</param>
+            <remarks>Use this method on the initial load to handle adding recurring appointments.</remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.IRecurringScheduleDataProvider.CheckAndAddIfNeededRecurringAppointments(System.DateTime)">
+            <summary>
+            Used after the initial load to add additional recurring appointments to the data provider.
+            </summary>
+            <param name="date">The date to which recurring appointments need to be extended.</param>
+            <returns>True if dates were added.</returns>
+            <remarks>Dynamically provide appointments on demand as new dates are exposed.</remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.IRecurringScheduleDataProvider.GetUniqueID">
+            <summary>
+            Returns a unique integer that serves to identify a recurring family of appointments.
+            </summary>
+            <returns>A unique integer.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IRecurringScheduleDataProvider.RemoveRecurringAppointments(Syncfusion.Schedule.IRecurringScheduleAppointment)">
+            <summary>
+            Removes all occurrences the given appointment.
+            </summary>
+            <param name="item">Recurring appointment form.</param>
+            <returns>True if the operation succeeds.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IRecurringScheduleDataProvider.SaveModifiedRecurringAppointment(Syncfusion.Schedule.IRecurringScheduleAppointment,Syncfusion.Schedule.IRecurringScheduleAppointment,Syncfusion.Schedule.RecurringAppointmentEditAction)">
+            <summary>
+            Makes changes to appointments in a recurring sequence of appointments.
+            </summary>
+            <param name="modifiedItem">The edited appointment.</param>
+            <param name="originalItem">The un-edited appointment.</param>
+            <param name="action">The requested edit action.</param>
+        </member>
+        <member name="P:Syncfusion.Schedule.IRecurringScheduleDataProvider.RecurringList">
+            <summary>
+            Gets a list of recurring appointments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.IScheduleAppointmentList">
+            <summary>
+            Defines the collection of schedule items.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.Add(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Adds an IScheduleAppointment at the end of this collection.
+            </summary>
+            <param name="item">An IScheduleAppointment item.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.Find(System.Int32)">
+            <summary>
+            Finds an IScheduleAppointment in the collection using its IScheduleAppointment.UniqueID.
+            </summary>
+            <param name="uniqueID">The IScheduleAppointment.UniqueID of the IScheduleAppointment being searched for.</param>
+            <returns>The IScheduleAppointment whose IScheduleAppointment.UniqueID is the given uniqueID.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.IndexOf(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Locates the index of a particular IScheduleAppointment in this collection.
+            </summary>
+            <param name="item">The item to be located.</param>
+            <returns>The index of the given item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.Insert(System.Int32,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Inserts the given IScheduleAppointment at a particular position in this collection.
+            </summary>
+            <param name="index">Where the item should be inserted.</param>
+            <param name="item">The item to be inserted.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.NewScheduleAppointment">
+            <summary>
+            Returns an instance of a new schedule item.
+            </summary>
+            <returns>A new schedule item that can be added to this list. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.Remove(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Removes a given IScheduleAppointment from this collection.
+            </summary>
+            <param name="item">The item to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.RemoveAt(System.Int32)">
+            <summary>
+            Removes an IScheduleAppointment at the given index from this collection.
+            </summary>
+            <param name="index">The index of the IScheduleAppointment to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleAppointmentList.SortStartTime">
+            <summary>
+            Arranges the IScheduleAppointments in this list according to IScheduleAppointment.StartTime.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointmentList.Count">
+            <summary>
+            Gets number of IScheduleAppointments in this list.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleAppointmentList.Item(System.Int32)">
+            <summary>
+            An IScheduleAppointment referenced through an indexer.
+            </summary>
+            <param name="i"> Get the ScheduleAppointment based on index </param>
+        </member>
+        <member name="T:Syncfusion.Schedule.IScheduleDataProvider">
+            <summary>
+            Defines the framework for providing schedule item data to the ScheduleControl.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.AddItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Adds a schedule item to this list.
+            </summary>
+            <param name="item">The schedule item to be added.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.CommitChanges">
+            <summary>
+            Saves modifications to the schedule items back to the data store.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetLabels">
+            <summary>
+            Gets a list holding the possible values for the <see cref="P:Syncfusion.Schedule.IScheduleAppointment.LabelValue"/> property.
+            </summary>
+            <returns>A list of possible values.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetLocations">
+            <summary>
+            Gets a list holding the possible values for the <see cref="P:Syncfusion.Schedule.IScheduleAppointment.LocationValue"/> property.
+            </summary>
+            <returns>A list of possible values.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetMarkers">
+            <summary>
+            Gets a list holding the possible values for the <see cref="P:Syncfusion.Schedule.IScheduleAppointment.MarkerValue"/> property.
+            </summary>
+            <returns>A list of possible values.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetOwners">
+            <summary>
+            Gets a list holding the possible values for the <see cref="P:Syncfusion.Schedule.IScheduleAppointment.Owner"/> property.
+            </summary>
+            <returns>Resources collection</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetReminders">
+            <summary>
+            Gets a list holding the possible values for the <see cref="P:Syncfusion.Schedule.IScheduleAppointment.ReminderValue"/> property.
+            </summary>
+            <returns>A list of possible values.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetSchedule(System.DateTime,System.DateTime)">
+            <summary>
+            Gets a list of schedule items for a range of dates.
+            </summary>
+            <param name="startDate">The start date of the requested range.</param>
+            <param name="endDate">The end date of the requested range.</param>
+            <returns>IScheduleAppointmentList object that holds the list of schedule items.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetSchedule(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Gets a list of schedule items for a range of dates and a specified owner.
+            </summary>
+            <param name="startDate">The start date of the requested range.</param>
+            <param name="endDate">The end date of the requested range.</param>
+            <param name="owner">The requested owner.</param>
+            <returns>IScheduleAppointmentList object that holds the list of schedule items.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetScheduleForDay(System.DateTime)">
+            <summary>
+            Gets a list of schedule items for a particular day.
+            </summary>
+            <param name="day">The requested date.</param>
+            <returns>IScheduleAppointmentList object that holds the list of schedule items.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.GetScheduleForDay(System.DateTime,System.Int32)">
+            <summary>
+            Gets a list of schedule items for a particular day and owner.
+            </summary>
+            <param name="day">The requested date.</param>
+            <param name="owner">The requested owner.</param>
+            <returns>IScheduleAppointmentList object that holds the list of schedule items.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.InitLists">
+            <summary>
+            Initializes the contents of the ILookUpObjectList lists obtained from
+            these methods: <see cref="M:Syncfusion.Schedule.IScheduleDataProvider.GetLocations"/>, <see cref="M:Syncfusion.Schedule.IScheduleDataProvider.GetMarkers"/>, <see cref="M:Syncfusion.Schedule.IScheduleDataProvider.GetLabels"/>, <see cref="M:Syncfusion.Schedule.IScheduleDataProvider.GetReminders"/>, <see cref="M:Syncfusion.Schedule.IScheduleDataProvider.GetOwners"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.NewScheduleAppointment">
+            <summary>
+            Gets an instance of a new schedule item.
+            </summary>
+            <returns>A new schedule item that can be added to this list. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.NewScheduleAppointmentList">
+            <summary>
+            Gets an instance of a new schedule items collection.
+            </summary>
+            <returns>A new schedule items collection. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.NewScheduleResource">
+            <summary>
+            Gets an instance of a new schedule resource.
+            </summary>
+            <returns>A new schedule resource. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.NewScheduleResourceList">
+            <summary>
+            Gets an instance of a new schedule resources collection.
+            </summary>
+            <returns>A new schedule resources collection. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.RemoveItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Removes a schedule item from this list.
+            </summary>
+            <param name="item">The schedule item to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleDataProvider.SaveModifiedItem(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Makes changes to appointments.
+            </summary>
+            <param name="appModifiedItem">The edited appointment.</param>
+            <param name="appOriginalItem">The original appointment.</param>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleDataProvider.IsDirty">
+             <summary>
+            Gets or sets a value indicating whether data source is modified or not.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleDataProvider.SaveOnCloseBehaviorAction">
+             <summary>
+            Gets or sets the SaveOnCloseBehavioourAction which determines whether CommitChanges is called when the toplevel Form holding the ScheduleControl is closed.
+             </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.IScheduleResource">
+            <summary>
+            Provides the functionality for individual schedule resources.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleResource.Name">
+             <summary>
+            Gets or sets the name of the resource.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleResource.UniqueID">
+             <summary>
+            Gets or sets a unique integer associated with this resource.
+             </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.IScheduleResourceList">
+            <summary>
+            Defines the collection of schedule resources.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.Add(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Appends the IScheduleResource to the end of the IScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to add to the IScheduleResourceCollection.</param>
+            <returns>Index at which the item is added.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.Contains(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Determines whether the collection contains the specified resource.
+            </summary>
+            <param name="resource">A IScheduleResource to search for in the collection.</param>
+            <returns>true if the collection contains the specified item; otherwise, false. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.Find(System.Int32)">
+            <summary>
+            Finds resource by UniqueID.
+            </summary>
+            <param name="nOwnerID">resource UniqueID</param>
+            <returns>A IScheduleResource</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.IndexOf(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Determines the index value that represents the position of the IScheduleResource in the ScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to locate in the IScheduleResourceCollection.</param>
+            <returns>The index position of the specified IScheduleResource in the collection.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.Insert(System.Int32,Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Inserts a IScheduleResource in the IScheduleResourceCollection at the specified index location.
+            </summary>
+            <param name="nIdx">The location in the collection to insert the ScheduleResource.</param>
+            <param name="resource">A IScheduleResource to add to the collection.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.NewScheduleResource">
+            <summary>
+            Gets an instance of a new schedule resource.
+            </summary>
+            <returns>A new schedule resource that can be added to this list. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.IScheduleResourceList.Remove(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Removes the specified ScheduleResource from the ScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to remove from the collection.</param>
+        </member>
+        <member name="P:Syncfusion.Schedule.IScheduleResourceList.Item(System.Int32)">
+            <summary>
+            Indexer that returns a <see cref="T:Syncfusion.Schedule.IScheduleResource"/>.
+            </summary>
+            <param name="i"> Get the ScheduleResource based on index </param>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentChangingEventHandler">
+            <summary>
+            Represents a method that handles an event with <see cref="T:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs"/> arguments
+            which is raised when any <see cref="T:Syncfusion.Schedule.IScheduleAppointment"/> has changed.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentChangedEventHandler">
+            <summary>
+            Represents a method that handles an event with <see cref="T:Syncfusion.Schedule.ScheduleAppointmentEventArgs"/> arguments
+            which is raised when any <see cref="T:Syncfusion.Schedule.IScheduleAppointment"/> has changed.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Syncfusion.Schedule.ScheduleAppointmentEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs">
+            <summary>
+            Provides data for the ItemChanging event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.#ctor(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.ItemAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs"/> class.
+            The event arguments for a cancellable event raised prior to changes in an IScheduleAppointment object.
+            </summary>
+            <param name="currentItem">Current value of the IScheduleAppointment object.</param>
+            <param name="proposedItem">Modified value of the IScheduleAppointment object.</param>
+            <param name="action">An <see cref="T:Syncfusion.Schedule.ItemAction"/> value that indicates the type of the change.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.#ctor(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.ItemAction,Syncfusion.Schedule.ItemDragHitContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs"/> class.
+            The event arguments for a cancellable event raised prior to changes in an IScheduleAppointment object.
+            </summary>
+            <param name="currentItem">Current value of the IScheduleAppointment object.</param>
+            <param name="proposedItem">Modified value of the IScheduleAppointment object.</param>
+            <param name="action">An <see cref="T:Syncfusion.Schedule.ItemAction"/> value that indicates the type of the change.</param>
+            <param name="context">An <see cref="P:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.ItemDragHitContext"/> value that indicates the drag hit context.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.ToString">
+            <summary>An Overridden method that returns the string representation of ScheduleAppointmentCancelEventArgs object.</summary>
+            <returns>A string holding the event args object.</returns>
+            <override/>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.Action">
+             <summary>
+            Gets or sets type of action that is being taken such as a Drag or an Edit.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.ItemDragHitContext">
+             <summary>
+            Gets or sets drag hit context in a Month or Week View
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.CurrentItem">
+            <summary>
+            Gets or sets IScheduleAppointment prior to the change.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentCancelEventArgs.ProposedItem">
+            <summary>
+            Gets or sets IScheduleAppointment after the change.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentEventArgs">
+            <summary>
+            Provides data for the ItemChanged event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentEventArgs.#ctor(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.ItemAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleAppointmentEventArgs"/> class.
+            </summary>
+            <param name="currentItem">Current value of the IScheduleAppointment object.</param>
+            <param name="action">An <see cref="T:Syncfusion.Schedule.ItemAction"/> value that indicates the type of the change.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentEventArgs.ToString">
+            <summary>An Overridden method that returns the string representation of ScheduleAppointmentEventArgs object.</summary>
+            <returns>A string holding the Event Args object.</returns>
+            <override/>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentEventArgs.Action">
+             <summary>
+            Gets or sets type of action that is being taken such as a Drag or an Edit.
+             </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentEventArgs.CurrentItem">
+            <summary>
+            Gets or sets IScheduleAppointment after the change.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.CalendarNavigationPanelPosition">
+            <summary>
+            Defines the constants that specify how the fixed panel holding the navigation calendars is displayed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.CalendarNavigationPanelPosition.Hidden">
+            <summary>
+            No navigation calendars are visible.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.CalendarNavigationPanelPosition.Left">
+            <summary>
+            Navigation calendars are positioned to the left of Schedule display.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.CalendarNavigationPanelPosition.Right">
+            <summary>
+            Navigation calendars are positioned to the right of Schedule display.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ItemAction">
+            <summary>
+            Defines the constants that specify the type of change an IScheduleAppointment is undergoing due to a user action.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.Add">
+            <summary>
+            A new IScheduleAppointment is being added.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.Default">
+            <summary>
+            A default IScheduleAppointment is being requested.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.Delete">
+            <summary>
+            An IScheduleAppointment is being deleted.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.Edit">
+            <summary>
+            An existing IScheduleAppointment is being edited.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.ItemDrag">
+            <summary>
+            A IScheduleAppointment is being moved with a Mouse Drag.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemAction.TimeDrag">
+            <summary>
+            The bottom or top border of a IScheduleAppointment is being dragged.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ItemHitType">
+            <summary>
+            Defines the constants that specify the type of information under a Point.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.AllDayItem">
+            <summary>
+            There is a AllDay IScheduleAppointment item under the Point.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.CellHeader">
+            <summary>
+            The Point is in a header line within a cell in a Week or Month Schedule view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.Header">
+            <summary>
+            The Point is in a column header of a Day or WorkWeek Schedule view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.Item">
+            <summary>
+            An IScheduleAppointment item under the Point.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.MoreItemsBitmap">
+            <summary>
+            The Point is in the rectangle occupied by the MoreItemsBitmap.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemHitType.None">
+            <summary>
+            There is no IScheduleAppointment item under the Point.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.RecurringAppointmentEditAction">
+            <summary>
+            Defines the constants that specify the possible edit actions on recurring appointments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.RecurringAppointmentEditAction.Cancel">
+            <summary>
+            Cancel the edit action.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.RecurringAppointmentEditAction.ChangeAllAppointments">
+            <summary>
+            Modify all appointments in this recurrence definition.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.RecurringAppointmentEditAction.ChangeAllFutureAppointments">
+            <summary>
+            Modify this and all future appointments.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.RecurringAppointmentEditAction.ChangeSingleAppointmentOnly">
+            <summary>
+            Modify a single appointment.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.SaveOnCloseBehavior">
+            <summary>
+             Defines the constants that specify the SaveOnClose behavior on how IScheduleDataProvider.Commit will be called when the toplevel Form holding the ScheduleControl is closed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.SaveOnCloseBehavior.DoNotSave">
+            <summary>
+            Do not call Commit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.SaveOnCloseBehavior.PromptBeforeSave">
+            <summary>
+            Propmt before calling Commit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.SaveOnCloseBehavior.SaveWithoutPrompt">
+            <summary>
+            Call Commit without a prompt.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentToolTip">
+            <summary>
+             Defines the constants that specify the details of a <see cref="T:Syncfusion.Schedule.IScheduleAppointment"/> that get displayed in a ToolTip.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.All">
+            <summary>
+            Retreives all the details of any appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.Custom">
+            <summary>
+            When the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.ToolTip"/>is set to custom you can define your own custom tooltip
+            <see cref="P:Syncfusion.Schedule.ScheduleAppointment.CustomToolTip"/>
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.EndTime">
+            <summary>
+            Retreives the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.EndTime"/> of a appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.Location">
+            <summary>
+            Retreives the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.LocationValue"/> of a appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.ResourceName">
+            <summary>
+            Retreives the ResourceName of Appointment"/> of a appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.StartAndEndTime">
+            <summary>
+            Retreives the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.EndTime"/> and <see cref="P:Syncfusion.Schedule.ScheduleAppointment.StartTime"/> of a appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.StartTime">
+            <summary>
+             Retreives the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.StartTime"/> of a appointment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ScheduleAppointmentToolTip.Subject">
+            <summary>
+            Retreives the <see cref="P:Syncfusion.Schedule.ScheduleAppointment.Subject"/> of a appointment
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ItemDragHitContext">
+            <summary>
+             Defines the constants that specify where the mouse is during a appointment drag in a Week or Month view.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemDragHitContext.Schedule">
+            <summary>
+            Mouse is over the schedule control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ItemDragHitContext.Calendar">
+            <summary>
+            Mouse is over the calendar.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.RecurrenceSupport">
+            <summary>
+            Exposes methods that allow you find dates that satisfy
+            some rule that designate when recurring appointments happen. The rule may be something as
+            simple as 'every month on 13' to indicate that the appointment should occur on the 13th
+            day of each month. Other rules might be 'every year on Jan 13', or
+            'every year on weekday after Apr 15'. A recurrence rule may be defined either as a string
+            (as with the three examples so far), or as an <see cref="T:Syncfusion.Schedule.RecurrenceRule"/>. More samples
+            of each use case follows.
+            </summary>
+            <remarks>
+            A recurrence rule has three main pieces; an Every clause, an On clause and an BeforeAfter
+            clause. Each of the three main pieces also has an integer count property associated with
+            it; EveryCount, OnCount and BeforeAfterCount. The RecurrenceRule class has public
+            properties that reflect these values; Every, EveryCount, On, OnCount, BeforeAfter, and
+            BeforeAfterCount. You may create a RecurrenceRule either by passing the constructor a
+            well formaed string holding the rule, or you can use the default constructor and explicitly
+            set the six properties mentioned above to define the RecurrenceRule.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.#ctor">
+             <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.RecurrenceSupport"/> class.
+             </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.FirstDayOfMonth(System.DateTime)">
+            <summary>
+            Gets the first day of specified month.
+            </summary>
+            <param name="date">The date value to find.</param>
+            <returns>The first day.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.FirstDayOfQuarter(System.DateTime)">
+            <summary>
+            Gets the first day of quarter month.
+            </summary>
+            <param name="date">The date value to find.</param>
+            <returns>The first day.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.FirstDayOfYear(System.DateTime)">
+            <summary>
+            Gets the first day of year.
+            </summary>
+            <param name="date">The date value to find.</param>
+            <returns>The first day.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetCount(System.Int32@,System.String)">
+            <summary>
+            Gets an integer starting at location in parsedRule.
+            </summary>
+            <param name="loc">Index of the rule.</param>
+            <param name="parsedRule">Rule string.</param>
+            <returns>Count.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetFirstDate(System.DateTime@,Syncfusion.Schedule.RecurrenceRule)">
+            <summary>
+            Gets the first date that satisfies the given recurrence definition that follows the
+            given date.
+            </summary>
+            <param name="dt">The date where the search begins, returns as the newly located date.</param>
+            <param name="rule">The RecurrenceRule that defines the recurrence.</param>
+            <returns>True if a date was located and dt holds the next occurrence.
+            </returns>
+            <remarks>
+            The usage is to call GetFirstDate to begin accumulating the dates that satisfiy the recurrence
+            definition. After returning the first date, then use the GetNextDate method to find each addition date.
+            Notice that GetFirstDate may find the passed in value (dt) satisfies the recurrence definition, but
+            GetNextDate does not consider the passed in date when it does it search.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetFirstDate(System.DateTime@,System.String,Syncfusion.Schedule.RecurrenceRule@)">
+            <summary>
+            Gets the first date that satisfies the given recurrence definition that follows the
+            given date.
+            </summary>
+            <param name="dt">The date where the search begins and returns as the newly found date.</param>
+            <param name="parsedExpression">A string holding the recurrence definition.</param>
+            <param name="rule">The Recurrence object defines the recurrence.</param>
+            <returns>True if a new recurrence date is located.</returns>
+            <remarks> If rule is passed in as null, then parsedExpression must hold the
+            recurrence definition. If parsedExpression is passed in as empty, then rule must hold the
+            recurrence definition.
+            The usage is to call GetFirstDate to begin accumulating the dates that satisfy the recurrence
+            definition. After returning the first date, then use the GetNextDate method to find each addition date.
+            Notice that GetFirstDate may find the passed in value (dt) satisfies the recurrence definition, but
+            GetNextDate does not consider the passed in date when it does it search.
+            The typical use case will not require the use of this method. Usually,
+            you would define a <see cref="T:Syncfusion.Schedule.RecurrenceList"/> object, and work with that object and its
+            IsValidRecurrence method to get recurrent dates.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetNextDate(System.DateTime@,System.String,Syncfusion.Schedule.RecurrenceRule@)">
+            <summary>
+            Get the next date that satisfies the recurrence definition.
+            </summary>
+            <param name="dt">The date after which the search begins. The newly found date
+            is returned through this parameter.</param>
+            <param name="parsedExpression">A parsed expression that defines the recurrence defintion.</param>
+            <param name="rule">The recurrence definition.</param>
+            <returns>True if a new date is located that satisfies the recurrence.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetNextDate(System.DateTime@,Syncfusion.Schedule.RecurrenceRule@)">
+            <summary>
+            Get the next date that satisfies the recurrence definition.
+            </summary>
+            <param name="dt">The date after which the search begins. The newly found date
+            is returned through this parameter.</param>
+            <param name="rule">The recurrence definition.</param>
+            <returns>True if a new date is located that satisfies the recurrence.</returns>
+            <remarks>The typical use case will not require the use of this method. Usually,
+            you would define a <see cref="T:Syncfusion.Schedule.RecurrenceList"/> object, and work with that object and its
+            IsValidRecurrence method to get recurrent dates.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetRecurrenceRule(System.String)">
+            <summary>
+            Gets a <see cref="T:Syncfusion.Schedule.RecurrenceRule"/> represented by the input text.
+            </summary>
+            <param name="text">A string holding a valid recurrence definition.</param>
+            <returns>A RecurrenceRule.</returns>
+            <remarks> If the input text holds multiple recurrence definitions (separated
+            by semicolons), then the first definition is used to define the single RecurrenceRule
+            that is returned.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.GetTextFromRecurrenceRule(Syncfusion.Schedule.RecurrenceRule)">
+            <summary>
+            Returns a string holding the recurrenced defined by the given RecurrenceRule.
+            </summary>
+            <param name="rule">The RecurrenceRule.</param>
+            <returns>The string representing the recurrence definition.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.HandleBeforeAfter(System.DateTime@,Syncfusion.Schedule.RecurrenceRule)">
+            <summary>
+            Handles the recurrence rule before and after.
+            </summary>
+            <param name="dt">The date value to handle.</param>
+            <param name="calcStruct">The recurrence rule.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.HandleOn(System.DateTime@,Syncfusion.Schedule.RecurrenceRule)">
+            <summary>
+            Handles the On clause
+            </summary>
+            <param name="dt">The date value to handle.</param>
+            <param name="calcStruct">Recurrence rule.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.IsSpanItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Determines if the passed AppointmentItem is a Span Item or not.
+            </summary>
+            <param name="item">Schedule Appointment.</param>
+            <returns>True if the Schedule Appointment is Span Item, false otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.IsValidRule(System.String)">
+            <summary>
+            Checks whether the provided string holds a valid recurrence defintion.
+            </summary>
+            <param name="rule">A string containingth eproposed rule.</param>
+            <returns>True if the rule is valid.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.IsValidRule(System.String,System.String@)">
+            <summary>
+            Checks whether the provided string holds a valid recurrence defintion.
+            </summary>
+            <param name="rule">A string containingth eproposed rule.</param>
+            <param name="errorMessage">Returns an error message if teh rule is not valid.</param>
+            <returns>True if the rule is valid.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.ParseDefinition(System.String)">
+            <summary>
+            Gets a tokenized version of the recurrence definition represented by text.
+            </summary>
+            <param name="text">The text of the definition. eg. Every month On Wed After 15</param>
+            <returns>A tokenized string.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.UnparseDefinition(System.String)">
+            <summary>
+            Accepts a tokenized string representing a recurrence definition and returns a non-tokenized version.
+            </summary>
+            <param name="parsedDefintion">Tokenized string</param>
+            <returns>Non tokenized string.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceSupport.UnparseSimpleDefinition(System.String)">
+            <summary>
+            Accepts a tokenized string representing a recurrence definition and returns a non-tokenized version.
+            </summary>
+            <param name="parsedDefintion">Token string.</param>
+            <returns>Non tokenized string.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.CountMarker">
+            <summary>
+            Gets or sets the character that is used to indicate a count parameter
+            (an integer) is applied to the preceding value. Default value is colon (:).
+            </summary>Use this character to delimit an object from a count.  For example,
+            if you want to specify the second Wednesday of every month, then the recurrence
+            definition could be represented as 'Every month On Wed:2'. The idea is that
+            Wed:2 represents the second Wednesday.
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.DaysOfWeekTokens">
+            <summary>
+            Gets the token of week days.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.ParseableStrings">
+            <summary>
+            Gets an ArrayList of strings that can be used to compose a text version of
+            a recurrence definition.
+            </summary>
+            <remarks>This list is exposed in case you want to localize the strings
+            used to define a recurrence definition in text. Note each string
+            should be padded with a single space at each end. The strings are
+            defined by the code below. When you replace them, the replacements must
+            be in the same order.
+            <code lang="C#">
+            gridTableControl.UpdateWithCustomPaint(bounds, new PaintEventHandler(TableControl_CustomPaint));
+            void TableControl_CustomPaint(object sender, PaintEventArgs e)
+            {
+                Rectangle clipBounds = Rectangle.Truncate(e.Graphics.ClipBounds);
+                gridTableControl.DrawClippedGrid(e.Graphics, clipBounds, false);
+            }
+            </code>
+            public ArrayList ParseableStrings
+            {
+                get
+                {
+                    if (parseableStrings == null)
+                    {
+                        parseableStrings = new ArrayList(new string[]{
+                            " EVERY ",
+                            " ON ",
+                            " AFTER ",
+                            " DAY ",
+                            " WEEK ",
+                            " MONTH ",
+                            " QUARTER ",
+                            " YEAR ",
+                            " WEEKDAY ",
+                            " WEEKEND ",
+                            " MON ",
+                            " TUE ",
+                            " WED ",
+                            " THU ",
+                            " FRI ",
+                            " SAT ",
+                            " SUN ",
+                            " JAN ",
+                            " FEB ",
+                            " MAR ",
+                            " APR ",
+                            " MAY ",
+                            " JUN ",
+                            " JUL ",
+                            " AUG ",
+                            " SEP ",
+                            " OCT ",
+                            " NOV ",
+                            " DEC "
+                        });
+                    }
+                    return parseableStrings;
+                 }
+             }
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.ParsedMarker">
+            <summary>
+            Gets or sets the character that indicates a recurrence definition
+            string has been parsed. Parsed strings begin with this character.
+            Default is tilde (~).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.RuleDelimiter">
+            <summary>
+            Gets or sets the character used to delimit multiple recurrence definitions
+            in a single string. Default is semicolon (;).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.SpanMarker">
+            <summary>
+            Gets or sets the character used to delimit multiple recurrence definitions
+            in a single string. Default is semicolon (;).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.SupportClass">
+            <summary>
+            Gets the support class for recurrence support.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceSupport.WeekEndDays">
+            <summary>
+            Gets or sets an array list that holds the days of the weeks that are considered the weekend.
+            It defaults to two days: DayOfWeek.Saturday, DayOfWeek.Sunday.
+            </summary>
+            <remarks> If you modify this list, you must make sure you only add DayOfWeek
+            enumerations to this list. The implementation expects this class to hold DayOfWeek values.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Schedule.ParseTokens">
+            <summary>
+            Defines the constants that specify the various pieces that go into making a valid rule that defines a set of recurring dates.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.EVERY">
+            <summary>
+            Indicates the beginning of an Every clause.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.ON">
+            <summary>
+            Indicates the beginning of an On clause.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.AFTER">
+            <summary>
+            Indicates the beginning of an BeforeAfter clause.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.BEFORE">
+            <summary>
+            Indicates the beginning of an BeforeAfter clause. Not currently used.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.IN">
+            <summary>
+            Indicates the beginning of an In clause. Not currently used.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.DAY">
+            <summary>
+            Represents a Day.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.WEEK">
+            <summary>
+            Represents a Week.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.MONTH">
+            <summary>
+            Represents a Month.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.QUARTER">
+            <summary>
+            Represents a Quarter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.YEAR">
+            <summary>
+            Represents a Year.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.WEEKDAY">
+            <summary>
+            Represents a Week Day.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.WEEKEND">
+            <summary>
+            Represents a Week End.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.MON">
+            <summary>
+            Represents a Monday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.TUE">
+            <summary>
+            Represents a Tuesday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.WED">
+            <summary>
+            Represents a Wednesday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.THU">
+            <summary>
+            Represents a Thursday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.FRI">
+            <summary>
+            Represents a Friday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.SAT">
+            <summary>
+            Represents a Saturday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.SUN">
+            <summary>
+            Represents a Sunday.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.JAN">
+            <summary>
+            Represents January.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.FEB">
+            <summary>
+            Represents February.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.MAR">
+            <summary>
+            Represents March.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.APR">
+            <summary>
+            Represents April.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.MAY">
+            <summary>
+            Represents May.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.JUN">
+            <summary>
+            Represents June.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.JUL">
+            <summary>
+            Represents July.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.AUG">
+            <summary>
+            Represents August.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.SEP">
+            <summary>
+            Represents September.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.OCT">
+            <summary>
+            Represents October.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.NOV">
+            <summary>
+            Represents November.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.DEC">
+            <summary>
+            Represents December.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.NULL">
+            <summary>
+            Represents no entry.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.SEC">
+            <summary>
+            Represents seconds.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.MIN">
+            <summary>
+            Represents minutes.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Schedule.ParseTokens.HR">
+            <summary>
+            Represents hours
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.RecurrenceList">
+            <summary>
+            Encapsulates the idea of a recurrence defintion. Its purpose is to accept a
+            recurrence definition (either as a string or as RecurrenceRules) and allow you to easily
+            decide whether particular date satisfies the defineition of recurrence. The class derives from
+            ArrayList. The ArayList may (depending upon <see cref="P:Syncfusion.Schedule.RecurrenceList.EnableDateCache"/>) hold a list
+            of known valid recurrent dates. This list is dynamic, and will grow as you use the method
+            <see cref="M:Syncfusion.Schedule.RecurrenceList.IsValidRecurrence(System.DateTime)"/> to determine whether a date satisfies the definition of
+            recurrence.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.RecurrenceList"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceList.#ctor(System.String,System.DateTime,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.RecurrenceList"/> class. Accepts a string rule and a base date to define the recurrence.
+            </summary>
+            <param name="rule">The string rule. <see cref="P:Syncfusion.Schedule.RecurrenceRule.Text"/></param>
+            <param name="baseDate">The base date.</param>
+            <param name="appointment">Defines the appointment associated with this recurrence.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceList.#ctor(Syncfusion.Schedule.RecurrenceRule,System.DateTime,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.RecurrenceList"/> class. Uses a RecurenceRule and BaseDate to define the recurrence.
+            </summary>
+            <param name="rule">The recurrence rule.</param>
+            <param name="baseDate">The basedate.</param>
+            <param name="appointment">Defines the appointment associated with this recurrence.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceList.#ctor(System.DateTime[],Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.RecurrenceList"/> class. Accepts a fixed list of dates.
+            </summary>
+            <param name="dates">An Array of DateTime values.</param>
+            <param name="appointment">Defines the appointment associated with this recurrence.</param>
+            <remarks>
+            This constructor allows you to specify a recurrence as a fix set of dates. So,
+            if you want to set up a series of 5 meetings on 5 different dates, then
+            you can use this constructor to do so as a recurring appointment.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceList.IsValidRecurrence(System.DateTime)">
+            <summary>
+            Determines whether the given date satisfies the recurrence definition.
+            </summary>
+            <param name="dt">The date to be tested.</param>
+            <returns>True is the date satisfies the recurrence definition.</returns>
+            <remarks>If <see cref="P:Syncfusion.Schedule.RecurrenceList.EnableDateCache"/> is true, then this routine first
+            does a binary search on the dates that are cached in the underlying ArrayList.
+            If the date is not found and exceeds the last cached date, then
+            Syncfusion.Schedule.RecurrenceSupport.GetFirstDate is called with a base date of the
+            last known cached recurrence date. Then GetNextDate is continually called until
+            either the given date is found to satisfy the recurrence, or the given date has
+            been exceeded. As the dates are generated, they are inserted into the underlying
+            ArrayList, extending the known date cache. Care is taken to insert the new dates
+            properly so the underlying date cache is always sorted, and BinarySearch is valid.
+            If EnableDateCache is false, then no searching is attempted in the cache which is
+            always empty. Instead, GetFirstDate is always called with the BaseDate, and the
+            GetNextDate is called until the given date is found or exceeded. There is no
+            cacheing involved and all checks require starting at the beginning and computing
+            all the dates from scratch everytime.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.Appointment">
+            <summary>
+            Gets or sets appointment information for this recurring event.
+            </summary>
+            <remarks>When a Calendar is displaying a date that holds a recurring
+            appointment, the information provided through this property will
+            be used to create a placeholder appointment for this recurring event.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.BaseDate">
+            <summary>
+            Gets or sets the start date for this recurrence.
+            </summary>
+            <remarks>
+            This value should be the earliest possible date that you want to be considered
+            for this set of recurrences.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.EnableDateCache">
+            <summary>
+            Gets or sets a value indicating whether this RecurrencList maintains a list of dates that satisfies
+            the recurrence definition.
+            </summary>
+            <remarks>
+            If this property is true, the ReccurenceList is an ArrayList object hodling a sorted
+            list of the known occurrences to date. The list is fully populated in the sense that
+            all dates between the first date in that list and the last date in the list which
+            satisfy the recurrence definintion are also in the list. This list is used in the
+            <see cref="M:Syncfusion.Schedule.RecurrenceList.IsValidRecurrence(System.DateTime)"/> method to check for occurences. This method first
+            checks whether the requested date is in the list which means the method returns true.
+            If not, it checks to see if the requested date is less than teh last date in the list,
+            and if so, returns false. Finally, if the requested date is beyond the dates in the list,
+            the method computes new dates that satisfy the rule and adds them to the list until
+            ether the requested date is found, or exceeded. This means that the list dynamically
+            grows as you request further and further dates into the future.
+            This dynamic list technique makes validating dates to be very efficient at the expense
+            of the memory load of maintaining the date list.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.Rules">
+            <summary>
+            Gets or sets an array of <see cref="T:Syncfusion.Schedule.RecurrenceRule"/>s that defines this recurrence collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.RuleString">
+            <summary>
+            Gets or sets a string that defines this recurrence collection.
+            </summary>
+            <remarks>The string may be a simple rule that qualifies (<see cref="P:Syncfusion.Schedule.RecurrenceRule.Text"/>
+            for sample rules). It also can be several simple rules appended together with
+            semicolons. This RuleString is equivalent to the collection of <see cref="P:Syncfusion.Schedule.RecurrenceList.Rules"/>
+            in that both RuleString and Rules define exactly the same set of recurrent dates.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.TerminalDate">
+            <summary>
+            Gets or sets the last date associated with this recurrence definition.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceList.Item(System.Int32)">
+            <summary>
+            Gets of sets the ith date in this RecurrentList.
+            </summary>
+            <param name="i">The requested index.</param>
+            <returns>A date satisfying this recurrence.</returns>
+        </member>
+        <member name="T:Syncfusion.Schedule.RecurrenceRule">
+            <summary>
+            Implements the definition of a simple recurrence. There are two representations
+            available for the recurrence definition. One is a simple text string that hold words defining the
+            recurrence. The property Text holds this text string. The other representation is based on the
+            <see cref="T:Syncfusion.Schedule.ParseTokens"/> enumerations along with some supporting integer properties. The enumerations
+            are Every, On, and BeforeAfter. The supporting properties are EveryCount, OnCount and BeforeAfterCount.
+            </summary>
+            <remarks>It is important to understand that there are two ways to define a set of recurrences
+            in a RecurrenceRule object. One is through the Text property. The other is through the ParseToken
+            enumeration properties and their associated integer properties. The Text definition is easier to
+            serialize and present to the user. The enumeration properties allow for straight-forward calculation
+            support.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceRule.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the RecurrenceRule class. Accepts a string used in the recurrence defintion.
+            </summary>
+            <param name="text">The string that defines this recurrence.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceRule.#ctor">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Syncfusion.Schedule.RecurrenceRule"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceRule.HandleNull(Syncfusion.Schedule.ParseTokens)">
+            <summary>
+            
+            Handles the null tokens.
+            </summary>
+            <param name="c">Token.</param>
+            <returns>Token string.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.RecurrenceRule.ToString">
+            <summary>
+            An Overridden method that returns a string holding the RecurrenceRule object.
+            </summary>
+            <returns>String representation of this object.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.BeforeAfter">
+            <summary>
+            Gets or sets after clause for this rule.
+            </summary>
+            <remarks>
+            The valid values for this property are:
+                   MON
+                   TUE
+                   WED
+                   THU
+                   FRI
+                   SAT
+                   SUN
+                   JAN
+                   FEB
+                   MAR
+                   APR
+                   MAY
+                   JUN
+                   JUL
+                   AUG
+                   SEP
+                   OCT
+                   NOV
+                   DEC
+                   NULL
+            <para></para>
+            If BeforeAfter has a value of ParseToken.NULL, then BeforeAfterCount should be positive and
+            represent a date. For example, the string "Every month on Wed After 15" would pick out the
+            first Wed of every month on or after the 15th of the month. In this case, the enumeration
+            representation of this recurrence definition would have BeforeAfter = ParseToken.NULL and
+            BeforeAfterCount = 15.
+            Also, this is a required entry when specifying a recurrence definition.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.BeforeAfterCount">
+            <summary>
+            Gets or sets an integer value used in conjunction with the BeforeAfter property to determine the After clause of the
+            definition of this recurrence. So, if Text = "Every month After Wed:2", then this would tranlate into
+            the BeforeAfter = ParseToken.WED and BeforeAfterCount = 2.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.BeforeAfterType">
+            <summary>
+            Gets or sets the BeforeAfterType which is not currently being used.
+            </summary>
+            <remarks>For the current implementation, this property should always have the value of
+            ParseTokens.After.</remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.Every">
+            <summary>
+            Gets or sets Every clause for this rule.
+            </summary>
+            <remarks>
+            The valid values for this property are:
+                   DAY
+                   WEEK
+                   MONTH
+                   QUARTER
+                   YEAR
+                   WEEKDAY
+                   WEEKEND
+                   MON
+                   TUE
+                   WED
+                   THU
+                   FRI
+                   SAT
+                   SUN
+                   JAN
+                   FEB
+                   MAR
+                   APR
+                   MAY
+                   JUN
+                   JUL
+                   AUG
+                   SEP
+                   OCT
+                   NOV
+                   DEC
+                   NULL
+            If Every = ParseTokens.NULL, then EveryCount must be positive. In this case, the EveryCount represents a
+            date. So, the string Text = "Every 21" would result in Every = ParseTokens.NULL and EveryCount = 21. The
+            recurrence definition would represent the 21st of every month.
+            Please note that the month entries, normally have a non-zero value set for EveryCount.
+            Also, this is a required entry when specifying a recurrence definition.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.EveryCount">
+            <summary>
+            Gets or sets an integer value used in conjunction with the Every property to determine the Every clause of the
+            definition of this recurrence. So, if Text = "Every Jan 20", then this would translate into
+            the Every = ParseToken.JAN and EveryCount = 20.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.On">
+            <summary>
+            Gets or sets on clause for this rule.
+            </summary>
+            <remarks>
+            The valid values for this property are:
+                   WEEKDAY
+                   WEEKEND
+                   MON
+                   TUE
+                   WED
+                   THU
+                   FRI
+                   SAT
+                   SUN
+                   JAN
+                   FEB
+                   MAR
+                   APR
+                   MAY
+                   JUN
+                   JUL
+                   AUG
+                   SEP
+                   OCT
+                   NOV
+                   DEC
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.OnCount">
+            <summary>
+            Gets or sets an integer value used in conjunction with the On property to determine the On clause of the
+            definition of this recurrence. So, if Text = "Every month On Wed:2", then this would tranlate into
+            the On = ParseToken.WED and OnCount = 2.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.RecurrenceRule.Text">
+            <summary>
+            Gets a string representation of a recurrence definition.
+            </summary>
+            <remarks>Here are some examples:
+            1)      Every Month On 13
+            2)      Every Month On Wed:2
+            3)      Every Year On Apr 15
+            4)      Every Apr 15
+            5)      Every Year On weekday After Apr 15
+            6)      Every Year On Tue After Apr 15
+            7)      Every Week on Thu
+            8)      Every Week:2 On Wed
+            9)      Every Week On Thu
+            10)     Every Month On 13
+            <para></para> Many of the example strings are self explanatory. In the second example, the Wed:2 indicates
+            the second Wed. In the 8th example, Week:2 indicates every 2 weeks. Examples 3 and 4 define
+            exactly the same recurrence. Examples 5 and 6 have After clauses in addition to Every and On
+            clauses.
+            From the examples, you can see that a Text rule that defines a recurrence can contain an
+            Every clause, an On clause and an After clause. The only piece that is required is the
+            Every clause (as seen in example 4). The order and case of these clause does not matter. So,
+            On 'Apr 15 Every Year' is valid and the same as 'EVERY year ON apr 15'. See the indivdual
+            ParseToken properties (Every, On and BeforeAfter) for a discussion of the valid forms of these
+            clauses.
+            The words used in a Text definition of a recurrence rule can be localized through the
+            <see cref="P:Syncfusion.Schedule.RecurrenceSupport.ParseableStrings"/> property.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Schedule.ListObject">
+            <summary>
+            Implements the list choices that can have a valueMember, displayMember and colorMember associated with them.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ListObject.#ctor(System.Int32,System.String,System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ListObject"/> class.
+            </summary>
+            <param name="valueMember">The valueMember that is stored in the data objects.</param>
+            <param name="displayMember">The displayMember that is used for display.</param>
+            <param name="colorMember">A color that is associated with this valueMember.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ListObject.ToString">
+            <summary>
+            An Overridden method to return DisplayMember.
+            </summary>
+            <returns>The DisplayMember.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.ListObject.ColorMember">
+            <summary>
+            Gets or sets color associated with this object.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ListObject.DisplayMember">
+            <summary>
+            Gets or sets string that is used when this object is displayed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ListObject.ValueMember">
+            <summary>
+            Gets or sets an integer that is stored in the data objects to represent this object.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ListObjectList">
+            <summary>
+            A strongly typed Array list class that maintain list option values.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ListObjectList.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Gets ListObject property descriptors collection.
+            </summary>
+            <param name="listAccessors">An array of PropertyDescriptor objects to find in the collection as bindable. This can be a null reference.</param>
+            <returns>The property descriptors for each property in ListObject.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ListObjectList.GetListName(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Gets the name of the list, i.e. &quot;ListObject&quot;.
+            </summary>
+            <param name="listAccessors">An array of PropertyDescriptor objects to find in
+            the collection as bindable. This can be a null reference.</param>
+            <returns>
+            The list name.
+            </returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.ListObjectList.Item(System.Int32)">
+            <summary>
+            Gets or sets the i-th item in the list.
+            </summary>
+            <param name="i">The key to identify the desired item.</param>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointment">
+            <summary>
+            Implements the objects that represent appointments in the Schedule Control.
+            </summary>
+            <remarks>
+             This class implements IScheduleAppointment to provide an object to hold the concrete data associated
+             with appointments.
+             You can either derive this class or implement IScheduleAppointment yourself to extend or modify the information
+             managed by the ScheduleAppointment class.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.#ctor">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Syncfusion.Schedule.ScheduleAppointment"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.Clone">
+            <summary>
+            Creates a copy of this item; using MemberwiseClone.
+            </summary>
+            <returns>A new instance of this item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.CompareTo(System.Object)">
+            <summary>
+            Implemented to check UniqueID property for equality.
+            </summary>
+            <param name="obj">The object to compare this instance to.</param>
+            <returns>Zero if the objects have the same UniqueID. Nonzero otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.IsConflict(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Determines whether the item has conflict with other item.
+            </summary>
+            <param name="appVal">A IScheduleAppointment</param>
+            <returns>True, it the item is in conflict; Fasle, otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.IsConflict(System.DateTime,System.DateTime)">
+            <summary>
+            Determines whether the item has conflict with other item.
+            </summary>
+            <param name="dtStart">Item start time.</param>
+            <param name="dtEnd">Item end time.</param>
+            <returns>
+            True, if the item is in conflict; False, otherwise.
+            </returns>
+            <exclude />
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.MaxDate(System.DateTime,System.DateTime)">
+            <summary>
+            Gets the maximum date between specified dates.
+            </summary>
+            <param name="dtDateTime1">The date value to compare.</param>
+            <param name="dtDateTime2">The date value to compare.</param>
+            <returns>The maximum date.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.MinDate(System.DateTime,System.DateTime)">
+            <summary>
+            Gets the minimum date between specified dates.
+            </summary>
+            <param name="dtDateTime1">The date value to compare.</param>
+            <param name="dtDateTime2">The date value to compare.</param>
+            <returns>The minimum date.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointment.ToString">
+            <summary>
+            An Overridden method that returns a text representation of the appointment.
+            </summary>
+            <returns>
+            A string holding the schedule appointment data.
+            </returns>
+            <override/>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.AllDay">
+            <summary>
+            Gets or sets a value indicating whether this appointment is an all-day appointment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.AllowClickable">
+            <summary>
+            Gets or sets a value indicating whether or not blocked appointment is allowed to click.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.AllowDrag">
+            <summary>
+            Gets or sets a value indicating whether or not an appointment is allowed to be dragged.The total hours doesn't gets changed by dragging an appointment.
+            </summary>
+            <value>Default is true.</value>
+            <remarks>
+            Setting this property to true enables moving an appointment by clicking on a appointment and moving it to a new place.
+            The total duration of an Appointment is not altered by dragging.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.AllowResize">
+            <summary>
+            Gets or sets a value indicating whether or not an appointment is allowed to resize and modify its duration.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.BackColor">
+            <summary>
+            Gets or sets back color of the appointment panel
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Blocked">
+            <summary>
+            Gets or sets a value indicating whether the block appointment is blocked.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.CustomToolTip">
+            <summary>
+            Gets or sets the custom tooltip text to be displayed for the item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Content">
+            <summary>
+            Gets or sets a text string holding the details or comments for this appointment item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Dirty">
+            <summary>
+            Gets or sets a value indicating whether this item has been modified.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.EndTime">
+            <summary>
+            Gets or sets the end time for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.IgnoreChanges">
+            <summary>
+            Gets or sets a value indicating whether changes to this item affect the Dirty property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.LabelValue">
+            <summary>
+            Gets or sets a integer categorizer value for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.LocationValue">
+            <summary>
+            Gets or sets a string associated with this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.MarkerValue">
+            <summary>
+            Gets or sets a integer categorizer value for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.NotifyOnOveride">
+            <summary>
+            Gets or sets a value indicating whether the block appointment is notify on overide.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.RecurringOnOverride">
+            <summary>
+            Gets or sets a value indicating whether the block appointment is notify on overide.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Owner">
+            <summary>
+            Gets or sets an integer that can be used to identify the owner (if any) of this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Priority">
+            <summary>
+            Gets or sets priority of the block appointment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Reminder">
+            <summary>
+            Gets or sets a value indicating whether you want a reminder event raised when the StartTime of this item gets close.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.ReminderValue">
+            <summary>
+            Gets or sets the type of reminder event raised when the StartTime of this item gets close.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.ReminderText">
+            <summary>
+            Gets or sets the type of reminder event raised when the StartTime of this item gets close.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.StartTime">
+            <summary>
+            Gets or sets the start time for this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Subject">
+            <summary>
+            Gets or sets a text string identifying the topic of this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Tag">
+            <summary>
+            Gets or sets an arbitrary object associated with this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.TimeSpanColor">
+            <summary>
+            Gets or sets color of appointment time span element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.ToolTip">
+            <summary>
+            Gets or sets the tooltip text to be displayed for the item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.UniqueID">
+            <summary>
+            Gets or sets a unique integer associated with this item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointment.Version">
+            <summary>
+            Gets an integer format version number.
+            </summary>
+            <remarks>
+            If you modify this class in a manner that changes its serialization, you should change
+            the version number so there is a unique number that can be used to identify the serialization
+            format.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentList">
+            <summary>
+            Maintains collection of IScheduleAppointments that serves as the data for the Schedule Control.
+            </summary>
+            <remarks>
+            This class is a wrapper class for an ArrayList and implements IComparer which orders the
+            list by the item's StartTime. If two items start at the same time, then the
+            EndTime is used as well to determine the order.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.#ctor">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Syncfusion.Schedule.ScheduleAppointmentList"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.Add(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Adds an IScheduleAppointment to this list.
+            </summary>
+            <param name="item">The IScheduleAppointment to be added.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.Contains(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Determines whether the collection contains the specified item.
+            </summary>
+            <param name="item">A IScheduleAppointment to search for in the collection.</param>
+            <returns>true if the collection contains the specified item; otherwise, false. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.Find(System.Int32)">
+            <summary>
+            Finds the item of the key passed in. Not implemented.
+            </summary>
+            <param name="nUniqueID">The unique search key.</param>
+            <returns>The found item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.GetEnumerator">
+            <summary>
+            Gets the enumerator of the list.
+            </summary>
+            <returns>The iterator.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the list to array collection.
+            </summary>
+            <param name="array">The destination array.</param>
+            <param name="index">The starting index for copying from list.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Add(System.Object)">
+            <summary>
+            Adds the value to the list.
+            </summary>
+            <param name="value">The schedule appointment item.</param>
+            <returns>Index of the item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Contains(System.Object)">
+            <summary>
+            Returns a value indicating whether collection contains the specified item.
+            </summary>
+            <param name="value">Object of the schedule appointment item.</param>
+            <returns>True if collection has item otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#IndexOf(System.Object)">
+            <summary>
+            Returns the Zero-based index of the first occurrence of the specified item.
+            </summary>
+            <param name="value">Object of the schedule appointment item.</param>
+            <returns>Index of the item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts the value to the list at specified position.
+            </summary>
+            <param name="value">The schedule appointment item.</param>
+            <param name="index">Index value to insert item.</param>        
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Remove(System.Object)">
+            <summary>
+            Removes the value to the list.
+            </summary>
+            <param name="value">The schedule appointment item.</param>        
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#RemoveAt(System.Int32)">
+            <summary>
+            Removes the value to the list at specified position.
+            </summary>        
+            <param name="index">Index value of remove item.</param>     
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.IndexOf(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Returns the position of the specified item within this list.
+            </summary>
+            <param name="item">The search item.</param>
+            <returns>The index in the list of the search item.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.Insert(System.Int32,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Inserts an IScheduleAppointment into this list.
+            </summary>
+            <param name="index">The position in the list where the item is to be inserted.</param>
+            <param name="item">The IScheduleAppointment to be inserted.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.IsAreaAvailable(System.DateTime,System.Double)">
+            <summary>
+            Determines if any items overlap the schedule area.
+            </summary>
+            <param name="dtStart">Start date</param>
+            <param name="nMinutes">Time interval</param>
+            <returns>True, if items overlap schedule area; False otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.IsAreaAvailable(System.DateTime,System.DateTime)">
+            <summary>
+            Determine if any items of this collection overlap the schedule area.
+            </summary>
+            <param name="dtStart">The start date</param>
+            <param name="dtEnd">The end date</param>
+            <returns>True, if items overlap schedule area; False otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.IsConflict(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Determines whether item has conflict with items of this collection.
+            </summary>
+            <param name="appApp">A IScheduleAppointment</param>
+            <returns>True, if the item is in conflict; False, otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.NewScheduleAppointment">
+            <summary>
+            Returns a default ScheduleAppointment.
+            </summary>
+            <returns>New ScheduleAppointment.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.NextAreaAvailable(System.DateTime,System.Int32)">
+            <summary>
+            Returns the next available slot after date.
+            </summary>
+            <param name="dtStart">Start date</param>
+            <param name="nMinutes">Time interval</param>
+            <returns>Next available slot.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.NextAreaAvailable(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Returns the next available slot after date.
+            </summary>
+            <param name="dtStart">Start date</param>
+            <param name="nMinutes">Time interval</param>
+            <param name="nTimeStep">Time step in minutes</param>
+            <returns>Next available slot.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.NextAreaAvailable(System.DateTime,System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Returns the next available slot after date.
+            </summary>
+            <param name="dtStart">Start date</param>
+            <param name="nMinutes">Time interval</param>
+            <param name="nTimeStep">Time step in minutes</param>
+            <param name="dtMinDate">Schedule min date</param>
+            <param name="dtMaxDate">Schedule max date</param>
+            <returns>Next available slot.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.NextAreaAvailable(System.DateTime,System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Returns the next available slot after date.
+            </summary>
+            <param name="dtStart">Start date</param>
+            <param name="nMinutes">Time interval</param>
+            <param name="nTimeStep">Time step in minutes</param>
+            <param name="dtMinDate">Schedule min date</param>
+            <param name="dtMaxDate">Schedule max date</param>
+            <param name="nDayStartHour">Schedule day start hour</param>
+            <param name="nDayEndHour">Schedule day end hour</param>
+            <returns>Next available slot.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.Remove(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Removes an IScheduleAppointment from this list.
+            </summary>
+            <param name="item">The IScheduleAppointment to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.RemoveAt(System.Int32)">
+            <summary>
+            Removes an IScheduleAppointment from this list.
+            </summary>
+            <param name="index">The position of the item to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.SortStartTime">
+            <summary>
+            Sorts this list on the IScheduleAppointment.StartTime property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.Count">
+            <summary>
+            Gets the number of IScheduleAppointments in this list.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#ICollection#Count">
+            <summary>
+            Gets the number of appointments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#ICollection#IsSynchronized">
+            <summary>
+            Gets a value indicating whether collection is synchronized.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#ICollection#SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access to collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#IsFixedSize">
+            <summary>
+            Gets a value indicating whether collection has fixed size.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#IsReadOnly">
+            <summary>
+            Gets a value indicating whether collection is read only.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.List">
+            <summary>
+            Gets or sets list can be serialized in derived classes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.System#Collections#IList#Item(System.Int32)">
+            <summary>
+            Gets the appointment from list.
+            </summary>
+            <param name="index">Index of the appointment item.</param>
+            <returns>The <see cref="T:Syncfusion.Schedule.IScheduleAppointment"/>.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleAppointmentList.Item(System.Int32)">
+            <summary>
+            Gets or sets the i-th IScheduleAppointment in this list.
+            </summary>
+            <param name="i">The index to identify the desired ScheduleAppointment.</param>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleAppointmentList.StartDateComparer">
+            <summary>
+            IComparer implementation that uses the StartTime/EndTime in its comparison.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleAppointmentList.StartDateComparer.Compare(System.Object,System.Object)">
+            <summary>
+            Compares two ScheduleAppointment objects and returns a value indicating whether one is
+            less than, equal to, or greater than the other.
+            </summary>
+            <param name="x">First item.</param>
+            <param name="y">Second item</param>
+            <returns>1 if x > y, -1 if x &lt; y and zero otherwise.</returns>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleDataProvider">
+            <summary>
+            Provides an empty implementation of IScheduleDataProvider. The implementation is done
+            through virtual methods. You can then derive this class and through its overrides, set up an
+            IScheduleDataProvider. See the ArrayListDataProvider class in the ScheduleSample sample.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.#ctor">
+            <summary>
+            Initializes a new instance of the  <see cref="T:Syncfusion.Schedule.ScheduleDataProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.AddItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Adds IScheduleAppointment passed in. No implementation.
+            </summary>
+            <param name="item">The IScheduleAppointment to be added.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.CommitChanges">
+            <summary>
+            Commits the changes made in item. No implementation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetLabels">
+            <summary>
+            Gets the list for the LabelValue options.
+            </summary>
+            <returns>LabelValue list.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetLocations">
+            <summary>
+            Gets the list for the LocationValue options.
+            </summary>
+            <returns>LocationValue list.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetMarkers">
+            <summary>
+            Gets the list for the MarkerValue options.
+            </summary>
+            <returns>MarkerValue list.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetOwners">
+            <summary>
+            Gets resources collection.
+            </summary>
+            <returns>The resources collection.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetReminders">
+            <summary>
+            Gets the list for the ReminderValue options.
+            </summary>
+            <returns>ReminderValue list.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetSchedule(System.DateTime,System.DateTime)">
+            <summary>
+            Gets the schedule added in dates passed in. No implementation.
+            </summary>
+            <param name="startDate">The first date.</param>
+            <param name="endDate">The second date.</param>
+            <returns>An IScheduleAppointmentList holding the schedule items between the given dates. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetSchedule(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Gets the schedule added in dates passed in for the respective owner. No implementation.
+            </summary>
+            <param name="startDate">The first date.</param>
+            <param name="endDate">The second date.</param>
+            <param name="owner">The owner.</param>
+            <returns>An IScheduleAppointmentList holding the schedule items for a particular owner between the given dates.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetScheduleForDay(System.DateTime)">
+            <summary>
+            Gets the schedule for the day passed in. No implementation.
+            </summary>
+            <param name="day">The DateTime</param>
+            <returns>An IScheduleAppointmentList holding the schedule items for the given date. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.GetScheduleForDay(System.DateTime,System.Int32)">
+            <summary>
+            Gets the schedule for the day passed in for the respective owner. No implementation.
+            </summary>
+            <param name="day">The given date.</param>
+            <param name="owner">The owner.</param>
+            <returns>An IScheduleAppointmentList holding the schedule items for a particular owner on the given date.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.InitLists">
+            <summary>
+            Initiates the default drop lists for entering IScheduleAppointment data.
+            </summary>
+            <remarks>
+            You can override this method to provide customized droplists.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.NewScheduleAppointment">
+            <summary>
+            Returns a default ScheduleAppointment.
+            </summary>
+            <returns>New ScheduleAppointment.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.NewScheduleAppointmentList">
+            <summary>
+            Returns a default ScheduleAppointmentList.
+            </summary>
+            <returns>New ScheduleAppointmentList.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.NewScheduleResource">
+            <summary>
+            Returns a default ScheduleResource.
+            </summary>
+            <returns>New ScheduleResource.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.NewScheduleResourceList">
+            <summary>
+            Returns a default ScheduleAppointmentList.
+            </summary>
+            <returns>New ScheduleAppointment.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.RemoveItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Removes an item. No implementation.
+            </summary>
+            <param name="item">The IScheduleAppointment to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleDataProvider.SaveModifiedItem(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Saves the modified item. No implementation.
+            </summary>
+            <param name="appModifiedItem">The modified IScheduleAppointment.</param>
+            <param name="appOriginalItem">The original IScheduleAppointment.</param>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.IsDirty">
+            <summary>
+            Gets or sets a value indicating whether data source is modified or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.LabelList">
+            <summary>
+            Gets or sets the list for the LabelValue options.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.LocationList">
+            <summary>
+            Gets or sets the list for the LocationValue options.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.MarkerList">
+            <summary>
+            Gets or sets the list for the MarkerValue options.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.Owners">
+            <summary>
+            Gets or sets resources collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.ReminderList">
+            <summary>
+            Gets or sets the list for the ReminderValue options.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleDataProvider.SaveOnCloseBehaviorAction">
+            <summary>
+            Gets or sets whether CommitChanges is called when the ScheduleControl is disposed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleResource">
+            <summary>
+            Represents a single schedule resource.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleResource"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResource.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleResource"/> class using the specified resource UniqueID.
+            </summary>
+            <param name="nUniqueID">Resource unique id.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResource.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleResource"/> class using the specified resource UniqueID and name.
+            </summary>
+            <param name="nUniqueID">Resource unique id.</param>
+            <param name="sName">Resource name.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResource.ToString">
+            <summary>An Overridden method that returns the string representation of ScheduleResource object.</summary>
+            <returns>A string holding the ScheudleResource object.</returns>
+            <override/>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleResource.Name">
+            <summary>
+            Gets or sets text to be displayed for the resources in Schedule.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleResource.UniqueID">
+            <summary>
+            Gets or sets a unique integer associated with this resource.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ScheduleResourceList">
+            <summary>
+            A Collection of IScheduleResources to be displayed in Schedule's resource row.
+            </summary>
+            <remarks>
+            Collection contains objects displayed in a Schedule as additional columns/rows of a Schedule.
+            Resource objects allow for displaying schedules for different resources or schedules along each other.
+            This allows for easy analysis and comparing two or more schedules linked to Resource objects.
+            If there is no objects in a collection then the Schedule displays one schedule
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ScheduleResourceList"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.Add(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Appends the IScheduleResource to the end of the ScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to add to the ScheduleResourceCollection.</param>
+            <returns>The position into which the new element was inserted.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.Contains(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Determines whether the collection contains the specified resource.
+            </summary>
+            <param name="resource">A IScheduleResource to search for in the collection.</param>
+            <returns>true if the collection contains the specified item; otherwise, false. </returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.Find(System.Int32)">
+            <summary>
+            Finds resource by UniqueID.
+            </summary>
+            <param name="nOwnerID">resource UniqueID</param>
+            <returns>A IScheduleResource</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.IndexOf(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Determines the index value that represents the position of the IScheduleResource in the ScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to locate in the ScheduleResourceCollection.</param>
+            <returns>The index position of the specified IScheduleResource in the collection.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.Insert(System.Int32,Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Inserts a IScheduleResource in the ScheduleResourceCollection at the specified index location.
+            </summary>
+            <param name="nIdx">The location in the collection to insert the IScheduleResource.</param>
+            <param name="resource">A IScheduleResource to add to the collection.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.NewScheduleResource">
+            <summary>
+            Returns a default ScheduleResource.
+            </summary>
+            <returns>New ScheduleResource.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ScheduleResourceList.Remove(Syncfusion.Schedule.IScheduleResource)">
+            <summary>
+            Removes the specified IScheduleResource from the ScheduleResourceCollection.
+            </summary>
+            <param name="resource">The IScheduleResource to remove from the collection.</param>
+        </member>
+        <member name="P:Syncfusion.Schedule.ScheduleResourceList.Item(System.Int32)">
+            <summary>
+            Gets or sets the schedule resource.
+            </summary>
+            <param name="nIdx">The zero-based index at which value should be returned.</param>
+            <returns>A IScheduleResource</returns>
+        </member>
+        <member name="T:Syncfusion.Schedule.NamespaceDoc">
+            <summary>
+            The Syncfusion.Schedule namespace contains fundamental classes and base classes that define commonly used interfaces and data provider for Essential ScheduleControl. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Schedule.ArrayListAppointment">
+            <summary>
+            Derives <see cref="T:Syncfusion.Schedule.ScheduleAppointment"/> to implement IScheduleAppointment.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ArrayListAppointment"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointment.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ArrayListAppointment"/> class to handle serialization.
+            </summary>
+            <param name="info">The SerialazationInfo.</param>
+            <param name="context">The StreamingContext.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointment.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Gets the serialization object data.
+            </summary>
+            <param name="info">The SerialazationInfo.</param>
+            <param name="context">The StreamingContext.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointment.InitSpanDateList">
+            <summary>
+            Initiates the span date list.
+            </summary>
+            <remarks>
+            Added to provide dynamic initialization for DateList in span rules.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListAppointment.DateList">
+            <summary>
+            Gets or sets the list of dates defined for this recurrence definition.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListAppointment.RecurrenceRule">
+            <summary>
+            Gets or sets the string that defines this recurrence.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListAppointment.RecurrenceRuleID">
+            <summary>
+            Gets or sets a Unique identifier to this recurrence appointment.
+            </summary>
+            <remarks>This value is zero for all non-recurring appointments. For a recurring appointment,
+            this value is the same for all appointments in the same recurrence definition.</remarks>
+        </member>
+        <member name="T:Syncfusion.Schedule.ArrayListAppointmentList">
+            <summary>
+            Derives <see cref="T:Syncfusion.Schedule.ScheduleAppointmentList"/> to implement IScheduleAppointmentList.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ArrayListAppointmentList"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ArrayListAppointmentList"/> class to handle serialization.
+            </summary>
+            <param name="info"> The SerializationInfo.</param>
+            <param name="context">The StreamingContext.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.GetList">
+            <summary>
+            Gets the underlying ArrayList that holds these objects.
+            </summary>
+            <returns>The underlying ArrayList.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Overridden to control serialization.
+            </summary>
+            <param name="info"> The SerializationInfo.</param>
+            <param name="context">The StreamingContext.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Gets the serialization object data.
+            </summary>
+            <param name="info"> The SerializationInfo.</param>
+            <param name="context">The StreamingContext.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListAppointmentList.NewScheduleAppointment">
+            <summary>
+            Overridden to return a <see cref="T:Syncfusion.Schedule.ArrayListAppointment"/>.
+            </summary>
+            <returns>An ArrayListAppointment.</returns>
+        </member>
+        <member name="T:Syncfusion.Schedule.ArrayListDataProvider">
+            <summary>
+            Derives <see cref="T:Syncfusion.Schedule.ScheduleDataProvider"/> and implements <see cref="T:Syncfusion.Schedule.IRecurringScheduleDataProvider"/>.
+            </summary>
+            <remarks>
+            This implementation of IRecurringScheduleDataProvider uses two collection of
+            <see cref="T:Syncfusion.Schedule.ArrayListAppointment"/>
+            objects to hold the items displayed in the schedule. These collections is serialized to disk as a
+            binary file. The ArrayListDataProvider.MasterList holds the appointment items that appear
+            in the schedule. The ArrayListDataProvider.RecurList holds any non-terminiating
+            appoint definitions.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.AddAppointmentFromItem(Syncfusion.Schedule.IRecurringScheduleAppointment,System.DateTime)">
+            <summary>
+            Adds the appointment form for specified item and date.
+            </summary>
+            <param name="item">The item to add appointment.</param>
+            <param name="dt">The date value of appointment.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.AddItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Overridden to add the item to the MasterList.
+            </summary>
+            <param name="item">IScheduleAppointment item to be added.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.CheckSecondsRecurringAppointments(System.String,System.Int32@)">
+            <summary>
+            Determines whether seconds rule is recurring appointment.
+            </summary>
+            <param name="secondsRule">Seconds rule string.</param>
+            <param name="intervalTime">The interval time of recurrence.</param>
+            <returns>True if it recurrence appointment otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.AddNewRecurringAppointments(Syncfusion.Schedule.IRecurringScheduleAppointment,System.DateTime)">
+            <summary>
+            Adds recurring appointments.
+            </summary>
+            <param name="item">The recurring appointment definition.</param>
+            <param name="dateLimit">A date limit at which the recurring appointments end.</param>
+            <remarks> The date limit may be dateTime.MaxValue which indicates no limit.</remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.CheckAndAddIfNeededRecurringAppointments(System.DateTime)">
+            <summary>
+            Used after the initial load to add additional recurring appointments to the data provider.
+            </summary>
+            <param name="date">The recurring appointment definition.</param>
+            <returns>True if dates were added.</returns>
+            <remarks>Dynamically provide appointments on demand as new dates are exposed.</remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.CommitChanges">
+            <summary>
+            Saves this ArrayListDataProvider object as a disk file.
+            </summary>
+            <remarks>If the <see cref="P:Syncfusion.Schedule.ArrayListDataProvider.FileName"/> ends with ".XML", then
+            the data object is saved to disk as an XML file. If the
+            FileName ends with something else, then the object is saved
+            as a binary file.</remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.CreateDateListFromItem(Syncfusion.Schedule.IRecurringScheduleAppointment)">
+            <summary>
+            Creates the date list from specified item.
+            </summary>
+            <param name="item">The appointment item.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.DisplayList(System.String,Syncfusion.Schedule.ScheduleAppointmentList)">
+            <summary>
+            USed to check the item list for debugging purpose.
+            </summary>
+            <param name="title">Title of the debugging.</param>
+            <param name="list">Appointment list.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.GetSchedule(System.DateTime,System.DateTime)">
+            <summary>
+            Returns a the subset of MasterList between the 2 dates.
+            </summary>
+            <param name="startDate">Starting date limit for the returned items.</param>
+            <param name="endDate">Ending date limit for the returned items.</param>
+            <returns>Returns a the subset of MasterList.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.GetScheduleForDay(System.DateTime)">
+            <summary>
+            Returns a the subset of MasterList for a given date.
+            </summary>
+            <param name="day">Date for the returned items.</param>
+            <returns>Returns a the subset of MasterList.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.GetUniqueID">
+            <summary>
+            Returns a unique integer that serves to identify a recurring family of appointments.
+            </summary>
+            <returns>A unique integer.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.InitializeRandomData">
+            <summary>
+            Provides random data, not really a part of the implementations.
+            </summary>
+            <returns>A ArrayListAppointmentList object holding sample data.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.InitializeRandomData(Syncfusion.Schedule.IScheduleAppointmentList)">
+            <summary>
+            Provides random data, not really a part of the implementations.
+            </summary>
+            <param name="masterList">A ScheduleAppointmentList</param>        
+            <returns>A ArrayListAppointmentList object holding sample data.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.LoadBinary">
+            <summary>
+            Loads a binary file whose name is given by <see cref="P:Syncfusion.Schedule.ArrayListDataProvider.FileName"/>
+            into this class instance.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.LoadBinary(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> and loads
+            a previously serialized ArrayListDataProvider into the instance.
+            </summary>
+            <param name="fileName">The serialized filename.</param>
+            <returns>A ArrayListDataProvider.</returns>
+            <remarks>
+            This method depends upon System.AppDomain.CurrentDomain.AssemblyResolve to
+            avoid versioning issues with the binary serialization of the MasterList.
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.LoadXML(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> and loads
+            a previously serialized ArrayListDataProvider into the instance from an XML file.
+            </summary>
+            <param name="fileName">The serialized filename.</param>
+            <returns>A ArrayListDataProvider.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.NewScheduleAppointment">
+            <summary>
+            An Overridden method to return a <see cref="T:Syncfusion.Schedule.ArrayListAppointment"/>.
+            </summary>
+            <returns>New ArrayListAppointment.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.NewScheduleAppointmentList">
+            <summary>
+            An Overridden method to return a <see cref="T:Syncfusion.Schedule.ArrayListAppointmentList"/>.
+            </summary>
+            <returns>New ArrayListAppointmentList.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.PreprocessListsBeforeWrite">
+            <summary>
+            Strips out any unnecessary recurring appointments (already added appointments up thru time limit)
+            </summary>
+            <exclude/>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.RemoveItem(Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            An Overridden method to remove the item from the MasterList.
+            </summary>
+            <param name="item">IScheduleAppointment item to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.RemoveRecurringAppointments(Syncfusion.Schedule.IRecurringScheduleAppointment)">
+            <summary>
+            Removes all occurrences the given appointment.
+            </summary>
+            <param name="recurItem">The recurring appointment to be removed.</param>
+            <returns>True, if the appointment is removed; False otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.ResetBaseDate(Syncfusion.Schedule.IRecurringScheduleAppointment)">
+            <summary>
+            Resets the base date for schedule appointment item.
+            </summary>
+            <param name="item">The schedule appointment item to reset.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SaveBinary(System.IO.Stream)">
+            <summary>
+            Saves the <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> object to a stream in binary format.
+            </summary>
+            <param name="s">The Stream object.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SaveBinary(System.String)">
+            <summary>
+            Saves the current <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> object in binary format to a file with the specified filename.
+            </summary>
+            <param name="fileName">The file name.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SaveModifiedItem(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Overridden to make changes to appointments.
+            </summary>
+            <param name="appModifiedItem">The edited appointment.</param>
+            <param name="appOriginalItem">The original appointment.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SaveModifiedRecurringAppointment(Syncfusion.Schedule.IRecurringScheduleAppointment,Syncfusion.Schedule.IRecurringScheduleAppointment,Syncfusion.Schedule.RecurringAppointmentEditAction)">
+            <summary>
+            Makes changes to appointments in a recurring sequence of appointments.
+            </summary>
+            <param name="modifiedItem">The edited appointment.</param>
+            <param name="originalItem">The original appointment.</param>
+            <param name="action">The requested edit action.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SaveXML(System.String)">
+            <summary>
+            Saves this <see cref="T:Syncfusion.Schedule.ArrayListDataProvider"/> object in an XML file with the specified filename.
+            </summary>
+            <param name="fileName">The file name.</param>
+        </member>
+        <member name="M:Syncfusion.Schedule.ArrayListDataProvider.SetExceptDates(Syncfusion.Schedule.IScheduleAppointment,Syncfusion.Schedule.IScheduleAppointment)">
+            <summary>
+            Sets the start and end date.
+            </summary>
+            <param name="targetItem">The destination item to set.</param>
+            <param name="sourceItem">The source item.</param>
+            <returns>The modified schedule appointment.</returns>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.FileName">
+            <summary>
+            Gets or sets the file name used to store the serialized data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.IsDirty">
+            <summary>
+            Gets or sets whether the MasterList has been modified.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.MasterList">
+            <summary>
+            Gets or sets an IScheduleAppointmentList collection that holds the IRecurringScheduleAppointments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.MasterListArray">
+            <summary>
+            Gets or sets the MasterListArrray for XML serialization.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.NextUniqueID">
+            <summary>
+            Gets or sets the largest ID value used so far in this ScheduleDataProvider.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.RecurringList">
+            <summary>
+            Gets a ArrayListAppointmentList collection that holds ScheduleRecurringAppointments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.RecurringListArray">
+            <summary>
+            Gets or sets RecurringListArray which is used internally for XML serialization.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Schedule.ArrayListDataProvider.RecurSupport">
+            <summary>
+            Gets or sets the recurrence support.
+            </summary>
+        </member>
+    </members>
+</doc>

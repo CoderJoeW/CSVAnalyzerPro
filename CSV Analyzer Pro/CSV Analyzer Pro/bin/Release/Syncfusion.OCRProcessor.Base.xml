@@ -1,0 +1,693 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.OCRProcessor.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.OCRProcessor.OCRLayoutResult">
+            <summary>
+            Represents the OCR'ed texts and bounds.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRLayoutResult.m_paginate">
+            <summary>
+            Indicates whether the document was paginated.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRLayoutResult.Paginate">
+            <summary>
+            Gets or sets a value indicating whether this image is paginated or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRLayoutResult.Pages">
+            <summary>
+            Get the OCR'ed page collection
+            </summary>
+            <seealso cref="T:Syncfusion.OCRProcessor.OCRPageCollection"/> Class
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.Languages">
+            <summary>
+            Represents OCR Supported Languages
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Languages.English">
+            <summary>
+            Represents English language
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Languages.French">
+            <summary>
+            Represents French language
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Languages.Polish">
+            <summary>
+            Represents Polish language
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.Line">
+            <summary>
+            Represents one line of text in a paragraph.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Line.m_text">
+            <summary>
+            Internal variable used to store the OCR text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Line.m_rectangle">
+            <summary>
+            Internal variable used to store the region to process OCR
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Line.#ctor">
+            <summary>
+            Initialize a new instance of class line.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Line.Text">
+            <summary>
+            Gets or sets OCR Text.
+            </summary>
+            <value>The text string.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Line.Rectangle">
+            <summary>
+            Gets the BBox of the text
+            </summary>
+            <value>The bounds of the text.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Line.Words">
+            <summary>
+            Gets the collection of words in a line.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Native.KernelApi.SetDllDirectory(System.String)">
+            <summary>
+            Adds a directory to the search path used to locate DLLs for the application.
+            </summary>
+            <param name="lpPathName">The directory to be added to the search path. If this parameter is an empty string (""), the call removes the current directory from the default DLL search order. If this parameter is NULL, the function restores the default search order.</param>
+            <returns>If the function succeeds, the return value is nonzero.</returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Native.KernelApi.WaitForSingleObject(System.IntPtr,System.UInt32)">
+            <summary>
+            Waits until the specified object is in the signaled state or the time-out interval elapses.
+            </summary>
+            <param name="hHandle">A handle to the object. If this handle is closed while the wait is still pending, 
+            the function's behavior is undefined.</param>
+            <param name="dwMilliseconds">The time-out interval, in milliseconds. If a nonzero value is specified, 
+            the function waits until the object is signaled or the interval elapses. 
+            If dwMilliseconds is zero, the function does not enter a wait state if the object is not signaled; 
+            it always returns immediately. If dwMilliseconds is INFINITE, the function will return only when the object is signaled</param>
+            <returns>If the function succeeds, the return value indicates the event that caused the function to return.</returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Native.KernelApi.CloseHandle(System.IntPtr)">
+            <summary>
+            Closes an open object handle.
+            </summary>
+            <param name="handle">A valid handle to an open object.</param>
+            <returns>If the function succeeds, the return value is nonzero.</returns>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Native.AdvApi.status">
+            <summary>
+            The ImpersonateLoggedOnUser function lets the calling thread impersonate the security context of a logged-on user. 
+            The user is represented by a token handle.
+            </summary>
+            <param name="hToken">A handle to a primary or impersonation access token that represents a logged-on user. .</param>
+            <returns>If the function succeeds, the return value is nonzero.</returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Native.AdvApi.DuplicateToken(System.IntPtr,System.Int32,System.IntPtr@)">
+            <summary>
+            The DuplicateToken function creates a new access token that duplicates one already in existence.
+            </summary>
+            <param name="hToken">A handle to an access token opened with TOKEN_DUPLICATE access.</param>
+            <param name="impersonationLevel">Specifies a SECURITY_IMPERSONATION_LEVEL enumerated type that supplies the impersonation level of the new token.</param>
+            <param name="hNewToken">A pointer to a variable that receives a handle to the duplicate token. This handle has TOKEN_IMPERSONATE and TOKEN_QUERY access to the new token.</param>
+            <returns>If the function succeeds, the return value is nonzero  .</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Syncfusion.OCRProcessor.Native.AdvApi.CreateProcessAsUser(System.IntPtr,System.String,System.String,System.IntPtr,System.IntPtr,System.Boolean,System.Int32,System.IntPtr,System.String,Syncfusion.OCRProcessor.Implementation.Native.Structures.STARTUPINFO@,Syncfusion.OCRProcessor.Implementation.Native.Structures.PROCESS_INFORMATION@)" -->
+        <member name="T:Syncfusion.OCRProcessor.OCRLineCollection">
+            <summary>
+            Represents the OCR'ed line collection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.OCRPageCollection">
+            <summary>
+            Represents the OCR'ed page collection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.OCRWordCollection">
+            <summary>
+            Represents the OCR'ed words collection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.Performance">
+            <summary>
+            Represents the performance of the OCR process.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Performance.Rapid">
+            <summary>
+            Use Rapid performance, high speed performance and normal OCR output.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Performance.Fast">
+            <summary>
+            Use Fast performance, Something middle between Rapid and Fast.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Performance.Slow">
+            <summary>
+            Use Slow performance, best OCR output.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.NamespaceDoc">
+            <summary>
+            The Syncfusion.OCRProcessor namespace contains classes to perform Optical Character Recognition.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.OCRProcessor">
+            <summary>
+            Represents a logic to process OCR for the Loaded PDF document.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRProcessor.m_hashValues">
+            <summary>
+            Internal variable used to store the hashed image results.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRProcessor.m_ptr">
+            <summary>
+            Unmanaged handle used by the tesseract functions
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRProcessor.s_OCRLock">
+            <summary>
+            Helps to lock s_OCRLock to avoid race conditions.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRProcessor.m_settings">
+            <summary>
+            OCR settings to the document
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRProcessor.m_tesseractPath">
+            <summary>
+            Holds the value of the tesseract path
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.OCRProcessor.OCRProcessor"/> class with the specified tesseract binary file path.
+            </summary>
+            /// <param name="tesseractPath">Tesseract binary path.</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the OCRProcessor is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.DoOCR(System.String[])">
+            <summary>
+            Entry point for the x64 process and process the OCR
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(System.Drawing.Bitmap,System.String)">
+            <summary>
+            Perform OCR process for the Image
+            </summary>
+            <param name="img">Source image to process OCR.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(System.Drawing.Bitmap,System.String,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the Image
+            </summary>
+            <param name="img">Source image to process OCR.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="hocrBounds">When this method returns, Layout results of the OCR'ed image</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="hocrBounds">When this method returns, Layout result of the OCR'ed document</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String,System.Boolean,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="isMemoryOptimized">Enable this parameter for memory optimization of larger PDF documents</param>
+            <param name="hocrBounds">When this method returns, Layout result of the OCR'ed document</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="isMemoryOptimized"> Enable this parameter for memory optimization of larger PDF documents</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.String,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="hocrBounds">When this method returns, Layout result of the OCR'ed document</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.String,System.Boolean,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="isMemoryOptimized"> Enable this parameter for memory optimization of larger PDF documents</param>
+            <param name="hocrBounds">When this method returns, Layout result of the OCR'ed document</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.String)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="dataPath">Tesseract data path</param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.String,System.Boolean)">
+            <summary>
+            Perform best OCR process for the PdfLoadedDocument if memory optimization is enabled.
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="dataPath">Tesseract data path</param>
+            <param name="isMemoryOptimized"> Enable this parameter for memory optimization of larger PDF documents </param>
+            <returns>Returns the OCRed texts </returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOptimizedOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String)">
+            <summary>
+            Perform OCR process for single PDF page. 
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.PerformOptimizedOCRwithLayoutBounds(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,System.String,Syncfusion.OCRProcessor.OCRLayoutResult@)">
+            <summary>
+            Perform OCR process for the PdfLoadedDocument
+            </summary>
+            <param name="lDoc">PdfLoadedDocument</param>
+            <param name="startIndex">The number that is use as a start point for the OCR process.</param>
+            <param name="endIndex">The number that is use as a end point for the OCR process.</param>
+            <param name="dataPath">Tesseract data path</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.Initialize(System.String,System.String)">
+            <summary>
+            Initialize the Tesseract engine
+            </summary>
+            <param name="path">Tesseract data path</param>
+            <param name="language">OCR language</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.SetImageRegion(System.Drawing.Bitmap,Syncfusion.Pdf.Exporting.PdfImageInfo,Syncfusion.Pdf.PdfPageBase,System.Int32)">
+            <summary>
+            Set the OCR region for the image
+            </summary>
+            <param name="image">image to OCR</param>
+            <param name="imageInfo">Image information</param>
+            <param name="page">Loaded page of the PDF document</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.SetGraphicsPath(Syncfusion.Pdf.Exporting.PdfImageInfo,System.Drawing.Drawing2D.GraphicsPath,System.Drawing.RectangleF,System.Drawing.Bitmap,Syncfusion.Pdf.PdfPageBase)">
+            <summary>
+            Set the graphics path to the image
+            </summary>
+            <param name="info">Image information</param>
+            <param name="imagePath">Graphics path for the whole image</param>
+            <param name="visibleRegion">Visible rectagle of the images</param>
+            <param name="image">image to set the regions</param>
+            <param name="page">Loaded page of the PDF document</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.IsRTLText(System.UInt16[])">
+            <summary>
+            Checks if the text contains RTL character or number.
+            </summary>
+            <param name="characterCodes">Array of symbols.</param>
+            <returns>True if the text contans RTL character or number.</returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.CompareImage(System.Drawing.Image)">
+            <summary>
+            Compare the images
+            </summary>
+            <param name="img">image to OCR</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.GetImageHash(System.Drawing.Image)">
+            <summary>
+            Get the hash value of the image
+            </summary>
+            <param name="img">image to OCR</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.ExtractImagesFromDocument(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32)">
+            <summary>
+            Extracts the images from the pdf Document
+            </summary>
+            <param name="lDoc"></param>
+            <param name="startIndex"></param>
+            <param name="endIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.GetHOCR(System.String,System.String)">
+            <summary>
+            Get the HOCR paragraph, lines and words from the Image
+            </summary>
+            <param name="imagePath">image to OCR</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.DrawOCR(Syncfusion.Pdf.Parsing.PdfLoadedDocument,System.Int32,System.Int32,Syncfusion.OCRProcessor.OCRLayoutResult)">
+            <summary>
+            Draws the ocred text into pdf document
+            </summary>
+            <param name="lDoc"></param>
+            <param name="startIndex"></param>
+            <param name="endIndex"></param>
+            <param name="ocr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.ConvertToTiff(System.Collections.Generic.List{System.Drawing.Image},System.String,System.String)">
+            <summary>
+            Converts the list of images into single multipage tiff image.
+            </summary>
+            <param name="images"></param>
+            <param name="location"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.CheckVersion">
+            <summary>
+            Check the os version
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.OCRProcessor.ParseHTML(Syncfusion.OCRProcessor.OCRLayoutResult,System.String)">
+            <summary>
+            Parse the HTML content
+            </summary>
+            <param name="ocr">HOCR values</param>
+            <param name="hOcrText">html content</param>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRProcessor.Settings">
+            <summary>
+            Gets or sets OCR settings to the document
+            </summary>
+            <seealso cref="T:Syncfusion.OCRProcessor.OCRSettings"/> Class
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRProcessor.TesseractPath">
+            <summary>
+            Holds the value of the tesseract path
+            </summary>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.OCRSettings">
+            <summary>
+            A class containing the settings of the OCR process.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_paginate">
+            <summary>
+            Indicates if the paginate were set.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_language">
+            <summary>
+            Holds the language of the OCR process.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_pageRegion">
+            <summary>
+            Internal variable used to store the page regions.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_performance">
+            <summary>
+            Holds the performance of the OCR process.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_blackList">
+            <summary>
+            Holds the black list value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_whiteList">
+            <summary>
+            Holds the white list value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_isImageStraighteningEnabled">
+            <summary>
+            Internal variable used to store whether straighten the image or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_isRegionMarked">
+            <summary>
+            Internal variable used to store whether to display region
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_isCompressEnabled">
+            <summary>
+            internal variable to store whether to compress the tiff file or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.OCRSettings.m_autoDetectRotation">
+            <summary>
+            Variable to check whether detect auto rotation or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.Language">
+            <summary>
+            Gets or sets OCR language
+            </summary>
+            <value> The language to be OCRed</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.Regions">
+            <summary>
+            Gets or sets the regions to process OCR
+            </summary>
+            <value> Collection of page regions to apply OCR </value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.Paginate">
+            <summary>
+            Gets or sets the pagination of the images
+            </summary>
+            <value><c>true</c> if [pagination]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.Performance">
+            <summary>
+            Gets or sets the Perfomance of the OCR
+            </summary>
+            <value> Performance of the OCR process</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.BlackList">
+            <summary>
+            Gets or sets BlackList values
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.WhiteList">
+            <summary>
+            Gets or sets WhiteList values
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.IsImageStraighteningEnabled">
+            <summary>
+            Gets or sets the StraightenImage
+            </summary>
+            <value><c>true</c> if [Image straightened]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.IsRegionMarked">
+            <summary>
+            Gets or sets the Region marked
+            </summary>
+            <value><c>true</c> if [Region marked]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.OCRSettings.IsCompressionEnabled">
+            <summary>
+            gets or sets the compression of tiff image
+            </summary>
+            <value><c>true</c> if [compression enable]; otherwise, <c>false</c>.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.OCRProcessor.OCRSettings.AutoDetectRotation" -->
+        <member name="T:Syncfusion.OCRProcessor.Page">
+            <summary>
+            Repersents the OCR'ed Page
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Page.m_text">
+            <summary>
+            Internal variable used to store the OCR text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Page.m_rectangle">
+            <summary>
+            Internal variable used to store the region to process OCR
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Page.#ctor">
+            <summary>
+            Initialize a new instance of class line.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Page.Text">
+            <summary>
+            Gets or sets OCR Text.
+            </summary>
+            <value>The text string.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Page.Rectangle">
+            <summary>
+            Gets or sets the BBox of the text
+            </summary>
+            <value>The bounds of the text.</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Page.Lines">
+            <summary>
+            Get the lines for the OCR'ed page
+            </summary>
+            <seealso cref="T:Syncfusion.OCRProcessor.OCRLineCollection"/> Class
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.PageRegion">
+            <summary>
+            A class containing the information about the pages.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.PageRegion.m_pageIndex">
+            <summary>
+            Internal variable used to store the page index.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.PageRegion.m_regions">
+            <summary>
+            Internal variable used to store the page regions.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.PageRegion.m_text">
+            <summary>
+            Internal variable used to store the region text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.PageRegion.PageIndex">
+            <summary>
+            Gets or sets page index of the PDF document
+            </summary>
+            <value> The index of the page</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.PageRegion.PageRegions">
+            <summary>
+            Gets or sets region of the PDF document to process OCR
+            </summary>
+            <value> The collection of bounds to be OCRed</value>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.PageRegion.Text">
+            <summary>
+            Gets the text for the specific region
+            </summary>
+            <value> The OCRed texts for the specific region </value>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Implementation.ProcessInteroperability.INFINITE">
+            <summary>
+            Holds the Infinite value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Implementation.ProcessInteroperability.WAIT_FAILED">
+            <summary>
+            Holds the Infinite value for wait failed
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Implementation.ProcessInteroperability.x86Platform">
+            <summary>
+            Holds the value of the target platform
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Implementation.ProcessInteroperability.LaunchSurrogateProcess(System.String)">
+            <summary>
+            Launch the 32 bit surrogate process
+            </summary>
+            <param name="strCommand">Path of the surrogate process</param>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Implementation.ProcessInteroperability.CreateSurrogateProcess(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Create a 32 bit surrogate process application
+            </summary>
+            <param name="assemblyPath">Tesseract assembly path</param>
+            <param name="tessdataPath">Tesseract data path</param>
+            <param name="language">language to process OCR</param>
+            <param name="imagePath">Image path</param>
+            <param name="hocrPath">HOCR file path</param>
+            <param name="pageSegment">Type of page segment</param>
+            <param name="blackList">Black list</param>
+            <param name="whiteList">White List</param>
+            <param name="performance">Type of performance</param>
+            <param name="processPath">Output Assembly path</param>
+        </member>
+        <member name="T:Syncfusion.OCRProcessor.Word">
+            <summary>
+            Represents word of text in a line.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Word.m_text">
+            <summary>
+            Internal variable used to store the OCR text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.OCRProcessor.Word.m_rectangle">
+            <summary>
+            Internal variable used to store the region to process OCR
+            </summary>
+        </member>
+        <member name="M:Syncfusion.OCRProcessor.Word.#ctor">
+            <summary>
+            Initialize word of text in a line.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Word.Text">
+            <summary>
+            Gets or sets OCR Text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.OCRProcessor.Word.Rectangle">
+            <summary>
+            Gets or sets the BBox of the text
+            </summary>
+        </member>
+    </members>
+</doc>

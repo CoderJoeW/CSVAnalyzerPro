@@ -1,0 +1,1935 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.PivotChart.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.NamespaceDoc">
+            <summary>
+            The Syncfusion namespace contains classes that defines the value and reference data types, events and event handlers, interfaces, attributes and processing the exceptions.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.PivotChartAssembly">
+            <exclude/>
+            <summary>
+            This class holds the name of the Syncfusion.Grid.Grouping.Windows assembly and provides a helper
+            routine that helps with resolving types when loading a serialization stream and when
+            the framework probes for assemblies by reflection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PivotChartAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.Grid.Grouping.Windows"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PivotChartAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the Grid assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PivotChartAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PivotChartAssembly.#cctor">
+            <summary>
+            Initializes the <see cref="!:GridGroupingWindowsAssembly"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PivotChartAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This delegate helps with resolving types and can be used as a eventhandler
+            for a <see cref="E:System.AppDomain.AssemblyResolve"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data with information about the type.</param>
+            <returns>A reference to the assembly where the type is located.</returns>
+            <remarks>
+            Use this handler when reading back types from a serialization stread
+            saved with an earlier version of this assembly.
+            </remarks>
+            <example>
+            <code lang="C#">
+                    public static GridModel LoadSoap(Stream s)
+                    {
+                        try
+                        {
+                            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(GridBaseAssembly.AssemblyResolver);
+                            SoapFormatter b = new SoapFormatter();
+                            b.AssemblyFormat = FormatterAssemblyStyle.Simple;
+                            GridModel t = b.Deserialize(s) as GridModel;
+                            t.Modified = false;
+                            return t;
+                        }
+                        finally
+                        {
+                            AppDomain.CurrentDomain.AssemblyResolve -= new ResolveEventHandler(GridBaseAssembly.AssemblyResolver);
+                        }
+                    }
+            <para/>
+            </code>
+            </example>        
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.AssemblyInfo">
+            <summary>
+            AssemblyInformation for internal use.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.NamespaceDoc">
+            <summary>
+            The Syncfusion.Windows.Forms.PivotChart namespace contains classes that provides the functionality of Essential PivotChartControl and its events and event handlers, interfaces, attributes and processing the exceptions.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles">
+            <summary>
+            Implements the functionality of PivotChart area's interior styling customization.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.#ctor(Syncfusion.Windows.Forms.Chart.ChartControl,System.Windows.Forms.Panel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles"/> class.
+            </summary>
+            <param name="chartControl">The <see cref="T:Syncfusion.Windows.Forms.Chart.ChartControl"/>.</param>
+            <param name="chartPanel">The panel to hold the chart control.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.chartPanel_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Used to draw the rectangle.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.ChartInterior">
+            <summary>
+            Gets or sets the interior of axis grid.
+            </summary>
+            <value>The chart interior.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BorderAppearance">
+            <summary>
+            Gets or sets the border appearance style of Chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.Font">
+            <summary>
+            Gets or sets the font.
+            </summary>
+            <value>The font.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.ForeColor">
+            <summary>
+            Gets or sets the fore color.
+            </summary>
+            <value>The color of the fore.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BackInterior">
+            <summary>
+            Gets or sets the color with which the ChartArea is to be filled initially before any rendering takes place.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BorderStyle">
+            <summary>
+            Gets or sets the style of the border that is to be rendered around the ChartArea. Default is None.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BackImage">
+            <summary>
+            Gets or sets the background image displayed in the control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.InteriorBackImage">
+            <summary>
+            Gets or sets the interior back image displayed in the control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BorderColor">
+            <summary>
+            Gets or sets the border color of the chart area.
+            </summary>
+            <value>Default value is SystemColors.ControlText.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAreaStyles.BorderWidth">
+            <summary>
+            Gets or sets the border width of the ChartArea. Default is 1.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles">
+            <summary>
+            Implements the functionality of the Primary X and Y axis styling customization.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles"/> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis">
+            <summary>
+            Implements the functionalities of the pivot chart control's axis title, zooming and interlaced grid interior information. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.#ctor(Syncfusion.Windows.Forms.Chart.ChartControl)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis"/> class.
+            </summary>
+            <param name="chartControl">Chart</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.GridLineType">
+            <summary>
+            Gets the attributes of the axis grid lines.
+            </summary>
+            <remarks>
+            Please refer to <see cref="T:Syncfusion.Windows.Forms.Chart.LineInfo"/> for more information on these attributes and
+            how they can change the appearance of the grid lines.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.InterlacedGrid">
+            <summary>
+            Gets or sets a value indicating whether interlaced grid is enabled.
+            </summary>
+            <value><c>true</c> if interlaced grid is enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.InterlacedGridInterior">
+            <summary>
+            Gets or sets the interlaced grid interior.
+            </summary>
+            <value>The interlaced grid interior.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.IsVisible">
+            <summary>
+            Gets or sets a value indicating whether this instance is visible.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is visible; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.LocationType">
+            <summary>
+            Gets or sets the locations types of X and Y axis. See <see cref="P:Syncfusion.Windows.Forms.Chart.ChartAxis.LocationType"/>.
+            </summary>
+            <remarks>
+            Determines how location of axes is calculated. See <see cref="P:Syncfusion.Windows.Forms.Chart.ChartAxis.LocationType"/>.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.ShowAxisLabelTooltip">
+            <summary>
+            Gets or sets a value indicating whether the tool tip associated with the axis labels are to be rendered.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.Title">
+            <summary>
+            Gets the axis title.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.VisibleRange">
+            <summary>
+            Gets the visible range when zoomed.
+            </summary>
+            <remarks>
+            Don't try to change this property manually. The value will be changed if any of related properties is changed.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.ZoomedRange">
+            <summary>
+            Gets the range that is currently zoomed in.   
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.ZoomFactor">
+            <summary>
+            Gets or sets the factor that is to be used to calculate Zoomed range.  
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.ZoomPosition">
+            <summary>
+            Gets or sets the minimum value(ZoomPosition) displayed on this axis when zoomed as a fraction of the total range. For example
+            if the total range is 20 and the minimum value currently displayed is 10, the ZoomPosition will be
+            0.5 (10/20).    
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.PivotChartAxis.ZoomActions">
+            <summary>
+            Gets or sets the zoom actions.
+            </summary>
+            <value>The zoom actions.</value>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle">
+            <summary>
+            Implements the functionalities of PivotChart's primary axis title styling option.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.#ctor(Syncfusion.Windows.Forms.Chart.ChartControl)">
+             <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle"/> class.
+             </summary>
+             <param name="chartControl">ChartControl</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.Text">
+            <summary>
+            Gets or sets the title of this axis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.Spacing">
+            <summary>
+            Gets or sets the spacing between title and labels.
+            </summary>
+            <value>The spacing.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.Alignment">
+            <summary>
+            Gets or sets the alignment of the axis title.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.Font">
+            <summary>
+            Gets or sets the title font that is to be used for text that is rendered in association with the axis (such as axis title).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.DrawMode">
+            <summary>
+            Gets or sets the title draw mode.
+            </summary>
+            <value>The title draw mode.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartAxisStyles.AxisTitle.Color">
+            <summary>
+            Gets or sets the title color that is to be used for text that is rendered in association with the axis (such as axis title).
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes">
+            <summary>
+            Defines the constants that specify the different types of PivotChart.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.Line">
+            <summary>
+             Line chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.Spline">
+            <summary>
+             Spline chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.Column">
+            <summary>
+             Column chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.Area">
+            <summary>
+             Area chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.SplineArea">
+            <summary>
+             Area chart with spline connectors
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StackingArea">
+            <summary>
+             Stacking area chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StackingColumn">
+            <summary>
+             Stacking column chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StackingArea100">
+            <summary>
+             Stacking area chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StackingColumn100">
+            <summary>
+             Stacking 100% column chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StepLine">
+            <summary>
+             StepLine chart
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.StepArea">
+            <summary>
+             StepArea chart
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.Drilling">
+            <summary>
+            Implements the functionalities of <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/>'s drilling options.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.Drilling.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.Drilling"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Drilling.DrillRow">
+            <summary>
+            Gets or sets the drilling row.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Drilling.DrillCol">
+            <summary>
+            Gets or sets the drilling column.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Drilling.Text">
+            <summary>
+            Gets or sets a text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Drilling.RangeInfo">
+            <summary>
+            Gets or sets the drilling range.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.DataCollection">
+            <summary>
+            Implements the functionalities of PivotChart's data area.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DataCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.DataCollection"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.Text">
+            <summary>
+            Gets or sets the display text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.OriginalRangeInfo">
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.Windows.Forms.Grid.GridRangeInfo"/> of data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.CellType">
+            <summary>
+            Gets or sets the data cell type.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.BaseCellType">
+            <summary>
+            Gets or sets the base cell type of data cell.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.NoOfRows">
+            <summary>
+            Gets or sets the number of rows to be displayed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.NoOfCols">
+            <summary>
+            Gets or sets the number of columns to be displayed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.HeaderColIndex">
+            <summary>
+            Gets or sets the header column index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DataCollection.Tag">
+            <summary>
+            Gets or sets the custom tag that needs to be associated with data cell.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList">
+            <summary>
+            Implements the designer action list for Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> control's smart tag panel.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.#ctor(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerVerb[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList"/> class.
+            </summary>
+            <param name="component">The <see cref="T:System.ComponentModel.IComponent"/>.</param>
+            <param name="verbs">The array of verbs.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.GetSortedActionItems">
+            <summary>
+            Returns the collection of <see cref="T:System.ComponentModel.Design.DesignerActionItem"/> objects contained in the list.
+            </summary>
+            <returns>
+            A <see cref="T:System.ComponentModel.Design.DesignerActionItem"/> array that contains the items in this list.
+            </returns>
+            override
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.OnSearch">
+            <summary>
+            Searches the online URL links.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.OnViewOnLineDocumentation">
+            <summary>
+            Opens the online documentation URL link.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.OnGoToForums">
+            <summary>
+            Opens the online forum URL link.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.OnGoToDirectTrac">
+            <summary>
+            Opens the online Direct-trac URL link.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.OnView(System.String)">
+            <summary>
+            Starts the link opening process.
+            </summary>
+            <param name="link"></param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.KeyWord">
+            <summary>
+            Gets or sets the keyword.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.DesignerActionSupportList.Search">
+            <summary>
+            Gets or sets the searching options.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.SearchOptions">
+            <summary>
+            Defines the constants that specify the various searching options.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.SearchOptions.Syncfusion">
+            <summary>
+            Represents Syncfusion
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.SearchOptions.Forums">
+            <summary>
+            Represents Forums
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.SearchOptions.KnowledgeBase">
+            <summary>
+            Represents Knowledge Base
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner">
+            <summary>
+            Extends the design mode behavior of a <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/>.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.InitializeNewComponent(System.Collections.IDictionary)">
+            <summary>
+            Overridden to initiate the new component.
+            </summary>
+            <param name="defaultValues">The collection of default values.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.BuildActionLists">
+            <summary>
+            Builds the action lists.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.OnCreateHandle">
+            <summary>
+            Provides an opportunity to perform additional processing immediately after the control handle has been created.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.ItemSource">
+            <summary>
+            Gets or sets source of data for pivot chart. This object should be either an IEnumerable list, or a DataTable.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner.ActionLists">
+            <summary>
+            Gets or sets the collection of <see cref="T:System.ComponentModel.Design.DesignerActionList"/>.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartControlChooseDataSourceActionList">
+            <summary>
+            Extends the DataSource action in the smart tag.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartControlChooseDataSourceActionList.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner)">
+            <summary>
+            Create a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartControlChooseDataSourceActionList"/>.
+            </summary>
+            <param name="owner">Decribes the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChartDesigner"/>.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartControlChooseDataSourceActionList.GetSortedActionItems">
+            <summary> 
+            Returns the collection of <see cref="T:System.ComponentModel.Design.DesignerActionItem"/>.
+            objects contained in the list.
+            </summary>
+            <returns>A System.ComponentModel.Design.DesignerActionItem array that contains the items in this list.</returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChartControlChooseDataSourceActionList.ItemSource">
+            <summary>
+            Gets or sets source of data for PivotChart. This object should be either an IEnumerable list, or a DataTable.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs">
+            <summary>
+            Provides data for <see cref="E:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Changing"/> event 
+            and <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotLegendSortDescriptorCollection.Changing"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs.#ctor(Syncfusion.PivotAnalysis.Base.PivotItem,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Initialize a new instance for class<see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs"/>.
+            </summary>
+            <param name="sortingItem">The pivotItem which needs to be sorted.</param>
+            <param name="direction">The <see cref="T:System.ComponentModel.ListSortDirection"/>sorting direction.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs.PivotItem">
+            <summary>
+            Gets the sorting Pivot item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs.SortDirection">
+            <summary>
+            Gets or sets the sorting direction.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs">
+            <summary>
+            Provides data for <see cref="E:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Changed"/> event 
+            and <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotLegendSortDescriptorCollection.Changed"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs.#ctor(Syncfusion.PivotAnalysis.Base.PivotItem,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Initialize a new instance for class <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs"/>.
+            </summary>
+            <param name="sortingItem">The pivotItem which needs to be sorted.</param>
+            <param name="direction">The <see cref="T:System.ComponentModel.ListSortDirection"/> sorting direction.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs.PivotItem">
+            <summary>
+            Gets the sorted pivot item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs.SortDirection">
+             <summary>
+            Gets or sets the sorted direction.
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventHandler" -->
+        <!-- Badly formed XML comment ignored for member "T:Syncfusion.Windows.Forms.PivotChart.PivoItemSortingEventHandler" -->
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection">
+            <summary>
+            Represents a collection of <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> for sorting PivotAxisItems .
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChart)">
+            <summary>
+            Initialize a new instance for <see cref="T:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection"/> class.
+            </summary>
+            <param name="pivotchart">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/>class object.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Dispose">
+            <summary>
+            Disposes the unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Add(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Adds an object to the end of the collection.
+            </summary>
+            <param name="value">The element to be added to the end of the collection. The value must not be a NULL reference.</param>
+            <returns>The zero-based collection index at which the value has been added.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Clear">
+            <summary>
+            Removes all elements from the collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.OnChanged(Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs)">
+            <summary>
+            Triggered when the <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.Changed"/> event is done.
+            </summary>
+            <param name="e">A <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs"/> contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.OnChanging(Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs)">
+            <summary>
+            Triggered when the <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.Changed"/> event is done.
+            </summary>
+            <param name="e">A <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs"/> contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Contains(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Determines a value indicating whether an element with the given name belongs to this PivotSortingDescriptor collection or not.
+            </summary>
+            <param name="value">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> value.</param>
+            <returns>True if item is found in the collection; otherwise, False.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Contains(System.String)">
+            <summary>
+            Determines a value indicating whether an element with the given name belongs to this PivotSortingDescriptor collection or not.
+            </summary>
+            <param name="name">The pivotItem fieldMappingName.</param>
+            <returns>True if item is found in the collection; otherwise, False.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.IndexOf(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Gets the zero-based index of the occurrence of the element in the collection.
+            </summary>
+            <param name="value">The element to locate in the collection. The value can be a NULL reference (Nothing in Visual Basic). </param>
+            <returns>The zero-based index of the occurrence of the element within the entire collection, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Insert(System.Int32,Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Inserts a descriptor element into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the element should be inserted.</param>
+            <param name="value">The element to insert. The value must not be a NULL reference (Nothing in Visual Basic). </param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Remove(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Removes the specified descriptor element from the collection.
+            </summary>
+            <param name="value">The element to remove from the collection. If the value is NULL or the element is not contained
+            in the collection, the method will do nothing.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the collection.
+            </summary>
+            <param name="index">The zero-based index of the element to remove. </param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the entire collection to a compatible one-dimensional array.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.CopyTo(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor[],System.Int32)">
+            <summary>
+            Copies the entire collection to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional array that is the destination of the elements copied from the ArrayList. The array must have zero-based indexing. </param>
+            <param name="index">The zero-based index in an array at which copying begins. </param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator for the entire collection.
+            </summary>
+            <returns>An Enumerator for the entire collection.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Throws the NotImplementedException.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Changed">
+            <summary>
+            Occurs after a property in a nested element or the collection is changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Changing">
+            <summary>
+            Occurs before a property in a nested element or the collection is changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.IsFixedSize">
+            <summary>
+            Gets a value indicating whether this collection has fixed size or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only or not.
+            Returns False.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the zero-based index.
+            </summary>
+            <param name="index">The zero-based index of the element</param>
+            <returns>The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> element.</returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.Count">
+            <summary>
+            Gets the number of elements contained in the collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.IsSynchronized">
+            <summary>
+            Gets a value indicating whether the collection is Synchronized or not.
+            Returns False.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.SyncRoot">
+            <summary>
+            Throws not supported exception. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortAxisDescriptorCollection.System#Collections#ICollection#SyncRoot">
+            <summary>
+            Throws the NotImplementedException.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection">
+            <summary>
+            Represents a collection of<see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> for sorting PivotLegends.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChart)">
+            <summary>
+            Initialize a new instance for <see cref="T:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection"/> class.
+            </summary>
+            <param name="pivotchart">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/>class object.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Dispose">
+            <summary>
+            Disposes the unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Add(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Adds an object to the end of the collection.
+            </summary>
+            <param name="value">The element to be added to the end of the collection. The value must not be a NULL reference.</param>
+            <returns>The zero-based collection index at which the value has been added.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Clear">
+            <summary>
+            Removes all elements from the collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.OnChanged(Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs)">
+            <summary>
+            Triggered when the <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.Changed"/> event is done.
+            </summary>
+            <param name="e">A <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs"/> contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.OnChanging(Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs)">
+            <summary>
+            Triggered when the <see cref="!:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.Changed"/> event is done.
+            </summary>
+            <param name="e">A <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortingEventArgs"/> contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Contains(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Determines a value indicating whether an element with the given name belongs to this PivotSortingDescriptor collection or not.
+            </summary>
+            <param name="value">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/></param>
+            <returns>True if item is found in the collection; otherwise, False.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Contains(System.String)">
+            <summary>
+            Determines a value indicating whether an element with the given name belongs to this PivotSortingDescriptor collection or not.
+            </summary>
+            <param name="fieldMappingname">The PivotItem's FieldMappingName.</param>
+            <returns>True if item is found in the collection; otherwise, false.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.IndexOf(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Gets the zero-based index of the occurrence of the element in the collection.
+            </summary>
+            <param name="value">The element to locate in the collection. The value can be a NULL reference (Nothing in Visual Basic). </param>
+            <returns>The zero-based index of the occurrence of the element within the entire collection, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Insert(System.Int32,Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Inserts a descriptor element into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the element should be inserted.</param>
+            <param name="value">The element to insert. The value must not be a NULL reference (Nothing in Visual Basic). </param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Remove(Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor)">
+            <summary>
+            Removes the specified descriptor element from the collection.
+            </summary>
+            <param name="value">The element to remove from the collection. If the value is NULL or the element is not contained
+            in the collection, the method will do nothing.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the collection.
+            </summary>
+            <param name="index">The zero-based index of the element to remove. </param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Throws the NotImplementedException.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator for the entire collection.
+            </summary>
+            <returns>An Enumerator for the entire collection.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Throws the NotImplementedException.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Changed">
+            <summary>
+            Occurs after a property in a nested element or the collection is changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Changing">
+            <summary>
+            Occurs before a property in a nested element or the collection is changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.IsFixedSize">
+            <summary>
+            Gets a value indicating whether this collection has fixed size or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only or not.
+            Returns False.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the zero-based index.
+            </summary>
+            <param name="index">The zero-based index of the element</param>
+            <returns>The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> element.</returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.Count">
+            <summary>
+            Gets the number of elements contained in the collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.IsSynchronized">
+            <summary>
+            Gets a value indicating whether the collection is Synchronized or not.
+            Returns False.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.SyncRoot">
+            <summary>
+            Throws not supported exception. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.SortLegendDescriptorCollection.System#Collections#ICollection#SyncRoot">
+            <summary>
+            Throws the NotImplementedException.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor">
+            <summary>
+            Defines the sorting order of the PivotAxis and PivotLegends.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.#ctor">
+            <summary>
+            Initialize a new instance for <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.#ctor(System.String)">
+            <summary>
+             Initialize a new instance for <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> class.
+            </summary>
+            <param name="name">The PivotItem Mapping name.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.#ctor(System.String,System.ComponentModel.ListSortDirection)">
+            <summary>
+            Initialize a new instance for the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor"/> class.
+            </summary>
+            <param name="name">The PivotItem Mapping name.</param>
+            <param name="direction">The <see cref="T:System.ComponentModel.ListSortDirection"/> sorting direction.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.FieldMappingName">
+            <summary>
+            Gets the field mapping name of the PivotItem.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotSortDescriptor.Direction">
+            <summary>
+            Gets or sets the sorting direction.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart">
+            <summary>
+            Essential PivotChart is a lightweight control that reads Pivot information and visualizes it in graphical format with the ability to drill up and down.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.isControlInitialized">
+            <summary>
+            Determines whether the control created(initialized) or not.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.SortedLegends_Changed(System.Object,Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs)">
+            <summary>
+            Applies Sorting for PivotLegends when collection changed.
+            </summary>
+            <param name="sender">The source control</param>
+            <param name="e">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs"/>contains event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.SortedAxis_Changed(System.Object,Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs)">
+            <summary>
+            Applies Sorting for PivotAxis when collection changed.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotItemSortedEventArgs"/>contains event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.OnCreateControl">
+            <summary>
+            Occurs when the control is created.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Filters_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Used to reload the chart and clear the group data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotColumns_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Used to reload the chart and clear the group data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotRows_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Used to reload the chart and clear the group data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotCalculations_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Used to reload the chart and clear the group data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotAxis_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Used to reload the chart and clear the group data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.InitializeChart">
+            <summary>
+            Adds the chart control to the Pivotchart area. The chart control will be docked to the entire chart area.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.LoadChartAppearance">
+            <summary>
+            Applies the chart appearance styles.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.ResetSkins">
+            <summary>
+            Resets the <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Skins"/> property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.ShouldSerializeSkins">
+            <summary>
+            Determines whether <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Skins"/> has been modified and its contents should be serialized at design-time.
+            </summary>
+            <returns>True if contents were changed; False otherwise.</returns>
+            <returns>True if modified; False otherwise.</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.LoadChartTypes">
+            <summary>
+            Applies the pivot chart types.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Sort(Syncfusion.PivotAnalysis.Base.PivotItem,System.ComponentModel.ListSortDirection)">
+            <summary>
+            The sorting will be applied in the passed pivotItem.
+            </summary>
+            <param name="pivotItem">The PivotItem need to sort.</param>
+            <param name="direction">Sorting Direction</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.InternalRefresh">
+            <summary>
+            Refresh the control without affecting persistence of expand/collapse states.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.LoadFieldButtons">
+            <summary>
+            Loads the field section buttons.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.ReloadChartData">
+            <summary>
+            Used to reload the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> series data and grouping labels.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Refresh">
+            <summary>
+            Refresh the PivotChart based on the data in ItemSource
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.BeginUpdate">
+            <summary>
+            Suspends the painting of the control until the EndUpdate method called.
+            When many changes are done to PivotChart, you should invoke the BeginUpdate method to temporarily freeze the drawing of the control.
+            After all updates have been made, invoke the EndUpdate method to resume drawing of the control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.EndUpdate">
+            <summary>
+            Resumes the painting of the control suspended by calling the BeginUpdate method.
+            When many changes are done to PivotChart, you should invoke the BeginUpdate method to temporarily freeze the drawing of the control.
+            After all updates have been made, invoke the EndUpdate method to resume drawing of the control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.LoadChartData">
+            <summary>
+            Used to render the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> data series and grouping labels.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PopulateDrillGrid">
+            <summary>
+            Used to populate the drill grid, which contains the data of the Drilling logic.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.Legend_FilterItems(System.Object,Syncfusion.Windows.Forms.Chart.ChartLegendFilterItemsEventArgs)">
+            <summary>
+            Used to load the filter items.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:Syncfusion.Windows.Forms.Chart.ChartLegendFilterItemsEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PopulateCoveredRanges">
+            <summary>
+            Used to cover the drill grid.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.TruncateData">
+            <summary>
+            Used to hide the data.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PopulateSeries">
+            <summary>
+            Used to populate the series to pivotchart.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.GetSeriesName(System.Int32)">
+            <summary>
+            Used to find the series name by using given PivotEngine
+            </summary>
+            <param name="colIndex">Column index of the PivotEngine</param>
+            <returns>Returns the series name</returns>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.PopulateGroupingLabels">
+            <summary>
+            Used to populate the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> grouping labels.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.completeData">
+            <summary>
+            Contains the information about the grouping labels data. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.padExtraWidth">
+            <summary>
+            Used as a key to pad extra width reduction to column charts. Column charts has inbuilt behavior from base to load from negative values.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.LoadGridData">
+            <summary>
+            Used to load PivotChart Grouping Labels grid.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.RowCalcluation(System.Int32,System.Int32,System.Int32@,System.Int32@,Syncfusion.Windows.Forms.Grid.GridRangeInfo@)">
+            <summary>
+            Used to calculate the range of a cell.
+            </summary>
+            <param name="RowIndex">Row index of a data cell.</param>
+            <param name="ColIndex">Column index of a data cell.</param>
+            <param name="noOfRowcells">The number of row cells.</param>
+            <param name="noOfColcells">Teh number of column cells.</param>
+            <param name="range">The range of cells.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.chartControl_ChartRegionClick(System.Object,Syncfusion.Windows.Forms.Chart.ChartRegionMouseEventArgs)">
+            <summary>
+            Used to perform drill operation in the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> grouping labels.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:Syncfusion.Windows.Forms.Chart.ChartRegionMouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.drillKeys">
+            <summary>
+            Contains information about the drilled keys.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.drillData">
+            <summary>
+            Contains information about the drilled data.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.ClearGroupData">
+            <summary>
+            Used to clear the grouping data and key collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.OnDrill(Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs)">
+            <summary>
+            Raises when the DrillDown or DrillUp of the chart region.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.RaiseChartPopulated">
+            <summary>
+            Raises the ChartPopulated event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.OnChartPopulated(Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulatedEventArgs)">
+            <summary>
+            Raises the ChartPopulated event.
+            </summary>
+            <param name="e">The ChartPopulatedEventArgs contains event data.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.InternalChart">
+            <internalonly/>
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.Windows.Forms.Chart.ChartControl"/> associated with this control.
+            </summary>
+            <remarks>
+            Internal use only.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotGrid">
+            <internalonly/>
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with this control.
+            </summary>
+            <remarks>
+            Internal use only.
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.UpdateManager">
+            <summary>
+            Gets an instance of a class that facilitates the pivot automatically updating itself due to changes in the underlying data. To enable this support,
+            set EnableUpdating to true;
+            </summary>
+            <remarks>
+            In order for the PivotChart to automatically respond to the changes in the underlying data, the underlying data must be either:
+                A) a DataTable or DataView
+            or
+                B) an IList; where T implements both INotifyPropertyChanging and INotifyPropertyChanged. Additionally, the IList must also
+                implement INotifyCollectionChanged or IBindingList."
+            </remarks>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartControl">
+            <summary>
+            Returns an instance of <see cref="T:Syncfusion.Windows.Forms.Chart.ChartControl"/> 
+            which is loaded into the chart area of <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.EnableTouchMode">
+            <summary>
+            Gets or sets a value indicating whether the control enables the touch mode.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ItemSource">
+            <summary>
+            Gets or sets source of data for pivot chart. This object should be either an IEnumerable list, or a DataTable.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotEngine">
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.PivotAnalysis.Base.PivotEngine"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotAxis">
+            <summary>
+            Gets the collection of PivotItems for PivotAxis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotLegend">
+            <summary>
+            Gets the collection of PivotItems for PivotLegend.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotFilters">
+            <summary>
+            Gets the collection of <see cref="T:Syncfusion.PivotAnalysis.Base.FilterExpression"/> for PivotFilters.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotCalculations">
+            <summary>
+            Gets the collection of <see cref="T:Syncfusion.PivotAnalysis.Base.PivotComputationInfo"/> for PivotCalculations.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PivotFields">
+            <summary>
+            Gets the collection of <see cref="T:Syncfusion.PivotAnalysis.Base.PivotItem"/> of Pivot FieldList.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.AxisFieldSection">
+            <summary>
+            Gets or sets the AxisFieldSections associated with the control. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.LegendFieldSection">
+            <summary>
+            Gets or sets the LegendFieldSection associated with the control. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.FilterFieldSection">
+            <summary>
+            Gets or sets the FilterFieldSection associated with the control. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ValueFieldSection">
+            <summary>
+            Gets or sets the ValueFieldSection associated with the control. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PrintDocument">
+            <summary>
+            Gets the print document of the Pivotchart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.IsAssociatedWithFieldList">
+            <summary>
+            Used to check the PivotChart is associated with PivotTableFieldList or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.EnableUpdating">
+            <summary>
+            Gets or sets a value indicating whether to enable or disable updating the cells.
+            </summary>
+            <value>If<b>True</b>Enables updating;Otherwise<b>False</b>. The default value is <b>False</b>.</value>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.AllowDrillDown">
+            <summary>
+            Gets or sets a value indicating whether drilldown option should be enabled.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Skins">
+            <summary>
+            Gets or sets the different skin's styles associated with PivotChart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PrimaryXAxis">
+            <summary>
+            Gets the primary X axis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.PrimaryYAxis">
+            <summary>
+            Gets the primary Y axis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartArea">
+            <summary>
+            Gets the ChartArea styles of PivotChart.
+            </summary>
+            <example> 
+            This example shows how to use <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartArea"/> property.
+            <code lang="C#">
+            // Changing the chart area's border style.
+            this.pivotChart1.ChartArea.BorderStyle = BorderStyle.Fixed3D;
+            // Changing the chart area's interior color.
+            this.pivotChart1.ChartArea.ChartInterior = new Syncfusion.Drawing.BrushInfo(Color.Blue);
+            </code>
+            <code lang="VB">
+            ' Changing the chart area's border style.
+            Me.pivotChart1.ChartArea.BorderStyle = BorderStyle.Fixed3D
+            ' Changing the chart area's interior color.
+            Me.pivotChart1.ChartArea.ChartInterior = New Syncfusion.Drawing.BrushInfo(Color.Blue)
+            </code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.CustomPalette">
+            <summary>
+            Gets or sets the custom color palette collection for PivotChart.
+            </summary>
+            <example> 
+            This example shows how to use <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.CustomPalette"/> property.
+            <code lang="C#">       
+            //Custom Colors for the bars in the chart.
+            Color[] colors = new Color[]
+            {
+            Color.FromArgb(165,165,165),
+            Color.FromArgb(68, 114, 196),
+            Color.FromArgb(112, 173, 71),
+            };
+            this.pivotChart1.CustomPalette = colors;
+            </code>
+            <code lang="VB">
+            'Custom Colors for the bars in the chart.
+            Dim colors() As Color = New Color() {Color.FromArgb(165, 165, 165), Color.FromArgb(68, 114, 196), Color.FromArgb(112, 173, 71)}
+            Me.pivotChart1.CustomPalette = colors
+            </code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.EnableXZooming">
+            <summary>
+            Gets or sets a value indicating whether zooming should be enabled for the PivotChart along the X axis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.EnableYZooming">
+            <summary>
+            Gets or sets a value indicating whether zooming should be enabled for the PivotChart along the Y axis.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ZoomIn">
+            <summary>
+            Gets or sets the Zooming in key option. Specifies the keyboard shortcut to control ZoomIn.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ZoomOut">
+            <summary>
+            Gets or sets the Zooming out key option. Specifies the keyboard shortcut to control ZoomOut.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ZoomRight">
+            <summary>
+            Gets or sets the Zoom Right keyboard shortcut.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ZoomLeft">
+            <summary>
+            Gets or sets the Zoom Left keyboard shortcut.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ZoomCancel">
+            <summary>
+            Gets or sets the Zoom Cancel key option. Specifies the keyboard shortcut to control ZoomCancel.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ShowLegend">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> legend should be displayed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.LegendPosition">
+            <summary>
+             Gets or sets the position of the legend element. Default is Right.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.LegendAlignment">
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> legend alignment.
+            </summary>
+            <example> 
+            This example shows how to use <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.LegendAlignment"/> property.
+            <code lang="C#">
+            // Changing the legend alignment
+            this.pivotChart1.LegendAlignment = ChartAlignment.Center;
+            </code>
+            <code lang="VB">
+            ' Changing the legend alignment
+            Me.pivotChart1.LegendAlignment = ChartAlignment.Center
+            </code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartTypes">
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> type.
+            </summary>
+            <example> 
+            This example shows how to use <see cref="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartTypes"/> property.
+            <code lang="C#">
+            // Changing the chart type to SplineArea
+            this.pivotChart1.ChartTypes = Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.SplineArea;
+            </code>
+            <code lang="VB">
+            ' Changing the chart type to SplineArea
+            Me.pivotChart1.ChartTypes = Syncfusion.Windows.Forms.PivotChart.PivotChartTypes.SplineArea
+            </code>
+            </example>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Series3D">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> should be displayed in 3D.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Style3D">
+            <summary>
+            Gets or sets a value indicating whether the 3D <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> should be displayed with 3D style.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Rotation">
+            <summary>
+            Gets or sets the rotational angle that is to be used when the ChartArea is rendered in 3D. Default is 30.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.RealMode3D">
+            <summary>
+            Gets or sets a value indicating whether the PivotChart should be displayed in a 3D plane.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.Tag">
+            <internalonly/>
+            <summary>
+            Gets the custom tag object.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.SortedLegends">
+            <summary>
+            Maintains the collection of sorted legends. 
+            </summary>
+            [Category("Pivot")]
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.SortedAxis">
+            <summary>
+            Maintains the collection of sorted axis.
+            </summary>
+            [Category("Pivot")]
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.PivotChart.Drill">
+            <summary>
+            Occurs when the DrillDown or DrillUp of the chart region.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulated">
+            <summary>
+            Occurs after populated all the series in PivotChart
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventHandler">
+            <summary>
+            Represents a method that handles an event with <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs"/>.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillState">
+            <summary>
+            Describes whether the chart region is in expand or collapse state.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillState.Expanded">
+            <summary>
+            Descripes the expand state.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillState.Collapsed">
+            <summary>
+            Descripes the collapse state.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs">
+            <summary>
+            Provides the support to handle the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventHandler"/>. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillState,Syncfusion.Windows.Forms.Chart.ChartRegion,System.Windows.Forms.MouseButtons,System.Drawing.Point)">
+            <summary>
+            Creates a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs"/>.
+            </summary>
+            <param name="drillstate">Describes expand or collapse state.</param>
+            <param name="region">Provides the chart region.</param>
+            <param name="mousebutton">Provides the mouse button.</param>
+            <param name="point">Provides point of mouse clicking position.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs.Region">
+            <summary>
+            Gets the information about the <see cref="T:Syncfusion.Windows.Forms.Chart.ChartRegion"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs.Point">
+            <summary>
+            Gets the mouse location.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs.Button">
+            <summary>
+            Gets the mouse button.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.DrillEventArgs.DrillState">
+            <summary>
+            Gets the expand or collapse state of the region.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulatedEventHandler">
+            <summary>
+            Defines the method that handles a OnChartPopulated event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="e">A ChartPopulatedEventArgs that contains data</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulatedEventArgs">
+            <summary>
+            Provides data for the ChartPopulatedEventHandler
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulatedEventArgs.#ctor(Syncfusion.Windows.Forms.Chart.ChartControl)">
+            <summary>
+            Create a new instance for ChartPopulatedEventArgs
+            </summary>
+            <param name="chartControl">That provides Chart control of PivotChart</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotChart.ChartPopulatedEventArgs.ChartControl">
+            <summary>
+            Gets Chart control of PivotChart.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager">
+            <summary>
+            This class allows a PivotChart to automatically respond to changes in the underlying data
+            provided that data supports appropriate events. You enable this support by setting EnableUpdating property in PivotChart 
+            to true. 
+            </summary>
+            <remarks>
+            In order for the PivotChart to automatically respond to the changes in the underlying data, the underlying data must be either:
+                A) a DataTable or DataView
+            or
+                B) an IList&lt;T&gt; where T implements both INotifyPropertyChanging and INotifyPropertyChanged. Additionally, the IList must also
+                implement INotifyCollectionChanged or IBindingList."
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChart)">
+            <summary>
+            Initializes a new instance of the PivotUpdatingManager class with the specified PivotChart.
+            </summary>
+            <param name="grid">The PivotGidControl that should be responding to updates.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.InitializeUpdatingManager(Syncfusion.Windows.Forms.PivotChart.PivotChart)">
+            <summary>
+            Initializes the updating manager with its associated settings.
+            </summary>
+            <param name="grid">The PivotGridControlBase object</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.UnwireEvents">
+            <summary>
+            UnWire the events from the PivotEngine.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.UpdateRefreshHelper_ListChanged(System.Object,System.ComponentModel.ListChangedEventArgs)">
+            <summary>
+            Override this method to control the response to a list changed event for a list that implements <see cref="T:System.ComponentModel.IBindingList"/>.
+            </summary>
+            <param name="sender">The IBindingList.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.ListChangedEventArgs"/>contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.UpdateRefreshHelper_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Override this method to control the response to a collection changed event for a list that implements the ICollectionChanged.
+            </summary>
+            <param name="sender">The ICollectionChanged collection.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/>contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotChartUpdatingManager.Item_PropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Override this method to catch the previous values of an underlying object after a change is applied.
+            This method is the default handler for the object's PropertyChange event. The base implementation
+            calls the <see cref="!:Syncfusion.Windows.Forms.PivotAnalysis.PivotUpdatingManager.ChangeValue"/> method to respond to the changed value.
+            </summary>
+            <param name="sender">The object that is changing.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/>contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection">
+            <summary>
+            Implements the extensive support to <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> with group bar functionalities.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.#ctor(System.Windows.Forms.Panel,Syncfusion.Windows.Forms.PivotChart.PivotChart)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/> class.
+            </summary>
+            <param name="fieldSectionPanel">FieldSection Group Panel</param>
+            <param name="pivotChart">Wired PivotChart</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.HorizontalScroller_Scroll(System.Object,System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Used to invalidate the field section panel.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.ScrollEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.fieldSectionPanel_VisibleChanged(System.Object,System.EventArgs)">
+            <summary>
+            Used to set scroll background.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.fieldSectionPanel_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Used to invalidate the field section panel.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.fieldSectionPanel_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Used to paint the border of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.Visible">
+            <summary>
+            Gets or sets a value indicating whether field section panel should be shown.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.ItemBackColor">
+            <summary>
+            Gets or sets the back color of the field section button.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.ItemForeColor">
+            <summary>
+            Gets or sets the fore color of the field section button. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.BorderStyle">
+            <summary>
+            Gets or sets the border style of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.BackGroundImage">
+            <summary>
+            Gets or sets the BackGroundImage of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.BackInterior">
+            <summary>
+            Gets or sets the interior of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.BorderColor">
+            <summary>
+            Gets or sets the border color of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection.BorderWidth">
+            <summary>
+            Gets or sets the border width of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotFieldsSection"/>.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.RoundedButton">
+            <summary>
+            Rounded button is an derivative of <see cref="T:Syncfusion.Windows.Forms.ButtonAdv"/> which have customization for Groupbar buttons. 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.RoundedButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.RoundedButton"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.RoundedButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden to draw the button as rounded button.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Forms.GrPaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.RoundedButtonRenderer">
+            <summary>
+            Implements the functionalities of <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> control's GroupBar buttons for drawing rounded corners.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.RoundedButtonRenderer.RoundedEdgeButton(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Returns the rounded path of the ButtonAdv.
+            </summary>
+            <param name="rc">Bounds of the button</param>
+            <param name="iRadius">Radius of the button</param>
+            <returns>Polygon Points</returns>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList">
+            <summary>
+            Provides interactive information between <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotChart"/> and <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.AssociateWith(System.Windows.Forms.Control)">
+            <summary>
+            Loads the associated control to <see cref="T:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList"/>.
+            </summary>
+            <param name="AssociatedControl">PivotChart/PivotGridControl</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.PivotSchemaDesigner_SchemaChanged(System.Object,Syncfusion.Windows.Forms.PivotAnalysis.SchemaChangedEventArgs)">
+            <summary>
+            Used to reload the chart data.
+            </summary>
+            <param name="sender">The source control.</param>
+            <param name="e">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.SchemaChangedEventArgs"/></param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.DragCheck">
+            <summary>
+            Used to reload the chart data on dragging.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.PivotTableFieldList.PivotGrid">
+            <summary>
+            Gets the <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with pivot chart.
+            </summary>
+            <remarks>
+            Generate's the PivotGrid control from the passed data. PivotGrid will be null if data is not valid.
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.PivotChart.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.arrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.axis">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.axis15">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.axis18">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.az">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.check">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.delete">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.dropdown">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.fieldsettings">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.filter">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.filter15">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.filter18">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.legend">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.legend15">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.legend18">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.PivotIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.values">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.values15">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.values18">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Forms.PivotChart.Properties.Resources.za">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -16,6 +16,7 @@ Fixed
 - Row functions fixed
 
 TODO
+-Create documentation on setting up the enviroment
 -Create documentation on plugin system
 -Improve plugin system metadata into array structure
 -Rewrite HandleSearch()
