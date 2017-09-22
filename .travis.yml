@@ -2,4 +2,4 @@ sudo: true
 language: csharp
 solution: "/CSV Analyzer Pro/CSVAnalyzerPro.sln"
 script:
-  - xbuild /p:Configuration=Release "/CSV Analyzer Pro/CSVAnalyzerPro.sln"
+  - msbuild /p:Configuration=Release "/CSV Analyzer Pro/CSVAnalyzerPro.sln"
