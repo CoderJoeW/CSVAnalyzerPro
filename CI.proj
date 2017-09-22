@@ -4,7 +4,7 @@
   <Target Name="CI" DependsOnTargets="Build" />
  
   <Target Name="Build">
-    <MSBuild Projects="./CSV Analyzer Pro/CSVAnalyzerPro.sln" /p:Configuration=Debug /p:Platform="Any CPU"" />
+    <MSBuild Projects="./CSV Analyzer Pro/CSVAnalyzerPro.sln" Properties="Platform=Any CPU"/>
   </Target>
  
 </Project>
