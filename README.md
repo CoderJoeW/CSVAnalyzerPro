@@ -64,7 +64,7 @@ Developer
 <a name="api"></a>
 ### Plugin Development
 
-Our documentation will be contained in the wiki but of the time writing this we havent started on it yet
+[View the docs](https://github.com/flaminggenius/CSVAnalyzerPro/wiki)
 
 Todo
 ----
