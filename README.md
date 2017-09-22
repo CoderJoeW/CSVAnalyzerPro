@@ -13,7 +13,7 @@
 **CSV Analyzer Pro** makes managing your spreadsheets easy and faster then ever. With speeds matching top open source editors and multiwindow support how could you not download?
 
 <h3 align="center">
-  <img src="https://github.com/flaminggenius/readme/blob/master/docs/img/overall-screenshot.png" alt="vim-devicons overall screenshot" />
+  <img src="https://github.com/flaminggenius/readme/blob/master/docs/img/overall-screenshot.png"/>
 </h3>
 
 Features
