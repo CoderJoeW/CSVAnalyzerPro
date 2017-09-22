@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 language: csharp
 solution: "/CSV Analyzer Pro/CSVAnalyzerPro.sln"
 script:
