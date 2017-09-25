@@ -98,8 +98,16 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e) {
-            MessageBox.Show("This feature is currently disabled");
-            //OnSearchCalled();
+            
+        }
+
+        private void setToolStripMenuItem_Click(object sender, EventArgs e) {
+            Core.Windows.Filter filter = new Core.Windows.Filter(this.HandleFilter);
+            filter.Show();
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e) {
+            HandleFilter("Row", "Like", "");
         }
 
         #endregion
@@ -152,12 +160,6 @@ namespace CSV_Analyzer_Pro{
             }
         }
 
-        private void OnSearchCalled() {
-            int index = tabControl1.SelectedIndex;
-            Search search = new Search(this.SearchFor);
-            search.Show();
-        }
-
         private void OnKeyCommands(object sender,KeyEventArgs e) {
             //Psuedo code
         }
@@ -179,19 +181,15 @@ namespace CSV_Analyzer_Pro{
             ds.Tables[pageIndex.ToString()].Columns[index].ColumnName = array[1];
         }
 
-        private void SearchFor(string val) {
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
-            //dbg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            int pageIndex = tabControl1.SelectedIndex;
-            string[] array = val.Split(',');
-            string searchValue = array[0];
-            int index = int.Parse(array[1]);
-
-            HandleSearch(dbg, searchValue, index);
-        }
-
-        private void HandleSearch(GridDataBoundGrid dbg,string searchValue,int index) {
-            //Rewite
+        private void HandleFilter(string filterState,string queryState,string queryString) {
+            if(filterState == "Row") {
+                if (queryState == "Like") {
+                    GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+                    DataView dv = ((DataTable)dbg.DataSource).DefaultView;
+                    dv.RowFilter = queryString;
+                    dbg.Refresh();
+                }
+            }
         }
         #endregion
 
@@ -262,6 +260,18 @@ namespace CSV_Analyzer_Pro{
             pi.SetValue(dbg, setting, null);
         }
 
+        private void grid_PrepareViewStyleInfo(object sender, GridPrepareViewStyleInfoEventArgs e) {
+
+            if (e.ColIndex == 0 && e.RowIndex > 0) {
+
+                e.Style.Text = e.RowIndex.ToString();
+
+                e.Style.Font.Bold = false;
+
+            }
+
+        }
+
         public void InitGrid(GridDataBoundGrid dbg) {
 
             #region DataGridView Contructing
@@ -273,9 +283,12 @@ namespace CSV_Analyzer_Pro{
             dbg.ListBoxSelectionMode = SelectionMode.None;
             dbg.ShowRowHeaders = false;
             dbg.ThemesEnabled = true;
-            dbg.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2007Blue;
+            dbg.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
             DoubleBuffering(dbg, true);
             dbg.ShowColumnHeaders = true;
+            dbg.AllowResizeToFit = true;
+
+            dbg.BaseStylesMap["Row Header"].StyleInfo.CellType = "Header";
 
             dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
             #endregion
@@ -317,6 +330,10 @@ namespace CSV_Analyzer_Pro{
             GridDataBoundGrid dbg = new GridDataBoundGrid();
             InitGrid(dbg);
             loader.GetPluginByTargetFramework("GridDataBoundGrid", dbg);
+
+            //GridCardView card = new GridCardView();
+            //card.CaptionField = "ProductName";
+            //card.WireGrid(dbg);
             DataTable dt = new DataTable();
 
             tb.Text = "New..";
