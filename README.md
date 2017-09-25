@@ -1,7 +1,7 @@
 # CSV Analyzer Pro - Manage your spreadsheets like never before
 
 <h1 align="center">
-  <img src="https://github.com/flaminggenius/readme/blob/master/docs/img/Icon.png" alt='csv-icon'>
+  <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/csv-icon.png" alt='csv-icon'>
 </h1>
 
 [![Build Status](https://travis-ci.org/flaminggenius/CSVAnalyzerPro.svg?branch=master)](https://travis-ci.org/flaminggenius/CSVAnalyzerPro)
