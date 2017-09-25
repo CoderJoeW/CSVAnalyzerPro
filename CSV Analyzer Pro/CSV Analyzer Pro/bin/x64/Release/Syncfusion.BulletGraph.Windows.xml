@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.BulletGraph.Windows</name>
+    </assembly>
+    <members>
+        <member name="F:Syncfusion.Windows.Forms.BulletGraph.BulletGraph.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.BulletGraph.BulletGraph.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Syncfusion.Windows.Forms.BulletGraph.BulletGraph.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphCaptionPosition">
+            <summary>
+            Enumerates the values for position of caption in the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphTicksPosition">
+            <summary>
+            Enumerates the values for position of ticks in the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphLabelsPosition">
+            <summary>
+            Enumerates the values for position of labels in the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphFlowDirection">
+            <summary>
+            Enumerates the values for the flow direction of the quantitative scale.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphLabel">
+            <summary>
+             Represents the label of quantitative scale in the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.BulletGraphTick">
+            <summary>
+             Represents the tick of quantitative scale in the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.BulletGraphWindowsAssembly">
+            <exclude/>
+            <summary>
+            This class holds the name of the Syncfusion.BulletGraph.Windows assembly and provides a helper
+            routine that helps with resolving types when loading a serialization stream and when
+            the framework probes for assemblies by reflection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.BulletGraphWindowsAssembly.Name">
+            <summary>
+            The full name of this assembly without version information: "Syncfusion.BulletGraph.Windows"
+            </summary>
+        </member>
+        <member name="F:Syncfusion.BulletGraphWindowsAssembly.Assembly">
+            <summary>
+            A reference to the <see cref="T:System.Reflection.Assembly"/> for the BulletGraph assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.BulletGraphWindowsAssembly.RootNamespace">
+            <summary>
+            The root namespace of this assembly. Used internally for locating resources within the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.BulletGraphWindowsAssembly.#cctor">
+            <summary>
+            Initializes the <see cref="T:Syncfusion.BulletGraphWindowsAssembly"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.BulletGraphWindowsAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This delegate helps with resolving types and can be used as an event handler
+            for a <see cref="E:System.AppDomain.AssemblyResolve"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data with information about the type.</param>
+            <returns>A reference to the assembly where the type is located.</returns>      
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.AssemblyInfo">
+            <summary>
+            AssemblyInformation for internal use.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.QualitativeRange">
+            <summary>
+             Represents the qualitative range of the bullet graph.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Forms.BulletGraph.QualitativeRangeCollection">
+            <summary>
+             Represents a collection of Qualitative ranges
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,10 +1,4 @@
-﻿using CSV_Analyzer_Pro.Core.PluginSystem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Syncfusion.Windows.Forms.Grid;
+﻿using Syncfusion.Windows.Forms.Grid;
 
 namespace CSV_Analyzer_Pro.Core.PluginSystem.GDBGExample {
     public class GDBGExample: IPlugin {

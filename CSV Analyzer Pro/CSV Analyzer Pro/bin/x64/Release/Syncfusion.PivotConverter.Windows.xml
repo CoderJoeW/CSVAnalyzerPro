@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.PivotConverter.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.PivotConverter.NamespaceDoc">
+            <summary>
+            The Syncfusion.PivotConverter namespace contains classes that provides the functionality of exporting the Essential PivotGridControl to an Excel sheet, a PDF or to a Word document.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.PivotConverter.ExcelExport">
+            <summary>
+            Implements the exporting functionality of the Pivot data to Excel sheet with the applied style.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"/> class.
+            </summary>
+            <param name="gridControl">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl,Syncfusion.XlsIO.ExcelVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"/> class.
+            </summary>
+            <param name="gridControl">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+            <param name="version"> The Excel Version.<remarks> Accessible through adding Syncfusion.XlsIO.Base as project reference.</remarks></param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotChart.PivotChart,Syncfusion.XlsIO.ExcelVersion,Syncfusion.XlsIO.ExcelChartType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"/> class.
+            </summary>
+            <param name="pivotChart">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+            <param name="version"> The Excel Version.<remarks> Accessible through adding Syncfusion.XlsIO.Base as project reference.</remarks></param>
+            <param name="excelChartType">The type of the excel chart.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl,Syncfusion.PivotConverter.ExportModes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"></see> class. 
+            </summary>
+            <param name="gridControl">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+            <param name="mode">The Exporting mode.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl,Syncfusion.XlsIO.ExcelVersion,Syncfusion.PivotConverter.ExportModes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"></see> class. 
+            </summary>
+            <param name="gridControl">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+            <param name="version">Excel Version.<remarks> Accessible through adding Syncfusion.XlsIO.Base as project reference.</remarks></param>
+            <param name="mode">The Exporting mode.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl[],Syncfusion.XlsIO.ExcelVersion,Syncfusion.PivotConverter.ExportModes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.ExcelExport"></see> class. 
+            </summary>
+            <param name="gridControls">Array of <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.</param>
+            <param name="version">Excel Version.<remarks>Accessible through adding Syncfusion.XlsIO.Base as project reference.</remarks></param>
+            <param name="mode">Export Mode</param>        
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.Export(System.String)">
+            <summary>
+            Exports the pivot grid control to Excel with the specified file name.
+            </summary>
+            <param name="fileName">Name of the Excel file.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.ApplyFilteredView(Syncfusion.XlsIO.IPivotField)">
+            <summary>
+            Applies the filtered view to respective pivot field.
+            </summary>
+            <param name="field">PivotField to which filtered view to apply.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.ApplyNumberFormat(System.Object,Syncfusion.XlsIO.IPivotField)">
+            <summary>
+            Applies the number format to pivot fields.
+            </summary>
+            <param name="item">An object of type PivotItem or PivotComputationInfo.</param>
+            <param name="field">The <see cref="T:Syncfusion.XlsIO.IPivotField"/>.</param>        
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.GetSubTotalType(Syncfusion.PivotAnalysis.Base.SummaryType)">
+            <summary>
+            Converts the summary type of PivotGrid to respective type supported by XlsIO.
+            </summary>
+            <param name="summaryType">The SummaryType to get the sub total type.</param>
+            <returns>The pivot grid's sub total types.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.FormatExcel">
+            <summary>
+            Apply styles to rows and column for Excel sheet.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.ExcelExport.HexToColor(System.String)">
+            <summary>
+            Gets the color for the given hexadecimal value.
+            </summary>
+            <param name="hexVal">The hexadecimal value string.</param>
+            <returns>The corresponding color for hexadecimal value.</returns>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.GridCollection">
+            <summary>
+            Gets or sets the collection of <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.application">
+            <summary>
+            Gets or sets the <see cref="T:Syncfusion.XlsIO.IApplication"/> to instantiate various kinds of applications.  
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.excelEngine">
+            <summary>
+            Create instance for Excel Engine.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.workBook">
+            <summary>
+            Gets or sets the Workbook to be added in Excel  file.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.sheet">
+            <summary>
+            Gets or sets the sheets to be added in workBook . 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.gridcontrol1">
+            <summary>
+            Gets the <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with this exporting.
+            </summary>
+            <value>The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with this exporting.</value>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.ExcelExport.ExportMode">
+            <summary>
+            Gets or sets the mode(Cell/PivotTable) to export.
+            </summary>
+            <value>The ExportMode.</value>        
+        </member>
+        <member name="T:Syncfusion.PivotConverter.ExportModes">
+            <summary>
+            Defines the constants that specify the exporting modes of pivot grid.
+            </summary>
+            <remarks>To export the <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> either cell wise or as PivotTable.</remarks>
+        </member>
+        <member name="F:Syncfusion.PivotConverter.ExportModes.Cell">
+            <summary>
+            Denotes the cell type export of pivot grid.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.PivotConverter.ExportModes.PivotTable">
+            <summary>
+            Denotes the pivot type export of pivot grid.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.PivotConverter.PivotPdfExport">
+            <summary>
+            Implements the exporting functionality of Pivot Grid to PDF document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl)">
+             <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.PivotPdfExport"/> class.
+             </summary>
+             <param name="gridControl"></param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.Export(System.String)">
+            <summary>
+            Exports the pivot grid to PDF with specified PDF file name.
+            </summary>
+            <param name="fileName">Name of the file</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.SummaryCellStyle(Syncfusion.Pdf.Grid.PdfGridCellStyle,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfStringFormat)">
+            <summary>
+            Formats the summary cells.
+            </summary>
+            <param name="cellStyle">Style for the cell.</param>
+            <param name="summaryCellBackColor">Background color for the cell.</param>
+            <param name="summaryCellForeColor">Background color for the fonts.</param>
+            <param name="format">Format for the contents</param>
+            <returns>The summary cell style for PDF.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.ValueCellStyle(Syncfusion.Pdf.Grid.PdfGridCellStyle,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfStringFormat)">
+            <summary>
+            Formats the value cell.
+            </summary>
+            <param name="cellStyle">Style for the cell.</param>
+            <param name="valueCellBackColor">Background color for the cell.</param>
+            <param name="valueCellForeColor">Background color for the fonts.</param>
+            <param name="format">Format for the contents.</param>
+            <returns>The value of the pivot grid cell.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.ColHeaderStyle(Syncfusion.Pdf.Grid.PdfGridCellStyle,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfStringFormat)">
+            <summary>
+            Applies styles for the column headers.
+            </summary>
+            <param name="cellStyle">Style for the cell.</param>
+            <param name="headerColBackColor">Background color for the column.</param>
+            <param name="headerColForeColor">Background color for the fonts.</param>
+            <param name="format">Format for the contents.</param>
+            <returns>The column header cell style.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.RowHeaderStyle(Syncfusion.Pdf.Grid.PdfGridCellStyle,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfStringFormat)">
+            <summary>
+            Applies styles for the row headers.
+            </summary>
+            <param name="cellStyle">Style for the cell.</param>
+            <param name="headerRowBackColor">Background color for the row.</param>
+            <param name="headerRowForeColor">Background color for the fonts.</param>
+            <param name="format">Format for the contents.</param>
+            <returns>The row header cell style.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.SummaryHeaderStyle(Syncfusion.Pdf.Grid.PdfGridCellStyle,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfBrush,Syncfusion.Pdf.Graphics.PdfStringFormat)">
+            <summary>
+            Applies styles for the Summary header
+            </summary>
+            <param name="cellStyle">Style for the Summary header</param>
+            <param name="summaryRowBackColor">Background color for the header</param>
+            <param name="summaryRowForeColor">Background color for the font</param>
+            <param name="format">Format for the contents</param>
+            <returns>The summary header style.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.GetFontInfo(System.String,System.String,System.Double)">
+            <summary>
+            Gets the font styles.
+            </summary>
+            <param name="fontName">Name of the font.</param>
+            <param name="fontStyle">Style of the font.</param>
+            <param name="fontSize">Size of the font.</param>
+            <returns>The font style.</returns>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotPdfExport.HexToColor(System.String)">
+            <summary>
+            Converts the hexadecimal value to color.
+            </summary>
+            <param name="hexVal">The Hexadecimal value.</param>
+            <returns>The color for the concerned hexadecimal value.</returns>
+            <exception cref="T:System.ArgumentException">Hexadecimal value length is not 6 or 8 characters.</exception>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.PivotPdfExport.PivotGridControl">
+            <summary>
+            Gets the pivot grid control associated for exporting.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.PivotConverter.PivotWordExport">
+            <summary>
+            Implements the exporting functionality of Pivot data to Word with the applied style.
+            </summary>    
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotWordExport.#ctor(Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.PivotConverter.PivotWordExport"/> class.
+            </summary>
+            <param name="gridControl">The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> to export.</param>
+        </member>
+        <member name="M:Syncfusion.PivotConverter.PivotWordExport.pivotGridToWord(System.String)">
+            <summary>
+            Exports the pivot grid control to word with specified filename.
+            </summary>
+            <param name="filename">The filename.</param>
+        </member>
+        <member name="P:Syncfusion.PivotConverter.PivotWordExport.gridControl1">
+            <summary>
+            The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with this exporting.
+            </summary>
+            <value>The <see cref="T:Syncfusion.Windows.Forms.PivotAnalysis.PivotGridControl"/> associated with this exporting.</value>
+        </member>
+    </members>
+</doc>

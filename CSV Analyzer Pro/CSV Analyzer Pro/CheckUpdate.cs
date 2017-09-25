@@ -20,7 +20,7 @@ namespace CSV_Analyzer_Pro {
 
         private void CheckUpdate_Load(object sender, EventArgs e) {
             WebClient wc = new WebClient();
-            System.IO.Stream stream = wc.OpenRead("http://cof.ftp.sh/CsvAnalyzerPro/update.php");
+            System.IO.Stream stream = wc.OpenRead("http://deathcrow.altervista.org/update.php");
             using(System.IO.StreamReader reader = new System.IO.StreamReader(stream)) {
                 string text = reader.ReadToEnd();
                 string[] texts = text.Split(',');

@@ -108,259 +108,267 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Syncfusion.BulletGraph.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.BulletGraph.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.BulletGraph.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Calculate.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Calculate.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Calculate.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Calculate.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Calculate.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Calculate.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Chart.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Chart.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Chart.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Chart.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Chart.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Chart.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Compression.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Core, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Core.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Core.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Diagram.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Diagram.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Diagram.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Diagram.Utility.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Diagram.Utility.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Diagram.Utility.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Diagram.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Diagram.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Diagram.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DICOM.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.DICOM.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.DICOM.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DocIO.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.DocIO.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.DocIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DocIO.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.DocIO.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.DocIO.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DocToPDFConverter.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.DocToPDFConverter.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.DocToPDFConverter.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Edit.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Edit.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Edit.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.ExcelChartToImageConverter.WPF, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.ExcelChartToImageConverter.WPF.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.ExcelChartToImageConverter.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.ExcelToPDFConverter.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.ExcelToPDFConverter.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.ExcelToPDFConverter.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Gauge.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Gauge.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Gauge.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Grid.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Grid.Grouping.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grid.Grouping.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Grouping.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grid.Grouping.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Grouping.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Grid.Grouping.Windows.XmlSerializers, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grid.Grouping.Windows.XmlSerializers.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Grouping.Windows.XmlSerializers.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Grid.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Grid.Windows.XmlSerializers, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grid.Windows.XmlSerializers.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grid.Windows.XmlSerializers.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.GridConverter.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.GridConverter.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.GridConverter.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.GridHelperClasses.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Grouping.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grouping.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grouping.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Grouping.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Grouping.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Grouping.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.HtmlConverter.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.HtmlConverter.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.HtmlConverter.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.HTMLUI.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.HTMLUI.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.HTMLUI.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.HTMLUI.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.HTMLUI.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.HTMLUI.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Linq.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Linq.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Linq.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Maps.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Maps.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Maps.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.MIME.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.MIME.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.MIME.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.OCRProcessor.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.OCRProcessor.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.OCRProcessor.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.OfficeChart.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.OfficeChart.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.OfficeChart.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.OfficeChartToImageConverter.WPF, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.OfficeChartToImageConverter.WPF.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.OfficeChartToImageConverter.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Olap.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Olap.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Olap.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.OlapSampleUtils, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.OlapSampleUtils.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.OlapSampleUtils.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Pdf.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Pdf.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Pdf.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Pdf.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Pdf.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Pdf.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PdfViewer.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PdfViewer.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PdfViewer.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PivotAnalysis.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PivotAnalysis.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PivotAnalysis.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PivotAnalysis.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PivotAnalysis.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PivotAnalysis.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PivotChart.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PivotChart.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PivotChart.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PivotConverter.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PivotConverter.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PivotConverter.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PMML.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PMML.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PMML.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Presentation.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Presentation.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Presentation.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.PresentationToPdfConverter.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.PresentationToPdfConverter.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.PresentationToPdfConverter.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.ProjIO.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.ProjIO.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.ProjIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Schedule.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Schedule.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Schedule.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Schedule.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Schedule.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Schedule.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Scripting.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Scripting.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Scripting.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Scripting.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Scripting.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Scripting.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBarcode.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.SfBarcode.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.SfBarcode.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfChart.WPF, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.SfChart.WPF.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.SfChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Shared.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Shared.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Shared.WPF, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Shared.WPF.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Shared.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SpellChecker.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.SpellChecker.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.SpellChecker.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Spreadsheet.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Spreadsheet.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Spreadsheet.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SpreadsheetHelper.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.SpreadsheetHelper.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.SpreadsheetHelper.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Tools.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Tools.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Tools.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Tools.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.Tools.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.Tools.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.TreeMap.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.TreeMap.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.TreeMap.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.XlsIO.Base, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.XlsIO.Base.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.XlsIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.XlsIO.Windows, Version=15.3451.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.3.0.26\Assemblies\4.6\Syncfusion.XlsIO.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\PluginDevelopment\References\Syncfusion.XlsIO.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
