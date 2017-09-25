@@ -15,6 +15,7 @@ using System.Reflection;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.GridHelperClasses;
 using CSV_Analyzer_Pro.Core.PluginSystem;
+using Syncfusion.Windows.Forms.Grid.Grouping;
 
 namespace CSV_Analyzer_Pro{
     public partial class Form1 : Form{
@@ -137,15 +138,17 @@ namespace CSV_Analyzer_Pro{
             }
         }
 
-        private void OnColumnHeaderMouseClick(object sender, GridCellClickEventArgs e) {
-            Debug.Write("ColumnHeaderClickEventFired");
-            GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
-            if (dbg[e.RowIndex, e.ColIndex].CellType == "ColumnHeaderCell") {
-                int index = tabControl1.SelectedIndex;
-                EditHeader eh = new EditHeader(this.UpdateHeader);
-                eh.TextBox1.Text = ds.Tables[index.ToString()].Columns[e.ColIndex].ToString();
-                eh.TextBox2.Text = e.ColIndex.ToString();
-                eh.Show();
+        private void OnColumnHeaderMouseClick(object sender, MouseEventArgs e) {
+            int row, col;
+            GridDataBoundGrid dbg = sender as GridDataBoundGrid;
+            if(dbg.PointToRowCol(new Point(e.X,e.Y),out row,out col)){
+                if(dbg.Model[row,(col - 1)].CellType == "ColumnHeaderCell"){
+                    int tableIndex = tabControl1.SelectedIndex;
+                    EditHeader eh = new EditHeader(this.UpdateHeader);
+                    eh.TextBox1.Text = ds.Tables[tableIndex.ToString()].Columns[(col - 1)].ToString();
+                    eh.TextBox2.Text = (col - 1).ToString();
+                    eh.Show();
+                }
             }
         }
 
@@ -244,7 +247,7 @@ namespace CSV_Analyzer_Pro{
                 //Get gridview
                 GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
                 //Attach event handler
-                //dbg.CellClick += (s, e) => this.OnColumnHeaderMouseClick(s, e);
+                dbg.MouseDown += (s, e) => this.OnColumnHeaderMouseClick(s, e);
                 //Bind data source
                 dbg.DataSource = ds.Tables[index.ToString()];
             }
@@ -272,6 +275,7 @@ namespace CSV_Analyzer_Pro{
             dbg.ThemesEnabled = true;
             dbg.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2007Blue;
             DoubleBuffering(dbg, true);
+            dbg.ShowColumnHeaders = true;
 
             dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
             #endregion
@@ -300,7 +304,7 @@ namespace CSV_Analyzer_Pro{
         private void ExitAll() {
             _exiting = true;
             try {
-                Environment.Exit(1);
+                Environment.Exit(0);
             }catch(Exception e) {
                 MessageBox.Show("There was an error trying to shutdown.\n\n Try closing all pages and then exiting.");
             }
@@ -420,53 +424,6 @@ namespace CSV_Analyzer_Pro{
         #endregion
 
         #region Unimplemented Experimental Code
-        //Experimental Test Code
-        //Paste Multiple Cells
-        //Needs enhancements and handler
-        //Add code to NewWindow function
-        private void paste() {
-            DataGridView dgv = tabControl1.SelectedTab.Controls.OfType<DataGridView>().First();
-            if (dgv.SelectedCells.Count < 1) return;
-
-            string[] lines;
-            int row = dgv.Rows.Count;
-            int col = dgv.Columns.Count;
-            int maxrow = 0;
-            int maxcol = 0;
-            int cellcount = dgv.SelectedCells.Count;
-
-            //find selection extents
-            foreach (DataGridViewCell cell in dgv.SelectedCells) {
-                if (cell.RowIndex < row) row = cell.RowIndex;
-                if (cell.RowIndex > maxrow) maxrow = cell.RowIndex;
-                if (cell.ColumnIndex < col) col = cell.ColumnIndex;
-                if (cell.ColumnIndex > maxcol) maxcol = cell.ColumnIndex;
-            }
-
-            if (Clipboard.GetText().Contains(Environment.NewLine) || Clipboard.GetText().Contains('\t')) {
-                //multiple cells copied;
-                lines = Clipboard.GetText().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-
-                string[] values;
-                for (int i = 0; i < lines.Length; i++) {
-                    values = lines[i].Split('\t');
-
-                    if (row >= dgv.Rows.Count || dgv.Rows[row].IsNewRow || (cellcount > 1 && row > maxrow)) continue;
-                    for (int j = 0; j < values.Length; j++) {
-                        if (col + j >= dgv.Columns.Count || (cellcount > 1 && col + j > maxcol)) continue;
-                        dgv.Rows[row].Cells[col + j].Value = values[j];
-                    }
-
-                    row++;
-                }
-            } else {
-                //single cell
-                string value = Clipboard.GetText().Trim();
-                foreach (DataGridViewCell dc in dgv.SelectedCells) {
-                    dc.Value = value;
-                }
-            }
-        }
 
         private void panel5_Paint(object sender, PaintEventArgs e) {
 
