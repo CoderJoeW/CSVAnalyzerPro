@@ -294,7 +294,13 @@ namespace CSV_Analyzer_Pro{
             #endregion
         }
 
-        
+        public bool IsWelcomePage() {
+            if(tabControl1.SelectedIndex == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
         #endregion
 
         #region Exiting Functions
