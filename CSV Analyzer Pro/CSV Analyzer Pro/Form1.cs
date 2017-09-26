@@ -69,45 +69,61 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
-            Thread th = new Thread(() => Save(path));
-            th.Start();
+            if (!IsWelcomePage()) {
+                Thread th = new Thread(() => Save(path));
+                th.Start();
+            }
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
-            SaveAs();
+            if (!IsWelcomePage()) {
+                SaveAs();
+            }
         }
 
         private void addNewRowToolStripMenuItem_Click(object sender, EventArgs e) {
-            InsertRowNew();
+            if (!IsWelcomePage()) {
+                InsertRowNew();
+            }
         }
 
         private void insertAfterToolStripMenuItem_Click(object sender, EventArgs e) {
-            InsertRowAfter();
+            if (!IsWelcomePage()) {
+                InsertRowAfter();
+            }
         }
 
         private void insertBeforeToolStripMenuItem_Click(object sender, EventArgs e) {
-            InsertRowBefore();
+            if (!IsWelcomePage()) {
+                InsertRowBefore();
+            }
         }
 
         private void insertNewToolStripMenuItem_Click(object sender, EventArgs e) {
-            InsertColumnNew();
+            if (!IsWelcomePage()) {
+                InsertColumnNew();
+            }
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
             NewWindow();
         }
 
-        private void findToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void FindToolStripMenuItem_Click(object sender, EventArgs e) {
             
         }
 
         private void setToolStripMenuItem_Click(object sender, EventArgs e) {
-            Core.Windows.Filter filter = new Core.Windows.Filter(this.HandleFilter);
-            filter.Show();
+            if (!IsWelcomePage()) {
+                Core.Windows.Filter filter = new Core.Windows.Filter(this.HandleFilter);
+                filter.Show();
+            }
         }
 
         private void resetToolStripMenuItem_Click(object sender, EventArgs e) {
-            HandleFilter("Row", "Like", "");
+            if (!IsWelcomePage()) {
+                HandleFilter("Row", "Like", "");
+            }
         }
 
         #endregion
@@ -354,8 +370,6 @@ namespace CSV_Analyzer_Pro{
         private void Save(string filePath) {
             int index = tabControl1.SelectedIndex;
 
-            if(index == 0){return;}
-
             StringBuilder sb = new StringBuilder();
 
             IEnumerable<string> columnNames = ds.Tables[index.ToString()].Columns.Cast<DataColumn>().
@@ -377,8 +391,6 @@ namespace CSV_Analyzer_Pro{
 
         private void SaveAs() {
             int index = tabControl1.SelectedIndex;
-
-            if(index == 0){return;}
 
             string savePath = "";
 
@@ -408,16 +420,12 @@ namespace CSV_Analyzer_Pro{
 
             GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
 
-            if (index == 0){return;}
-
             ds.Tables[index.ToString()].Rows.Add("");
             dbg.Refresh();
         }
 
         private void InsertRowAfter() {
             int tabCIndex = tabControl1.SelectedIndex;
-
-            if(tabCIndex == 0){return;}
 
             GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
             DataRow dr;
@@ -430,8 +438,6 @@ namespace CSV_Analyzer_Pro{
         private void InsertRowBefore() {
             int tabCIndex = tabControl1.SelectedIndex;
 
-            if(tabCIndex == 0){return;}
-
             GridDataBoundGrid dbg = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
             DataRow dr;
             dr = ds.Tables[tabCIndex.ToString()].NewRow();
@@ -441,8 +447,6 @@ namespace CSV_Analyzer_Pro{
 
         private void InsertColumnNew() {
             int index = tabControl1.SelectedIndex;
-
-            if(index == 0){return;}
 
             ds.Tables[index.ToString()].Columns.Add("");
         }

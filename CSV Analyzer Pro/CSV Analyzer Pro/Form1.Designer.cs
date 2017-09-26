@@ -187,7 +187,7 @@ namespace CSV_Analyzer_Pro
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.findToolStripMenuItem.Text = "Filter";
-            this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
+            this.findToolStripMenuItem.Click += new System.EventHandler(this.FindToolStripMenuItem_Click);
             // 
             // setToolStripMenuItem
             // 
