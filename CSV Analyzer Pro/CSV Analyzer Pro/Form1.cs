@@ -293,6 +293,8 @@ namespace CSV_Analyzer_Pro{
             dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
             #endregion
         }
+
+        
         #endregion
 
         #region Exiting Functions

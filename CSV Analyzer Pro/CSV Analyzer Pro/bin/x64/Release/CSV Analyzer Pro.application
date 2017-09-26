@@ -7,14 +7,14 @@
     <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CSV Analyzer Pro.exe.manifest" size="57203">
+    <dependentAssembly dependencyType="install" codebase="CSV Analyzer Pro.exe.manifest" size="58177">
       <assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0XioWN0wzijF2sKgxeubex9m1RqV2B55Wpk2ccEHBxM=</dsig:DigestValue>
+        <dsig:DigestValue>xh/chtwQDBB3oeDo31nALG09Uoo4tnWD21jrt87fViE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

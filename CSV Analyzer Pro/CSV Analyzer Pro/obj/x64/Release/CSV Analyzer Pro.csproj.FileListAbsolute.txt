@@ -155,3 +155,5 @@ C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\x64\Release\CSV Analyzer Pro.exe
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\x64\Release\CSV Analyzer Pro.pdb
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\x64\Release\CSV_Analyzer_Pro.Core.Windows.Filter.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\DemoCommon.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\x64\Release\CSV Analyzer Pro.csproj.CSV Analyzer Pro.exe.config

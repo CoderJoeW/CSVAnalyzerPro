@@ -23,7 +23,7 @@ namespace CSV_Analyzer_Pro.Core.Windows
 
         public string QueryString {
             get {
-                return richTextBox1.Text;
+                return editControl1.Text;
             }
         }
         #endregion
@@ -34,6 +34,7 @@ namespace CSV_Analyzer_Pro.Core.Windows
         }
 
         private void Filter_Load(object sender, EventArgs e) {
+            InitEditControl();
             comboBox2.SelectedIndexChanged += (s, ex) => this.SetQueryState(s, ex);
             comboBox1.SelectedIndexChanged += (s, ex) => this.SetFilterState(s, ex);
         }
@@ -48,10 +49,30 @@ namespace CSV_Analyzer_Pro.Core.Windows
 
         #endregion
 
+        #region Helpers
+        private void InitEditControl() {
+            this.editControl1.ShowHorizontalSplitters = false;
+            this.editControl1.ShowVerticalSplitters = false;
+            this.editControl1.SaveOnClose = false;
+        }
+        #endregion
+
         #region Buttons and Clickers
         private void button1_Click(object sender, EventArgs e) {
             _Filter(filterState,queryState,QueryString);
             this.Close();
+        }
+
+        private void splitInHalfToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.editControl1.SplitVertically();
+        }
+
+        private void splitVerticleToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.editControl1.SplitHorizontally();
+        }
+
+        private void fourQuadrantsToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.editControl1.SplitFourQuadrants();
         }
         #endregion
 
@@ -64,11 +85,17 @@ namespace CSV_Analyzer_Pro.Core.Windows
         public void SetQueryState(object sender, EventArgs e) {
             if(comboBox2.SelectedIndex == 0) {
                 queryState = "Like";
-                richTextBox1.Text = "ColumnName LIKE '*'";
+                editControl1.Text = "ColumnName LIKE '*'";
             } else if(comboBox2.SelectedIndex == 1) {
                 queryState = "Custom";
-                richTextBox1.Text = "Insert Custom Query";
+                editControl1.Text = "Insert Custom Query";
             }
+        }
+        #endregion
+
+        #region ExitHandling
+        private void Filter_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+            
         }
         #endregion
     }

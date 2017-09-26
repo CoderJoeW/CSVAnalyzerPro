@@ -44,6 +44,11 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="InstallInfoLibrary" version="15.3.0.26" publicKeyToken="3D67ED1F87D44C89" language="neutral" processorArchitecture="x86" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="MetroFramework.Design" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
@@ -75,14 +80,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2731528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2734600">
       <assemblyIdentity name="CSV Analyzer Pro" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HI7NXbOrOBdDLEqe34jJU+RBf8ouPee2d5jqk64Ulvw=</dsig:DigestValue>
+        <dsig:DigestValue>IY01NrD/5C6T/yu3jKoYYJaZ5mygRZi/WVnjRlDdlns=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DemoCommon.dll" size="102400">
+      <assemblyIdentity name="DemoCommon" version="15.3460.0.26" publicKeyToken="3D67ED1F87D44C89" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>SvZ/mPPzxl4/jcGXa16Op0LLMaUNbu7HLR4aGbetRcM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -950,13 +967,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CSV Analyzer Pro.exe.config" size="184">
+  <file name="CSV Analyzer Pro.exe.config" size="538">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>gKxXKIvI1oB2Ujf3NLkY67/jWCAETGNca3j2WtIebak=</dsig:DigestValue>
+      <dsig:DigestValue>XRQs/63h7P/+oVUTyXvVQXkteyJYANr6QDHi6s1bHJM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Icon.ico" size="370070">
