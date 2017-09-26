@@ -54,6 +54,7 @@ namespace CSV_Analyzer_Pro.Core.Windows
             this.editControl1.ShowHorizontalSplitters = false;
             this.editControl1.ShowVerticalSplitters = false;
             this.editControl1.SaveOnClose = false;
+            this.editControl1.ConvertOnLoad = false;
         }
         #endregion
 
