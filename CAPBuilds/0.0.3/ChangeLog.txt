@@ -19,6 +19,7 @@ Fixed
 - Fixed bug causing table loading to slow down
 - Row functions fixed
 - Fixed column header editing
+- Cleaned up broken references
 
 TODO
 -Improve plugin system metadata into array structure

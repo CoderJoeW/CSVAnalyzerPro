@@ -13,9 +13,6 @@ C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\CSV Analyzer Pro.application
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\CSV Analyzer Pro.exe
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\CSV Analyzer Pro.pdb
-C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\cooldatagridview.dll
-C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\MetroFramework.dll
-C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\MetroFramework.Fonts.dll
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\Syncfusion.BulletGraph.Windows.dll
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\Syncfusion.Calculate.Base.dll
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\x64\Release\Syncfusion.Calculate.Windows.dll
