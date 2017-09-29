@@ -11,7 +11,7 @@ using System.Net;
 
 namespace CSV_Analyzer_Pro {
     public partial class CheckUpdate : Form {
-        string thisVersion = "0.0.2";
+        string thisVersion = "0.0.3";
         string thisLicenseKey = "alpha";
 
         public CheckUpdate() {

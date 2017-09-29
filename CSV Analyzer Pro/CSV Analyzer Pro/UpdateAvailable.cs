@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CSV_Analyzer_Pro {
     public partial class UpdateAvailable : Form {
-        string updateURL = "http://cof.ftp.sh/CsvAnalyzerPro/index.php";
+        string updateURL = "http://deathcrow.altervista.org/update/0.0.3/";
 
         public UpdateAvailable() {
             InitializeComponent();
