@@ -19,6 +19,8 @@
     <facebook>NULL</facebook>
     <google>NULL</google>
     <flameforged>NULL</flameforged>
+    <twitter>NULL</twitter>
+    <github>NULL</github>
   </authmethods>
   <connection>Username-Password-Authentication</connection>
 <email_verified>FALSE</email_verified>
