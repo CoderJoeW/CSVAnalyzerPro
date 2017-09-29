@@ -1,30 +1,32 @@
-Added
--Multi-Selection
--Copy and paste multiple rows/columns(starts from selected cell to lower right)
--Double click column header to sort by column(Asc,Desc)
--Added plugin system
--Create documentation on setting up the enviroment
--Create documentation on plugin system
--Added advanced filter system with query support
+# Changelog
 
-Changed
--Tables now have a beautifully styled UI
--Rows now alternate colors to make reading tables easier
--You no longer have to double click a cell to edit now you can click on a cell and start typing to make edits
--Cleaned up outdated code
--Optimized table loading
+### Added
+- Multi-Selection
+- Copy and paste multiple rows/columns(starts from selected cell to lower right)
+- Double click column header to sort by column(Asc,Desc)
+- Added plugin system
+- Create documentation on setting up the enviroment
+- Create documentation on plugin system
+- Added advanced filter system with query support
 
-Fixed
+### Changed
+- Tables now have a beautifully styled UI
+- Rows now alternate colors to make reading tables easier
+- You no longer have to double click a cell to edit now you can click on a cell and start typing to make edits
+- Cleaned up outdated code
+- Optimized table loading
+
+### Fixed
 - Fixed crash when database memory is exceeded and another file is opened
 - Fixed bug causing table loading to slow down
 - Row functions fixed
 - Fixed column header editing
-- Cleaned up broken references
+- Broken references
 
-TODO
--Improve plugin system metadata into array structure
--Add option in installer to auto set csv files to launch progam(options['Open file in new window','Launch progam'])
--Fix crash related to exiting the application(Error creating window handle)
--Add edit panel
--Add context menu on cell right click
--Create plugins store
+### TODO
+- Improve plugin system metadata into array structure
+- Add option in installer to auto set csv files to launch progam(options['Open file in new window','Launch progam'])
+- Fix crash related to exiting the application(Error creating window handle)
+- Add edit panel
+- Add context menu on cell right click
+- Create plugins store
