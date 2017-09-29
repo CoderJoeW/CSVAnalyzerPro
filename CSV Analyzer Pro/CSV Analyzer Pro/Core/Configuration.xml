@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <target>X64</target>
+  <os>Windows</os>
+  <osversion>10</osversion>
+  <applicationfolder>DEFAULT</applicationfolder>
+  <email>DEFAULT</email>
+  <user>DEFAULT</user>
+  <pass>DEFAULT</pass>
+  <ispremium>FALSE</ispremium>
+  <license>FREE</license>
+  <registeredtocloud>FALSE</registeredtocloud>
+  <cloudid>DEFAULT</cloudid>
+  <cloudusername>DEFAULT</cloudusername>
+  <cloudpassword>DEFAULT</cloudpassword>
+  <clouddirectory>DEFAULT</clouddirectory>
+  <authurl>NULL</authurl>
+  <authmethods>
+    <facebook>NULL</facebook>
+    <google>NULL</google>
+    <flameforged>NULL</flameforged>
+  </authmethods>
+</config>
