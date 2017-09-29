@@ -4,20 +4,36 @@
   <os>Windows</os>
   <osversion>10</osversion>
   <applicationfolder>DEFAULT</applicationfolder>
-  <email>DEFAULT</email>
-  <user>DEFAULT</user>
-  <pass>DEFAULT</pass>
+  <email>johndoe@gmail.com</email>
+  <user>John Doe</user>
+  <pass>doejohn</pass>
   <ispremium>FALSE</ispremium>
   <license>FREE</license>
   <registeredtocloud>FALSE</registeredtocloud>
-  <cloudid>DEFAULT</cloudid>
-  <cloudusername>DEFAULT</cloudusername>
-  <cloudpassword>DEFAULT</cloudpassword>
-  <clouddirectory>DEFAULT</clouddirectory>
+  <cloudid>1</cloudid>
+  <cloudusername>JohnDoe</cloudusername>
+  <cloudpassword>doejohn</cloudpassword>
+  <clouddirectory>/1/</clouddirectory>
   <authurl>NULL</authurl>
   <authmethods>
     <facebook>NULL</facebook>
     <google>NULL</google>
     <flameforged>NULL</flameforged>
   </authmethods>
+  <connection>Username-Password-Authentication</connection>
+<email_verified>FALSE</email_verified>
+  <user_id>auth0|59cde8e0f506c55620f77921</user_id>
+  <clientID>OBnwKB8yciXK8R_e60O7QNDKBJiJDSTY</clientID>
+  <picture>https://s.gravatar.com/avatar/29a1df4646cb3417c19994a59a3e022a?s=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fjo.png</picture>
+  <nickname>johndoe</nickname>
+  <identities>
+    <user_id>59cde8e0f506c55620f77921</user_id>
+      <provider>auth0</provider>
+      <connection>Username-Password-Authentication</connection>
+      <isSocial>FALSE</isSocial>
+  </identities> 
+  <updated_at>2017-09-29T06:32:49.209Z</updated_at>
+  <created_at>2017-09-29T06:32:00.041Z</created_at>
+  <name>johndoe@gmail.com</name>
+  <sub>auth0|59cde8e0f506c55620f77921</sub>
 </config>
