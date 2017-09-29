@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.org/flaminggenius/CSVAnalyzerPro.svg?branch=master)](https://travis-ci.org/flaminggenius/CSVAnalyzerPro)
 [![Code Climate](https://codeclimate.com/github/flaminggenius/CSVAnalyzerPro/badges/gpa.svg)](https://codeclimate.com/github/flaminggenius/CSVAnalyzerPro)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
-[![Total Downloads](http://deathcrow.altervista.org/update/downloadBadge.php?token=new)](https://github.com/flaminggenius/CSVAnalyzerPro)
+[![Total Downloads](http://deathcrow.altervista.org/update/downloadBadge.php?force)](https://github.com/flaminggenius/CSVAnalyzerPro)
 ![License](https://github.com/ellerbrock/open-source-badges/blob/master/badges/licence-gpl/gpl.png)
 
 **CSV Analyzer Pro** makes managing your spreadsheets easy and faster then ever. With speeds matching top open source editors and multiwindow support how could you not download?
