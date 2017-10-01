@@ -360,7 +360,7 @@ namespace CSV_Analyzer_Pro{
             //card.WireGrid(dbg);
             DataTable dt = new DataTable();
 
-            tb.Text = "New..";
+            tb.Text = "New";
 
             tb.Controls.Add(dbg);
             tabControl1.TabPages.Add(tb);
