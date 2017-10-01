@@ -72,7 +72,7 @@ Todo
 
 Our todo list is contained within our changelog which you can see [Here](https://github.com/flaminggenius/CSVAnalyzerPro/tree/master/CAPBuilds)
 
-Just select a version and view ChangeLog.txt
+Just select a version and view ChangeLog.txt(Switched to markdown in 0.0.4)
 
 ## License
 
