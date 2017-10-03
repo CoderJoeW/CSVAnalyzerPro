@@ -22,7 +22,7 @@ Features
 **CSV Analyzer Pro is built for speed and extendability**
 
 * Extend the application through our plugin system
-	* Sbility to override defaults and use your own styles/functionalities
+	* Ability to override defaults and use your own styles/functionalities
 	* Make money selling your plugins in the plugin store or publish them for free
 * Fast buffering makes sure large files open without any issue
 * Inline editing makes it easier for you to get down to business
