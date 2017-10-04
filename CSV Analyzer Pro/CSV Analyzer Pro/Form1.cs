@@ -209,10 +209,10 @@ namespace CSV_Analyzer_Pro{
 
         private void GridCellChanged(object sender, GridCellsChangedEventArgs e) {
             int index = tabControl1.SelectedIndex;
-            TabExtraInfo temp;
-            temp = tabMetadataList.ElementAt(index);
-            if (!temp.QueryHasUnsavedChanges()) {
-                temp.SetHasUnsavedChanges(true);
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(index);
+            if (!tabInfo.QueryHasUnsavedChanges()) {
+                tabInfo.SetHasUnsavedChanges(true);
                 tabControl1.SelectedTab.Text = "*" + tabControl1.SelectedTab.Text; // Add asterisk to denote unsaved changes
             }
         }
@@ -307,10 +307,10 @@ namespace CSV_Analyzer_Pro{
                 //Bind data source
                 dbg.DataSource = ds.Tables[index.ToString()];
             }
-            TabExtraInfo temp;
-            temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
-            temp.SetAssociatedFileName(tabControl1.SelectedTab.Text);
-            temp.SetHasUnsavedChanges(false);
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            tabInfo.SetAssociatedFileName(tabControl1.SelectedTab.Text);
+            tabInfo.SetHasUnsavedChanges(false);
         }
         #endregion
 
@@ -394,7 +394,7 @@ namespace CSV_Analyzer_Pro{
                     return true;
                case UnsavedChangesSingleFile.Cancel:
                     return false;
-                default:
+               default:
                     return false; // Should be unreachable
             }
         }
@@ -594,10 +594,6 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void InsertColumnNew() {
-            TabExtraInfo temp;
-            temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
-            MessageBox.Show(temp.GetAssocaitedFileName());
-            MessageBox.Show(tabMetadataList.Count.ToString());
             int index = tabControl1.SelectedIndex;
 
             ds.Tables[index.ToString()].Columns.Add("");
