@@ -31,6 +31,42 @@ namespace CSV_Analyzer_Pro{
         bool _exiting = false;
 
         string Filters = "csv files (*.csv)|*.csv";
+
+        List<TabExtraInfo> tabMetadataList = new List<TabExtraInfo>();
+
+        private class TabExtraInfo {
+			
+			private int associatedTabIndex; // Will not be updated as tabs are open and closed, be wary of relying on it
+			private string assocaitedFileName;
+			private bool hasUnsavedChanges;
+			
+			public TabExtraInfo(int index, string fileName) {
+				associatedTabIndex = index;
+				assocaitedFileName = fileName;
+                hasUnsavedChanges = false;
+			}
+
+            public void SetAssociatedFileName(string filename) {
+                assocaitedFileName = filename;
+            }
+			
+			public string GetAssocaitedFileName() {
+				return assocaitedFileName;
+			}
+			
+			public int GetAssociatedTabIndex() {
+				return associatedTabIndex;
+			}
+			
+			public void SetHasUnsavedChanges(bool yn) {
+				hasUnsavedChanges = yn;
+			}
+			
+			public bool QueryHasUnsavedChanges() {
+				return hasUnsavedChanges;
+			}
+			
+		}
         #endregion
 
         #region Initializing
@@ -47,6 +83,10 @@ namespace CSV_Analyzer_Pro{
 
             //Enable Progress Reorting
             worker.WorkerReportsProgress = true;
+			
+			//Create tab metadata for Welcome page
+			TabExtraInfo welcomePage = new TabExtraInfo(0, "N/A");
+            tabMetadataList.Insert(0, welcomePage);
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -70,7 +110,9 @@ namespace CSV_Analyzer_Pro{
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
             if (!IsWelcomePage()) {
-                Thread th = new Thread(() => Save(path));
+                TabExtraInfo tabInfo;
+                tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+                Thread th = new Thread(() => Save(tabInfo.GetAssocaitedFileName()));
                 th.Start();
             }
         }
@@ -79,6 +121,9 @@ namespace CSV_Analyzer_Pro{
             if (!IsWelcomePage()) {
                 SaveAs();
             }
+        }
+        private void saveAllToolStripMenuItem_Click(object sender, EventArgs e) {
+            SaveAll();
         }
 
         private void addNewRowToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -154,6 +199,9 @@ namespace CSV_Analyzer_Pro{
 
         #region EventHandlers
         private void OnTabMouseUp(object sender, MouseEventArgs e) {
+            //TabExtraInfo tabInfo;
+            //tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            //MessageBox.Show(tabInfo.GetAssocaitedFileName());
             if (e.Button == MouseButtons.Right) {
                 DialogResult result = MessageBox.Show("Do you really wanna delete this page? All unsaved data will be lost!", "Confirmation", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes) {
@@ -185,6 +233,16 @@ namespace CSV_Analyzer_Pro{
                 e.Style.BackColor = Color.LightCyan;
             else
                 e.Style.BackColor = Color.GhostWhite;
+        }
+
+        private void GridCellChanged(object sender, GridCellsChangedEventArgs e) {
+            int index = tabControl1.SelectedIndex;
+            TabExtraInfo temp;
+            temp = tabMetadataList.ElementAt(index);
+            if (!temp.QueryHasUnsavedChanges()) {
+                temp.SetHasUnsavedChanges(true);
+                tabControl1.SelectedTab.Text = "*" + tabControl1.SelectedTab.Text;
+            }
         }
         #endregion
 
@@ -228,6 +286,9 @@ namespace CSV_Analyzer_Pro{
                 DataTable dt = ds.Tables.Add(index.ToString());
                 path = csvSearch.FileName;
                 tabControl1.SelectedTab.Text = csvSearch.FileName;
+                //TabExtraInfo temp;
+                //temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+                //temp.SetAssociatedFileName(tabControl1.SelectedTab.Text);
                 OpenCSVFile();
             }
         }
@@ -265,6 +326,9 @@ namespace CSV_Analyzer_Pro{
                 //Bind data source
                 dbg.DataSource = ds.Tables[index.ToString()];
             }
+            TabExtraInfo temp;
+            temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            temp.SetAssociatedFileName(tabControl1.SelectedTab.Text);
         }
         #endregion
 
@@ -307,6 +371,7 @@ namespace CSV_Analyzer_Pro{
             dbg.BaseStylesMap["Row Header"].StyleInfo.CellType = "Header";
 
             dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
+            dbg.Model.CellsChanged += new Syncfusion.Windows.Forms.Grid.GridCellsChangedEventHandler(GridCellChanged);
             #endregion
         }
 
@@ -365,10 +430,24 @@ namespace CSV_Analyzer_Pro{
             tb.Controls.Add(dbg);
             tabControl1.TabPages.Add(tb);
             tabControl1.SelectedTab = tb;
+            
+            TabExtraInfo newTab = new TabExtraInfo(tabControl1.TabCount-1, "N/A");
+            tabMetadataList.Insert(tabControl1.TabCount-1, newTab);
         }
 
-        private void Save(string filePath) {
-            int index = tabControl1.SelectedIndex;
+        private void Save(string filePath, int index=-1) {
+            if (index == -1) {
+                index = tabControl1.SelectedIndex;
+                // I found that the usage of SelectedIndex in the Save functions resticted them to the current tab, which was a problem when trying to implement SaveAll.
+                // This should allow saving of data from any tab without interfering with current functions by defaulting to SelectedIndex if no other index is specified.
+            }
+
+            if (filePath == "N/A") {
+                return; // Skipping tabs with associatedFileName of N/A, mainly the Welcome page
+            }
+
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(index);
 
             StringBuilder sb = new StringBuilder();
 
@@ -381,12 +460,20 @@ namespace CSV_Analyzer_Pro{
                 sb.AppendLine(string.Join(",", fields));
             }
 
+            bool success;
+
             try {
                 File.WriteAllText(filePath, sb.ToString());
+                success = true;
             } catch (Exception e) {
                 Console.WriteLine("An Exception occured when trying to save file");
+                success = false;
             }
 
+            if (success && tabInfo.QueryHasUnsavedChanges()) { // Avoiding removal of unsaved changes marker where it does not exist or where save has failed
+                tabInfo.SetHasUnsavedChanges(false);
+                tabControl1.TabPages[index].Text = tabControl1.TabPages[index].Text.Substring(1); // Return substring without unsaved changed marker
+            }
         }
 
         private void SaveAs() {
@@ -402,6 +489,11 @@ namespace CSV_Analyzer_Pro{
                 savePath = saveAs.FileName;
             }
 
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            tabInfo.SetAssociatedFileName(savePath);
+            tabControl1.SelectedTab.Text = savePath;
+
             Thread th = new Thread(() => Save(savePath));
             th.Start();
 
@@ -409,7 +501,17 @@ namespace CSV_Analyzer_Pro{
             //Save(savePath);
         }
 
+        private void SaveAll() {
+            int i;
+            TabExtraInfo tabInfo;
+            for (i = 0; i < tabControl1.TabCount; i++) {
+                tabInfo = tabMetadataList.ElementAt(i);
+                Save(tabInfo.GetAssocaitedFileName(), i);
+            }
+        }
+
         private void DeleteTab() {
+            tabMetadataList.RemoveAt(tabControl1.SelectedIndex);
             Debug.WriteLine("Delete Tab Called");
             int index = tabControl1.SelectedIndex;
             tabControl1.TabPages.RemoveAt(index);
@@ -446,6 +548,10 @@ namespace CSV_Analyzer_Pro{
         }
 
         private void InsertColumnNew() {
+            TabExtraInfo temp;
+            temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            MessageBox.Show(temp.GetAssocaitedFileName());
+            MessageBox.Show(tabMetadataList.Count.ToString());
             int index = tabControl1.SelectedIndex;
 
             ds.Tables[index.ToString()].Columns.Add("");
