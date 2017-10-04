@@ -33,40 +33,6 @@ namespace CSV_Analyzer_Pro{
         string Filters = "csv files (*.csv)|*.csv";
 
         List<TabExtraInfo> tabMetadataList = new List<TabExtraInfo>();
-
-        private class TabExtraInfo {
-			
-			private int associatedTabIndex; // Will not be updated as tabs are open and closed, be wary of relying on it
-			private string assocaitedFileName;
-			private bool hasUnsavedChanges;
-			
-			public TabExtraInfo(int index, string fileName) {
-				associatedTabIndex = index;
-				assocaitedFileName = fileName;
-                hasUnsavedChanges = false;
-			}
-
-            public void SetAssociatedFileName(string filename) {
-                assocaitedFileName = filename;
-            }
-			
-			public string GetAssocaitedFileName() {
-				return assocaitedFileName;
-			}
-			
-			public int GetAssociatedTabIndex() {
-				return associatedTabIndex;
-			}
-			
-			public void SetHasUnsavedChanges(bool yn) {
-				hasUnsavedChanges = yn;
-			}
-			
-			public bool QueryHasUnsavedChanges() {
-				return hasUnsavedChanges;
-			}
-			
-		}
         #endregion
 
         #region Initializing
@@ -83,9 +49,9 @@ namespace CSV_Analyzer_Pro{
 
             //Enable Progress Reorting
             worker.WorkerReportsProgress = true;
-			
-			//Create tab metadata for Welcome page
-			TabExtraInfo welcomePage = new TabExtraInfo(0, "N/A");
+            
+            //Create tab metadata for Welcome page
+            TabExtraInfo welcomePage = new TabExtraInfo(0, "N/A");
             tabMetadataList.Insert(0, welcomePage);
         }
 
@@ -122,6 +88,7 @@ namespace CSV_Analyzer_Pro{
                 SaveAs();
             }
         }
+
         private void saveAllToolStripMenuItem_Click(object sender, EventArgs e) {
             SaveAll();
         }
@@ -199,13 +166,18 @@ namespace CSV_Analyzer_Pro{
 
         #region EventHandlers
         private void OnTabMouseUp(object sender, MouseEventArgs e) {
-            //TabExtraInfo tabInfo;
-            //tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
-            //MessageBox.Show(tabInfo.GetAssocaitedFileName());
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            bool hasUnsavedChanges = tabInfo.QueryHasUnsavedChanges();
             if (e.Button == MouseButtons.Right) {
-                DialogResult result = MessageBox.Show("Do you really wanna delete this page? All unsaved data will be lost!", "Confirmation", MessageBoxButtons.YesNoCancel);
-                if (result == DialogResult.Yes) {
-                    DeleteTab();
+
+                if (hasUnsavedChanges) {
+                    PromptUnsavedChangesCloseTab(tabInfo);
+                } else { 
+                    DialogResult result = MessageBox.Show("Do you really want to close this file?", "Confirmation", MessageBoxButtons.YesNoCancel);
+                    if (result == DialogResult.Yes) {
+                        DeleteTab();
+                    }
                 }
             }
         }
@@ -241,7 +213,7 @@ namespace CSV_Analyzer_Pro{
             temp = tabMetadataList.ElementAt(index);
             if (!temp.QueryHasUnsavedChanges()) {
                 temp.SetHasUnsavedChanges(true);
-                tabControl1.SelectedTab.Text = "*" + tabControl1.SelectedTab.Text;
+                tabControl1.SelectedTab.Text = "*" + tabControl1.SelectedTab.Text; // Add asterisk to denote unsaved changes
             }
         }
         #endregion
@@ -272,6 +244,18 @@ namespace CSV_Analyzer_Pro{
             if (tabControl1.SelectedIndex == 0) {
                 NewWindow();
             }
+
+            bool safeToOpen = true;
+            TabExtraInfo tabInfo;
+            tabInfo = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
+            if (tabInfo.QueryHasUnsavedChanges()) {
+                safeToOpen = PromptUnsavedChangesOpenTab(tabInfo); // Checking for unsaved changes since opening a new file deletes the current one
+            }
+
+            if (!safeToOpen) {
+                return;
+            }
+
             OpenFileDialog csvSearch = new OpenFileDialog();
             csvSearch.Filter = Filters;
             csvSearch.FilterIndex = 1;
@@ -286,9 +270,6 @@ namespace CSV_Analyzer_Pro{
                 DataTable dt = ds.Tables.Add(index.ToString());
                 path = csvSearch.FileName;
                 tabControl1.SelectedTab.Text = csvSearch.FileName;
-                //TabExtraInfo temp;
-                //temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
-                //temp.SetAssociatedFileName(tabControl1.SelectedTab.Text);
                 OpenCSVFile();
             }
         }
@@ -329,6 +310,7 @@ namespace CSV_Analyzer_Pro{
             TabExtraInfo temp;
             temp = tabMetadataList.ElementAt(tabControl1.SelectedIndex);
             temp.SetAssociatedFileName(tabControl1.SelectedTab.Text);
+            temp.SetHasUnsavedChanges(false);
         }
         #endregion
 
@@ -382,14 +364,56 @@ namespace CSV_Analyzer_Pro{
                 return false;
             }
         }
+
+        private void PromptUnsavedChangesCloseTab(TabExtraInfo tabInfo) {
+            UnsavedChangesSingleFile unsavedChangesBox = new UnsavedChangesSingleFile();
+            unsavedChangesBox.ShowDialog();
+
+            switch (unsavedChangesBox.userAnswer) {
+               case UnsavedChangesSingleFile.saveAndClose:
+                    Save(tabInfo.GetAssocaitedFileName(), tabControl1.SelectedIndex);
+                    DeleteTab();
+                    break;
+               case UnsavedChangesSingleFile.closeWithoutSaving:
+                    DeleteTab();
+                    break;
+               case UnsavedChangesSingleFile.Cancel:
+                    break;
+            }
+        }
+
+        private bool PromptUnsavedChangesOpenTab(TabExtraInfo tabInfo) {
+            UnsavedChangesSingleFile unsavedChangesBox = new UnsavedChangesSingleFile();
+            unsavedChangesBox.ShowDialog();
+
+            switch (unsavedChangesBox.userAnswer) {
+               case UnsavedChangesSingleFile.saveAndClose:
+                    Save(tabInfo.GetAssocaitedFileName(), tabControl1.SelectedIndex);
+                    return true;
+               case UnsavedChangesSingleFile.closeWithoutSaving:
+                    return true;
+               case UnsavedChangesSingleFile.Cancel:
+                    return false;
+                default:
+                    return false; // Should be unreachable
+            }
+        }
         #endregion
 
         #region Exiting Functions
         protected override void OnFormClosing(FormClosingEventArgs e) {
             base.OnFormClosing(e);
 
-            if (e.CloseReason == CloseReason.WindowsShutDown) return;
-            if (!_exiting) {
+            bool hasUnsavedChanges = false;
+
+            foreach (TabExtraInfo tabInfo in tabMetadataList) { 
+                if (tabInfo.QueryHasUnsavedChanges()) {
+                    hasUnsavedChanges = true;
+                }
+            }
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) { return; }
+            if (!_exiting && !hasUnsavedChanges) {
                 switch (MessageBox.Show(this, "Are you sure you want to exit?", "Closing", MessageBoxButtons.YesNo)) {
                     case DialogResult.No:
                         e.Cancel = true;
@@ -400,6 +424,28 @@ namespace CSV_Analyzer_Pro{
                     default:
                         break;
                 }
+            }
+            else if (!_exiting && hasUnsavedChanges) {
+                PromptUnsavedChangesExit(e);
+            }   
+        }
+
+        private void PromptUnsavedChangesExit(FormClosingEventArgs e) {
+            UnsavedChangesMultipleFiles unsavedChangesBox = new UnsavedChangesMultipleFiles();
+            unsavedChangesBox.ShowDialog();
+
+            switch (unsavedChangesBox.userAnswer)
+            {
+                case UnsavedChangesMultipleFiles.saveAllAndClose:
+                    SaveAll();
+                    ExitAll();
+                    break;
+                case UnsavedChangesMultipleFiles.closeWithoutSaving:
+                    ExitAll();
+                    break;
+                case UnsavedChangesMultipleFiles.Cancel:
+                    e.Cancel = true;
+                    break;
             }
         }
 
