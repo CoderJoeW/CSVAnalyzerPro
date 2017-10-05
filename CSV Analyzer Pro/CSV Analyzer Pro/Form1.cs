@@ -369,7 +369,7 @@ namespace CSV_Analyzer_Pro{
             UnsavedChangesSingleFile unsavedChangesBox = new UnsavedChangesSingleFile();
             unsavedChangesBox.ShowDialog();
 
-            switch (unsavedChangesBox.userAnswer) {
+            switch (unsavedChangesBox.GetUserAnswer()) {
                case UnsavedChangesSingleFile.saveAndClose:
                     Save(tabInfo.GetAssocaitedFileName(), tabControl1.SelectedIndex);
                     DeleteTab();
@@ -386,7 +386,7 @@ namespace CSV_Analyzer_Pro{
             UnsavedChangesSingleFile unsavedChangesBox = new UnsavedChangesSingleFile();
             unsavedChangesBox.ShowDialog();
 
-            switch (unsavedChangesBox.userAnswer) {
+            switch (unsavedChangesBox.GetUserAnswer()) {
                case UnsavedChangesSingleFile.saveAndClose:
                     Save(tabInfo.GetAssocaitedFileName(), tabControl1.SelectedIndex);
                     return true;
@@ -434,7 +434,7 @@ namespace CSV_Analyzer_Pro{
             UnsavedChangesMultipleFiles unsavedChangesBox = new UnsavedChangesMultipleFiles();
             unsavedChangesBox.ShowDialog();
 
-            switch (unsavedChangesBox.userAnswer)
+            switch (unsavedChangesBox.GetUserAnswer())
             {
                 case UnsavedChangesMultipleFiles.saveAllAndClose:
                     SaveAll();
