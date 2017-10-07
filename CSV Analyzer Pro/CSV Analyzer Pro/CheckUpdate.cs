@@ -16,9 +16,13 @@ namespace CSV_Analyzer_Pro {
 
         public CheckUpdate() {
             InitializeComponent();
+            CheckUpdate_Load();
         }
 
-        private void CheckUpdate_Load(object sender, EventArgs e) {
+        private void CheckUpdate_Load() {
+            System.Threading.Thread updaterUI = new System.Threading.Thread(() => ShowDialog());
+            updaterUI.Start();
+
             WebClient wc = new WebClient();
             System.IO.Stream stream = wc.OpenRead("http://deathcrow.altervista.org/update.php");
             using(System.IO.StreamReader reader = new System.IO.StreamReader(stream)) {
