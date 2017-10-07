@@ -7,7 +7,8 @@
 
 
 ### Fixed
-
+- Fixed threading issue in CheckUpdate
+- Fixed unhandled exception on failure to connect to server while checking for updates
 
 ### TODO
 - Improve plugin system metadata into array structure
