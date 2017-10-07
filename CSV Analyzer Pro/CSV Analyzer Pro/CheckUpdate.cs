@@ -20,6 +20,9 @@ namespace CSV_Analyzer_Pro {
         }
 
         private void CheckUpdate_Load() {
+            label1.Text = "Connecting To Update Server";
+            progressBar1.Value = 15;
+
             System.Threading.Thread updaterUI = new System.Threading.Thread(() => ShowDialog());
             updaterUI.Start();
 
@@ -30,7 +33,7 @@ namespace CSV_Analyzer_Pro {
                 string[] texts = text.Split(',');
 
                 label1.Text = "Checking For Update";
-                progressBar1.Value = 10;
+                progressBar1.Value = 25;
 
                 if (thisVersion != texts[0]) {
                     //Update Available
