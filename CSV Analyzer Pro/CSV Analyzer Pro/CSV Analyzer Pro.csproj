@@ -382,6 +382,19 @@
     <Compile Include="CheckUpdate.Designer.cs">
       <DependentUpon>CheckUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UnsavedChangesMultipleFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnsavedChangesMultipleFiles.Designer.cs">
+      <DependentUpon>UnsavedChangesMultipleFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnsavedChangesSingleFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnsavedChangesSingleFile.Designer.cs">
+      <DependentUpon>UnsavedChangesSingleFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabExtraInfo.cs" />
     <Compile Include="Core\PluginSystem\Constants.cs" />
     <Compile Include="Core\PluginSystem\ExamplePlugin.cs" />
     <Compile Include="Core\PluginSystem\GDBGExample\GDBGExample.cs" />
@@ -439,6 +452,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnsavedChangesMultipleFiles.resx">
+      <DependentUpon>UnsavedChangesMultipleFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnsavedChangesSingleFile.resx">
+      <DependentUpon>UnsavedChangesSingleFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvalidLicense.resx">
       <DependentUpon>InvalidLicense.cs</DependentUpon>

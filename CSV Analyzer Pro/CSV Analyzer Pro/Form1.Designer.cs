@@ -48,6 +48,7 @@ namespace CSV_Analyzer_Pro
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertAfterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +101,8 @@ namespace CSV_Analyzer_Pro
             this.newToolStripMenuItem,
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
+            this.saveAsToolStripMenuItem,
+            this.saveAllToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -108,30 +110,37 @@ namespace CSV_Analyzer_Pro
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.newToolStripMenuItem.Text = "New..";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.saveAsToolStripMenuItem.Text = "SaveAs";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // saveAllToolStripMenuItem
+            // 
+            this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAllToolStripMenuItem.Text = "Save All";
+            this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
             // rowsToolStripMenuItem
             // 
@@ -193,7 +202,7 @@ namespace CSV_Analyzer_Pro
             // 
             this.setToolStripMenuItem.Name = "setToolStripMenuItem";
             this.setToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-            this.setToolStripMenuItem.Text = "Set";
+            this.setToolStripMenuItem.Text = "Set...";
             this.setToolStripMenuItem.Click += new System.EventHandler(this.setToolStripMenuItem_Click);
             // 
             // resetToolStripMenuItem
@@ -316,6 +325,7 @@ namespace CSV_Analyzer_Pro
         private ToolStripMenuItem findToolStripMenuItem;
         private ToolStripMenuItem setToolStripMenuItem;
         private ToolStripMenuItem resetToolStripMenuItem;
+        private ToolStripMenuItem saveAllToolStripMenuItem;
     }
 }
 
