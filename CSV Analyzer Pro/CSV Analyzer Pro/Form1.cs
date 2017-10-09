@@ -16,6 +16,7 @@ using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.GridHelperClasses;
 using CSV_Analyzer_Pro.Core.PluginSystem;
 using Syncfusion.Windows.Forms.Grid.Grouping;
+using Syncfusion.Windows.Forms.Spreadsheet;
 
 namespace CSV_Analyzer_Pro{
     public partial class Form1 : Form{
@@ -77,7 +78,7 @@ namespace CSV_Analyzer_Pro{
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
             if (!IsWelcomePage()) {
-                SaveAs();
+                SaveAs(path);
             }
         }
 
@@ -310,6 +311,12 @@ namespace CSV_Analyzer_Pro{
             #endregion
         }
 
+        public void InitSpreadsheet(Spreadsheet spreadsheet) {
+            spreadsheet.Dock = DockStyle.Fill;
+
+            spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+        }
+
         public bool IsWelcomePage() {
             if(tabControl1.SelectedIndex == 0) {
                 return true;
@@ -351,62 +358,34 @@ namespace CSV_Analyzer_Pro{
         #region Commands
         private void NewWindow() {
             TabPage tb = new TabPage();
-            GridDataBoundGrid dbg = new GridDataBoundGrid();
-            InitGrid(dbg);
-            loader.GetPluginByTargetFramework("GridDataBoundGrid", dbg);
+            Spreadsheet spreadsheet = new Spreadsheet();
+            SpreadsheetRibbon sRibbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
 
-            //GridCardView card = new GridCardView();
-            //card.CaptionField = "ProductName";
-            //card.WireGrid(dbg);
+            InitSpreadsheet(spreadsheet);
+
             DataTable dt = new DataTable();
 
             tb.Text = "New";
 
-            tb.Controls.Add(dbg);
+            tb.Controls.Add(spreadsheet);
+            tb.Controls.Add(sRibbon);
             tabControl1.TabPages.Add(tb);
             tabControl1.SelectedTab = tb;
         }
 
-        private void Save(string filePath) {
-            int index = tabControl1.SelectedIndex;
-
-            StringBuilder sb = new StringBuilder();
-
-            IEnumerable<string> columnNames = ds.Tables[index.ToString()].Columns.Cast<DataColumn>().
-                                              Select(column => column.ColumnName);
-            sb.AppendLine(string.Join(",", columnNames));
-
-            foreach (DataRow row in ds.Tables[index.ToString()].Rows) {
-                IEnumerable<string> fields = row.ItemArray.Select(field => field.ToString());
-                sb.AppendLine(string.Join(",", fields));
-            }
-
-            try {
-                File.WriteAllText(filePath, sb.ToString());
-            } catch (Exception e) {
-                Console.WriteLine("An Exception occured when trying to save file");
-            }
-
+        private void Open(string path) {
+            Spreadsheet spreadsheet = tabControl1.SelectedTab.Controls.OfType<Spreadsheet>().First();
+            spreadsheet.Open(path);
         }
 
-        private void SaveAs() {
-            int index = tabControl1.SelectedIndex;
+        private void Save(string path) {
+            Spreadsheet spreadsheet = tabControl1.SelectedTab.Controls.OfType<Spreadsheet>().First();
+            spreadsheet.Save();
+        }
 
-            string savePath = "";
-
-            SaveFileDialog saveAs = new SaveFileDialog();
-            saveAs.Filter = "csv files (*.csv)|*.csv";
-            saveAs.FilterIndex = 1;
-
-            if (saveAs.ShowDialog() == DialogResult.OK) {
-                savePath = saveAs.FileName;
-            }
-
-            Thread th = new Thread(() => Save(savePath));
-            th.Start();
-
-            //Retired
-            //Save(savePath);
+        private void SaveAs(string path) {
+            Spreadsheet spreadsheet = tabControl1.SelectedTab.Controls.OfType<Spreadsheet>().First();
+            spreadsheet.SaveAs(path);
         }
 
         private void DeleteTab() {

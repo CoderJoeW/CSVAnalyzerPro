@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <asmv1:assemblyIdentity name="CSV Analyzer Pro.exe" version="0.0.2.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
   <description asmv2:iconFile="Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2734600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2733576">
       <assemblyIdentity name="CSV Analyzer Pro" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zWc27kOnRpzt0gFyHeSNlsiBgOqcIDerlrIu4nmxYVY=</dsig:DigestValue>
+        <dsig:DigestValue>8l+OBeL7rOqsPUCg2fydgaiic5VsrVd39HgYfPmB75E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -926,6 +926,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Core\Configuration.xml" size="1477" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wI3bvOHnFNhDgwA9d1mPR/oBBLnQUfVcdNB4GbpL8Rc=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="CSV Analyzer Pro.exe.config" size="538">
     <hash>
       <dsig:Transforms>
@@ -944,13 +953,13 @@
       <dsig:DigestValue>ejv6NIGZO8nB+WY/JXCMkkwBgK0cJaOScRCB+IqidEY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MetroFramework.txt" size="1266">
+  <file name="MetroFramework.txt" size="1241">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+yV6adEVlpUIOiH/IdsfqaixKo0MB7DiB/hBOyI4wKw=</dsig:DigestValue>
+      <dsig:DigestValue>SKU4r0IkmbHnnFfl6rJRB7fC4TZdnkB3idz22Odjpgo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
