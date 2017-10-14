@@ -207,7 +207,7 @@ namespace CSV_Analyzer_Pro{
                 e.Style.BackColor = Color.GhostWhite;
         }
 
-        private void GridCellChanged(object sender, GridCellsChangedEventArgs e) {
+        private void AddUnsavedMarkOnCellChanged(object sender, GridCellsChangedEventArgs e) {
             int index = tabControl1.SelectedIndex;
             TabExtraInfo tabInfo;
             tabInfo = tabMetadataList.ElementAt(index);
@@ -216,6 +216,47 @@ namespace CSV_Analyzer_Pro{
                 tabControl1.SelectedTab.Text = "*" + tabControl1.SelectedTab.Text; // Add asterisk to denote unsaved changes
             }
         }
+        
+        private void FillRangeWithValueOnCellChanged(object sender, GridCellsChangedEventArgs e)
+        {
+            var eventRange = e.Range;
+
+            if (eventRange.Top != eventRange.Bottom || eventRange.Left != eventRange.Right)
+            {
+                return;
+            }
+
+            var grid = tabControl1.SelectedTab.Controls.OfType<GridDataBoundGrid>().First();
+
+            var modifiedCell = grid[eventRange.Top, eventRange.Left];
+            var modifiedCellValue = modifiedCell.CellValue;
+                
+            var selectedRanges = grid.Selections.Ranges;
+            foreach (GridRangeInfo selectedRange in selectedRanges)
+            {
+                UpdateRange(selectedRange, grid, modifiedCellValue);
+            }
+        }
+
+        private static void UpdateRange(GridRangeInfo selectedRange, GridDataBoundGrid grid, object modifiedCellValue)
+        {
+            for (var row = selectedRange.Top; row <= selectedRange.Bottom; row++)
+            {
+                for (var col = selectedRange.Left; col <= selectedRange.Right; col++)
+                {
+                    UpdateCell(grid, modifiedCellValue, row, col);
+                }
+            }
+        }
+
+        private static void UpdateCell(GridDataBoundGrid grid, object modifiedCellValue, int row, int col)
+        {
+            if (grid[row, col].CellValue != modifiedCellValue)
+            {
+                grid[row, col].CellValue = modifiedCellValue;
+            }
+        }
+
         #endregion
 
         #region Main Functions
@@ -353,7 +394,8 @@ namespace CSV_Analyzer_Pro{
             dbg.BaseStylesMap["Row Header"].StyleInfo.CellType = "Header";
 
             dbg.Model.QueryCellInfo += new Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventHandler(Model_QueryCellInfo);
-            dbg.Model.CellsChanged += new Syncfusion.Windows.Forms.Grid.GridCellsChangedEventHandler(GridCellChanged);
+            dbg.Model.CellsChanged += new Syncfusion.Windows.Forms.Grid.GridCellsChangedEventHandler(AddUnsavedMarkOnCellChanged);
+            dbg.Model.CellsChanged += new Syncfusion.Windows.Forms.Grid.GridCellsChangedEventHandler(FillRangeWithValueOnCellChanged);
             #endregion
         }
 
