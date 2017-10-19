@@ -43,12 +43,22 @@ namespace CSV_Analyzer_Pro {
                     string errorMessage = string.Format("There was a problem connecting to the update server : {0}", ne.Message);
 
                     DialogResult userResponse = MessageBox.Show(errorMessage, "Failed to connect to server", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    if (userResponse == DialogResult.Cancel) {
-                        updaterUI.Abort();
-                        Application.Exit();
-                        Environment.Exit(1);
+                    if (userResponse != DialogResult.Retry) {
+                        label1.Text = "Update Failed";
+                        progressBar1.Value = 0;
+                        break;
                     }
                 }
+            }
+
+            if (connectionFailed) { // Show the main window early and exit once it is closed. Temporary measure.
+                Form1 form = new Form1();
+                form.ShowDialog();
+
+                updaterUI.Abort();
+
+                Application.Exit();
+                Environment.Exit(0);
 
             }
 
@@ -77,8 +87,8 @@ namespace CSV_Analyzer_Pro {
                     //Load
                     Form1 form = new Form1();
 
+                    form.ShowDialog();
                     updaterUI.Abort();
-                    form.Show();
                 }
             }
         }
