@@ -156,3 +156,159 @@ C:\Users\flameforged\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyz
 C:\Users\flameforged\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.application
 C:\Users\flameforged\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.exe
 C:\Users\flameforged\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.pdb
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\CSV Analyzer Pro.exe.config
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\CSV Analyzer Pro.exe.manifest
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\CSV Analyzer Pro.application
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\CSV Analyzer Pro.exe
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\CSV Analyzer Pro.pdb
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\DemoCommon.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.BulletGraph.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Calculate.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Calculate.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Chart.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Chart.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Core.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Utility.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DICOM.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocIO.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocIO.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocToPDFConverter.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Edit.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ExcelChartToImageConverter.WPF.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ExcelToPDFConverter.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Gauge.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Grouping.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Grouping.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Grouping.Windows.XmlSerializers.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Windows.XmlSerializers.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.GridConverter.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.GridHelperClasses.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grouping.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grouping.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HtmlConverter.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HTMLUI.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HTMLUI.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Linq.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Maps.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.MIME.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OCRProcessor.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OfficeChart.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OfficeChartToImageConverter.WPF.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Olap.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OlapSampleUtils.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Pdf.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PdfViewer.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotAnalysis.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotAnalysis.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotChart.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotConverter.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PMML.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Presentation.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PresentationToPdfConverter.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ProjIO.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Schedule.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Schedule.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Scripting.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Scripting.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SfBarcode.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SfChart.WPF.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.WPF.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SpellChecker.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Spreadsheet.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SpreadsheetHelper.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Tools.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Tools.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.TreeMap.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.XlsIO.Base.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.XlsIO.Windows.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Microsoft.mshtml.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\EnvDTE.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\stdole.dll
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.BulletGraph.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Calculate.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Calculate.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Chart.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Chart.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Utility.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Diagram.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DICOM.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocIO.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocIO.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.DocToPDFConverter.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Edit.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ExcelChartToImageConverter.WPF.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ExcelToPDFConverter.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Gauge.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Grouping.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Grouping.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grid.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.GridConverter.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.GridHelperClasses.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grouping.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Grouping.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HtmlConverter.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HTMLUI.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.HTMLUI.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Linq.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Maps.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.MIME.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OCRProcessor.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OfficeChart.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OfficeChartToImageConverter.WPF.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Olap.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.OlapSampleUtils.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Pdf.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PdfViewer.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotAnalysis.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotAnalysis.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotChart.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PivotConverter.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PMML.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Presentation.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.PresentationToPdfConverter.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.ProjIO.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Schedule.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Schedule.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Scripting.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Scripting.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SfBarcode.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SfChart.WPF.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Shared.WPF.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SpellChecker.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Spreadsheet.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.SpreadsheetHelper.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Tools.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.Tools.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.TreeMap.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.XlsIO.Base.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\bin\Release\Syncfusion.XlsIO.Windows.xml
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.csproj.CSV Analyzer Pro.exe.config
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.CheckUpdate.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.Core.Windows.Filter.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.EditHeader.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.Form1.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.InvalidLicense.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.Properties.Resources.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.Search.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.UpdateAvailable.resources
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.csproj.GenerateResource.Cache
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.csproj.CoreCompileInputs.cache
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.exe.manifest
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.application
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.exe
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.pdb
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.csprojResolveAssemblyReference.cache

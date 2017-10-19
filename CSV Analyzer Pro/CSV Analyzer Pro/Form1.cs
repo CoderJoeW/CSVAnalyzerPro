@@ -317,6 +317,10 @@ namespace CSV_Analyzer_Pro{
             spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
         }
 
+        public void InitSpreadsheetRibbon(SpreadsheetRibbon sRibbon) {
+            sRibbon.MenuButtonVisible = false;
+        }
+
         public bool IsWelcomePage() {
             if(tabControl1.SelectedIndex == 0) {
                 return true;
@@ -348,7 +352,7 @@ namespace CSV_Analyzer_Pro{
         private void ExitAll() {
             _exiting = true;
             try {
-                Environment.Exit(0);
+                Application.Exit();
             }catch(Exception e) {
                 MessageBox.Show("There was an error trying to shutdown.\n\n Try closing all pages and then exiting.");
             }
@@ -362,6 +366,7 @@ namespace CSV_Analyzer_Pro{
             SpreadsheetRibbon sRibbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
 
             InitSpreadsheet(spreadsheet);
+            InitSpreadsheetRibbon(sRibbon);
 
             DataTable dt = new DataTable();
 
