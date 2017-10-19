@@ -66,7 +66,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckUpdate";
             this.Text = "CheckUpdate";
-            this.Load += new System.EventHandler(this.CheckUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

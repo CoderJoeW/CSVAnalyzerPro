@@ -16,40 +16,79 @@ namespace CSV_Analyzer_Pro {
 
         public CheckUpdate() {
             InitializeComponent();
+            CheckUpdate_Load();
         }
 
-        private void CheckUpdate_Load(object sender, EventArgs e) {
+        private void CheckUpdate_Load() {
+            System.Threading.Thread updaterUI = new System.Threading.Thread(() => ShowDialog());
+            updaterUI.Start();
+
             WebClient wc = new WebClient();
-            System.IO.Stream stream = wc.OpenRead("http://deathcrow.altervista.org/update.php");
-            using(System.IO.StreamReader reader = new System.IO.StreamReader(stream)) {
-                string text = reader.ReadToEnd();
-                string[] texts = text.Split(',');
+            string text = null;
+            bool connectionFailed = true;
 
-                label1.Text = "Checking For Update";
-                progressBar1.Value = 10;
+            while (text == null && connectionFailed) {
+                label1.Text = "Connecting To Update Server";
+                progressBar1.Value = 15;
 
-                if (thisVersion != texts[0]) {
-                    //Update Available
-                    UpdateAvailable form = new UpdateAvailable();
-                    form.Show();
-                }else {
-                    //No update Available
-                    progressBar1.Value = 75;
-                    label1.Text = "Checking License Key";
-                    //Check License
-                    if (thisLicenseKey != texts[1]) {
-                        //Invalid License
-                        InvalidLicense form = new InvalidLicense();
-                        form.Show();
-                    }else {
-                        //Valid License
-                        progressBar1.Value = 100;
-                        label1.Text = "All up to date.";
-                        //Load
-                        Form1 form = new Form1();
-
-                        form.Show();
+                try {
+                    System.IO.Stream stream = wc.OpenRead("http://deathcrow.altervista.org/update.php");
+                    using (System.IO.StreamReader reader = new System.IO.StreamReader(stream)) {
+                        text = reader.ReadToEnd();
                     }
+                    connectionFailed = false;
+                }
+                catch (Exception ne) {
+                    connectionFailed = true;
+                    string errorMessage = string.Format("There was a problem connecting to the update server : {0}", ne.Message);
+
+                    DialogResult userResponse = MessageBox.Show(errorMessage, "Failed to connect to server", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if (userResponse != DialogResult.Retry) {
+                        label1.Text = "Update Failed";
+                        progressBar1.Value = 0;
+                        break;
+                    }
+                }
+            }
+
+            if (connectionFailed) { // Show the main window early and exit once it is closed. Temporary measure.
+                Form1 form = new Form1();
+                form.ShowDialog();
+
+                updaterUI.Abort();
+
+                Application.Exit();
+                Environment.Exit(0);
+
+            }
+
+            string[] texts = text.Split(','); // It would be nice to have something that checks the server did not give a malformed response here
+
+            label1.Text = "Checking For Update";
+            progressBar1.Value = 25;
+
+            if (thisVersion != texts[0]) {
+                //Update Available
+                UpdateAvailable form = new UpdateAvailable();
+                form.Show();
+            } else {
+                //No update Available
+                progressBar1.Value = 75;
+                label1.Text = "Checking License Key";
+                //Check License
+                if (thisLicenseKey != texts[1]) {
+                    //Invalid License
+                    InvalidLicense form = new InvalidLicense();
+                    form.Show();
+                } else {
+                    //Valid License
+                    progressBar1.Value = 100;
+                    label1.Text = "All up to date.";
+                    //Load
+                    Form1 form = new Form1();
+
+                    form.ShowDialog();
+                    updaterUI.Abort();
                 }
             }
         }

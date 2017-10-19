@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace CSV_Analyzer_Pro {
     public partial class UnsavedChangesMultipleFiles : Form {
 
-        public int userAnswer;
+        private int userAnswer;
         public const int saveAllAndClose = 1;
         public const int closeWithoutSaving = 2;
         public const int Cancel = 3;
@@ -34,5 +34,10 @@ namespace CSV_Analyzer_Pro {
             userAnswer = Cancel;
             Close();
         }
+
+        public int GetUserAnswer() {
+            return userAnswer;
+        }
+
     }
 }

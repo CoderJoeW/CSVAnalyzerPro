@@ -12,7 +12,7 @@ namespace CSV_Analyzer_Pro {
 
     public partial class UnsavedChangesSingleFile : Form {
 
-        public int userAnswer;
+        private int userAnswer;
         public const int saveAndClose = 1;
         public const int closeWithoutSaving = 2;
         public const int Cancel = 3;
@@ -34,6 +34,10 @@ namespace CSV_Analyzer_Pro {
         private void button3_Click(object sender, EventArgs e) {
             userAnswer = Cancel;
             Close();
+        }
+
+        public int GetUserAnswer() {
+            return userAnswer;
         }
 
     }
