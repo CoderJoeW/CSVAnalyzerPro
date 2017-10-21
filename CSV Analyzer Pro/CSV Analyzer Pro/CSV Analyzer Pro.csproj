@@ -422,6 +422,7 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShortcutHandler.cs" />
     <Compile Include="UpdateAvailable.cs">
       <SubType>Form</SubType>
     </Compile>
