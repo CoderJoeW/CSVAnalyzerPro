@@ -1,7 +1,7 @@
 # Changelog
 
 ### Added
-
+- Added keyboard shortcuts
 
 ### Changed
 
