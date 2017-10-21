@@ -229,7 +229,7 @@ namespace CSV_Analyzer_Pro{
                 DataTable dt = ds.Tables.Add(index.ToString());
                 path = csvSearch.FileName;
                 tabControl1.SelectedTab.Text = csvSearch.FileName;
-                OpenCSVFile();
+                Open(csvSearch.FileName);
             }
         }
 
