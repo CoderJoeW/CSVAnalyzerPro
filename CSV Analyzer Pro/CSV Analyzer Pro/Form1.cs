@@ -26,7 +26,8 @@ namespace CSV_Analyzer_Pro{
         DataSet ds = new DataSet();
 
         BackgroundWorker worker;
-        
+        ShortcutHandler shortcutHandler;
+
         string path = "";
 
         bool _exiting = false;
@@ -48,6 +49,11 @@ namespace CSV_Analyzer_Pro{
 
             //Enable Progress Reorting
             worker.WorkerReportsProgress = true;
+
+            tabControl1.KeyUp += new KeyEventHandler(KeyUpReporter);
+            tabControl1.KeyDown += new KeyEventHandler(KeyDownReporter);
+            tabControl1.KeyDown += new KeyEventHandler(ShortcutChecker);
+            shortcutHandler = new ShortcutHandler();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -181,6 +187,22 @@ namespace CSV_Analyzer_Pro{
             //Psuedo code
         }
 
+        private void KeyDownReporter(object sender, KeyEventArgs e) {
+            shortcutHandler.ReportKeyDown(e.KeyCode.ToString());
+        }
+
+        private void KeyUpReporter(object sender, KeyEventArgs e) {
+            shortcutHandler.ReportKeyUp(e.KeyCode.ToString());
+        }
+
+        private void ShortcutChecker(object sender, KeyEventArgs e) {
+            switch (shortcutHandler.CheckShortcuts()) {
+                case ShortcutHandler.shortcuts.NewWindow:
+                    NewWindow();
+                    break;
+            }
+        }
+
         private void Model_QueryCellInfo(object sender, Syncfusion.Windows.Forms.Grid.GridQueryCellInfoEventArgs e) {
             if (e.Style.CellType != "ColumnHeaderCell" && (e.RowIndex % 2 == 0))
                 e.Style.BackColor = Color.LightCyan;
@@ -229,7 +251,7 @@ namespace CSV_Analyzer_Pro{
                 DataTable dt = ds.Tables.Add(index.ToString());
                 path = csvSearch.FileName;
                 tabControl1.SelectedTab.Text = csvSearch.FileName;
-                OpenCSVFile();
+                Open(csvSearch.FileName);
             }
         }
 
