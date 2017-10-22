@@ -200,6 +200,15 @@ namespace CSV_Analyzer_Pro{
                 case ShortcutHandler.shortcuts.NewWindow:
                     NewWindow();
                     break;
+                case ShortcutHandler.shortcuts.Open:
+                    Browse();
+                    break;
+                case ShortcutHandler.shortcuts.Save:
+                    if (!IsWelcomePage()) {
+                        Thread th = new Thread(() => Save(path));
+                        th.Start();
+                    }
+                    break;
             }
         }
 

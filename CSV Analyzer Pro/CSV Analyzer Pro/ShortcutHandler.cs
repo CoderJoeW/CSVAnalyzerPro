@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace CSV_Analyzer_Pro { 
     class ShortcutHandler {
 
-        public enum shortcuts { NoShortcut, NewWindow };
+        public enum shortcuts { NoShortcut, NewWindow,Open,Save };
         Dictionary<string, bool> keyStates = new Dictionary<string, bool>();
 
         public ShortcutHandler() {
@@ -67,6 +67,10 @@ namespace CSV_Analyzer_Pro {
 
             if (CheckKeyDown(Keys.ControlKey.ToString()) && CheckKeyDown(Keys.N.ToString())) {
                 shortcut = shortcuts.NewWindow;
+            }else if(CheckKeyDown(Keys.ControlKey.ToString()) && CheckKeyDown(Keys.S.ToString())){
+                shortcut = shortcuts.Save;
+            }else if(CheckKeyDown(Keys.ControlKey.ToString()) && CheckKeyDown(Keys.O.ToString())) {
+                shortcut = shortcuts.Open;
             }
 
             return shortcut;

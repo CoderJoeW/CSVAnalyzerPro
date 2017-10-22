@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2734600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV Analyzer Pro.exe" size="2735624">
       <assemblyIdentity name="CSV Analyzer Pro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uIIwhXA4+aZo8lngXHgRY1WtJZ5wrBoWMLHpfiHupz4=</dsig:DigestValue>
+        <dsig:DigestValue>nPtPDUW8JFPSiUczYQfXcxqmsczEAVPqypXg6lFCW9s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
