@@ -7,12 +7,17 @@ using System.Windows.Forms;
 
 namespace CSV_Analyzer_Pro { 
     class ShortcutHandler {
-
-        public enum shortcuts { NoShortcut, NewWindow,Open,Save };
+        public static ShortcutHandler Instance { set; get; }
+        public enum shortcuts {
+            NoShortcut, NewWindow, Open,
+            Save,NewPluginStoreTab,
+        };
         Dictionary<string, bool> keyStates = new Dictionary<string, bool>();
 
-        public ShortcutHandler() {
+        public shortcuts shortcut = shortcuts.NoShortcut;
 
+        public ShortcutHandler() {
+            Instance = this;
         }
 
         public bool CheckKeyDown(string key) {
@@ -71,10 +76,11 @@ namespace CSV_Analyzer_Pro {
                 shortcut = shortcuts.Save;
             }else if(CheckKeyDown(Keys.ControlKey.ToString()) && CheckKeyDown(Keys.O.ToString())) {
                 shortcut = shortcuts.Open;
+            }else if(CheckKeyDown(Keys.Alt.ToString()) && CheckKeyDown(Keys.N.ToString())) {
+                shortcut = shortcuts.NewPluginStoreTab;
             }
 
             return shortcut;
-
         }
 
     }
