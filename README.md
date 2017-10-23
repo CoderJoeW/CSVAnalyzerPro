@@ -15,7 +15,7 @@
 **We got a new look!!!**
 
 <h3 align="center">
-  <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshot.png?download=1" alt='overall-screenshot'>
+  <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshots.png" alt='overall-screenshot'>
 </h3>
 
 Features
