@@ -12,8 +12,10 @@
 
 **CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever. With speeds matching top open source editors and multi-window support, why would you not download it?
 
+**We got a new look!!!**
+
 <h3 align="center">
-  <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshot.png" alt='overall-screenshot'>
+  <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshot.png?download=1" alt='overall-screenshot'>
 </h3>
 
 Features
