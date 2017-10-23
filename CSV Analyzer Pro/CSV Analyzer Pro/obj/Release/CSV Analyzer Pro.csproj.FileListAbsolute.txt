@@ -312,3 +312,4 @@ C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.exe
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.pdb
 C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV Analyzer Pro.csprojResolveAssemblyReference.cache
+C:\Users\netty\Documents\GitHub\CSVAnalyzerPro\CSV Analyzer Pro\CSV Analyzer Pro\obj\Release\CSV_Analyzer_Pro.Core.Windows.PluginStore.resources

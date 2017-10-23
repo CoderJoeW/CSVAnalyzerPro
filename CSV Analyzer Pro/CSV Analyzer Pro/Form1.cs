@@ -199,15 +199,18 @@ namespace CSV_Analyzer_Pro{
             switch (shortcutHandler.CheckShortcuts()) {
                 case ShortcutHandler.shortcuts.NewWindow:
                     NewWindow();
+                    ShortcutHandler.Instance.shortcut = ShortcutHandler.shortcuts.NoShortcut;
                     break;
                 case ShortcutHandler.shortcuts.Open:
                     Browse();
+                    ShortcutHandler.Instance.shortcut = ShortcutHandler.shortcuts.NoShortcut;
                     break;
                 case ShortcutHandler.shortcuts.Save:
                     if (!IsWelcomePage()) {
                         Thread th = new Thread(() => Save(path));
                         th.Start();
                     }
+                    ShortcutHandler.Instance.shortcut = ShortcutHandler.shortcuts.NoShortcut;
                     break;
             }
         }
@@ -407,6 +410,18 @@ namespace CSV_Analyzer_Pro{
             tb.Controls.Add(sRibbon);
             tabControl1.TabPages.Add(tb);
             tabControl1.SelectedTab = tb;
+        }
+
+        private void NewPluginStoreTab() {
+            TabPage tp = new TabPage();
+
+            WebBrowser wb = new WebBrowser();
+            System.Uri uri = new System.Uri("https://deathcrow.altervista.org/update/PluginStore/index.php");
+            wb.Url = uri;
+
+            tp.Controls.Add(wb);
+            tabControl1.TabPages.Add(tp);
+            tabControl1.SelectedTab = tp;
         }
 
         private void Open(string path) {
