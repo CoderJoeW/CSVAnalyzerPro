@@ -2,7 +2,7 @@
 
 Please take a moment to review [our Code of Conduct](https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/CODE_OF_CONDUCT.md) before continuing.
 
-###First of all thank you so much for your contributions!
+### First of all thank you so much for your contributions!
 
 #### **Did you find a bug?**
 
