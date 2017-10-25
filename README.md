@@ -11,7 +11,9 @@
 [![Total Downloads](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)
 ![License](https://github.com/ellerbrock/open-source-badges/blob/master/badges/licence-gpl/gpl.png)
 
-> **CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever. With speeds matching top open source editors and multi-window support, why would you not download it?
+**CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever.
+
+> With speeds matching top open source editors and multi-window support, why would you not download it?
 
 <h3 align="center">
   <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshot.png" alt='overall-screenshot'>
@@ -42,10 +44,10 @@ Table of Contents
 * [**Plugin Development**](#api)
 * [**Contributing**](#contributing)
 * [**Inspiration and special thanks**](#inspiration-and-special-thanks)
-* [**Todo**](#todo)
+* [**To-Do**](#to-do)
 * [**License**](#license)
 
-[**Issues**](#Issues)
+[**Issues**](#issues)
 
 <br />
 
