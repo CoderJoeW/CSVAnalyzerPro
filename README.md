@@ -1,4 +1,5 @@
-# CSV Analyzer Pro - Manage your spreadsheets like never before
+# CSV Analyzer Pro
+> ## Manage your spreadsheets like never before
 
 <h1 align="center">
   <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/csv-icon.png" alt='csv-icon'>
@@ -10,7 +11,9 @@
 [![Total Downloads](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)
 ![License](https://github.com/ellerbrock/open-source-badges/blob/master/badges/licence-gpl/gpl.png)
 
-**CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever. With speeds matching top open source editors and multi-window support, why would you not download it?
+**CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever.
+
+> With speeds matching top open source editors and multi-window support, why would you not download it?
 
 <h3 align="center">
   <img src="https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/overall-screenshot.png" alt='overall-screenshot'>
@@ -41,10 +44,10 @@ Table of Contents
 * [**Plugin Development**](#api)
 * [**Contributing**](#contributing)
 * [**Inspiration and special thanks**](#inspiration-and-special-thanks)
-* [**Todo**](#todo)
+* [**To-Do**](#to-do)
 * [**License**](#license)
 
-[**Issues**](#faq--troubleshooting)
+[**Issues**](#issues)
 
 <br />
 
@@ -54,7 +57,7 @@ Installation
 
 1. [Download the latest release](https://github.com/flaminggenius/CSVAnalyzerPro/releases)
 
-2. Run Setup wizard in adminstration mode
+2. Run **Setup wizard** in **Adminstration mode**
 
 3. Type `CSV Analyzer Pro` in your search bar and run the application
 
@@ -72,41 +75,44 @@ To-Do
 
 Our To-Do list is contained within our changelog which you can see [Here](https://github.com/flaminggenius/CSVAnalyzerPro/tree/master/CAPBuilds)
 
-Just select a version and view ChangeLog.txt(Switched to markdown in 0.0.4)
+Just select a version and view `ChangeLog.txt` *(Switched to markdown in 0.0.4)*
 
 ## License
 
-See [LICENSE](https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/LICENSE)
+**[GNU General Public License v3.0](https://github.com/flaminggenius/CSVAnalyzerPro/blob/master/LICENSE)**
 
-[Issues](https://github.com/flaminggenius/CSVAnalyzerPro/issues)
----------------------
+## [Issues](https://github.com/flaminggenius/CSVAnalyzerPro/issues)
 
-If you find a bug, glitch, or experience a crash please [open a new issue](https://github.com/flaminggenius/CSVAnalyzerPro/issues) so that we can take care of it ASAP
+If you find a bug, glitch, or experience a crash !
+
+Please [Open a new issue](https://github.com/flaminggenius/CSVAnalyzerPro/issues), So that we can take care of it, **ASAP**
+
 
 Contributing
 ------------
 
-Best ways to contribute
-* Star it on GitHub - if you use it and like it please at least star it :)
-* [Promote](#promotion)
-* Open [issues/tickets](https://github.com/flaminggenius/CSVAnalyzerPro/issues)
-* Submit fixes and/or improvements with [Pull Requests](#source-code)
+**Best ways to contribute**
+* :star: **Star** it on GitHub
+> If you used and liked it, Please at least **Star** it ! :stuck_out_tongue_closed_eyes::relaxed::relaxed:
+* **[Promote](#promotion)**
+* **Open [issues/tickets](https://github.com/flaminggenius/CSVAnalyzerPro/issues)**
+* **Submit fixes and/or improvements with [Pull Requests](#source-code)**
 
 ### Promotion
 
-Like the project? Please support to ensure continued development going forward:
-* Star this repo on GitHub
-* Follow the repo on GitHub
-* Fork the project on GitHub
-* Tell everyone about it!
+**Like the project? Please support to ensure continued development going forward:**
+* **Star** this repo on GitHub
+* **Follow** the repo on GitHub
+* **Fork** the project on GitHub
+* **Tell everyone about it!**
 
 ### Source code
 
-Contributions and Pull Requests are welcome.
+> *Contributions and Pull Requests are welcome.*
 
-No real formal process has been setup - just stick to general good conventions for now.
+**No real formal process has been setup - just stick to general good conventions for now.**
 
-Inspiration and special thanks
+Inspiration and Special Thanks
 ------------------------------
 
 * Every CSV Editor I have ever used :)
