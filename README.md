@@ -92,18 +92,18 @@ Contributing
 ------------
 
 **Best ways to contribute**
-* Star it on GitHub - if you use it and like it please at least star it :)
-* [Promote](#promotion)
-* Open [issues/tickets](https://github.com/flaminggenius/CSVAnalyzerPro/issues)
-* Submit fixes and/or improvements with [Pull Requests](#source-code)
+* **Star** it on GitHub - if you use it and like it please at least star it :)
+* **[Promote](#promotion)**
+* **Open [issues/tickets](https://github.com/flaminggenius/CSVAnalyzerPro/issues)**
+* **Submit fixes and/or improvements with [Pull Requests](#source-code)**
 
 ### Promotion
 
 **Like the project? Please support to ensure continued development going forward:**
-* Star this repo on GitHub
-* Follow the repo on GitHub
-* Fork the project on GitHub
-* Tell everyone about it!
+* **Star** this repo on GitHub
+* **Follow** the repo on GitHub
+* **Fork** the project on GitHub
+* **Tell everyone about it!**
 
 ### Source code
 
