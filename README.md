@@ -10,6 +10,7 @@
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 [![Total Downloads](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)](http://deathcrow.altervista.org/update/downloadBadge.php?download=3)
 ![License](https://github.com/ellerbrock/open-source-badges/blob/master/badges/licence-gpl/gpl.png)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&&hosted_button_id=RR3VWQPVMFGQW)
 
 **CSV Analyzer Pro** makes managing your spreadsheets easier and faster then ever.
 
