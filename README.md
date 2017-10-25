@@ -39,6 +39,7 @@ Table of Contents
 -----------------
 
 [**Installation**](#installation)
+
 [**Regarding donations**](#donations)
 
 [**Developer**](#developer)
