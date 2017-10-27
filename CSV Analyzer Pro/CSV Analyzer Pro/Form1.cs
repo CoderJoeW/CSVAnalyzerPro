@@ -488,5 +488,17 @@ namespace CSV_Analyzer_Pro{
 
         }
         #endregion
+
+        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Control && e.KeyCode == Keys.F)
+            {
+                Search s = new Search();
+                if (s.DialogResult == DialogResult.OK)
+                {
+                    //this is line for code if button OK in search is pressed
+                }
+            }
+        }
     }
 }
